@@ -1,0 +1,11 @@
+{
+    "position": 3,
+    "label": "使用 Docker 自搭建",
+    "collapsible": true,
+    "collapsed": false,
+    "className": "red",
+    "link": null,
+    "customProps": {
+        "description": "Docker 自搭建概览"
+    }
+}
