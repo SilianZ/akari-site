@@ -1,65 +1,22 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
-# 信息
+# 模块
 
-## 介绍
+小可提供了一部分的官方模块，可使用 `~module` 命令对模块进行操作，但[基础模块](https://bot.teahouse.team/wiki/Category:基础模块)不会被此命令影响。
 
-**小可**是基于多个框架开发的可扩展、多平台机器人。图标由[Rin 十一](https://mihuashi.com/profiles/75826?role=painter)绘制。
+若你准备[自搭建](/docs/dev/deploy/intro)机器人，请注意并非所有模块为立即可用，部分模块需要修改[配置文件](/docs/dev/config)或进行额外操作才能正常使用。
 
-目前小可还正在持续开发中。
+你可以编写自定义模块，请将其放到 `modules` 目录下，可以在[新建模块指南](/docs/dev/new_module)获得更多信息。
 
-## 平台
+你也可以在 Issue 中[请求新功能](https://github.com/Teahouse-Studios/akari-bot/issues/new?assignees=OasisAkari&labels=enhancement&projects=&template=feature_request.yaml&title=[FEATURE]%3A+)，但存在包括但不限于以下情况的模块可能会被搁置：
 
-小可目前支持以下平台：
+-   实用性较低
+-   服务稳定性不足
+-   易消耗机器人性能
+-   使用非开源或开源协议不兼容的代码
 
--   QQ
--   Discord
--   Telegram
--   Kook
--   Matrix
+下面的图片展示了所有模块的信息：
 
-## 运行
-
-### 公共实例
-
-茶馆工作室和问谛居共同提供小可的公共实例。
-
-#### Telegram
-
-链接：<https://t.me/oasisakaribot>，支持私聊和群聊。
-
-#### Discord
-
-邀请链接：<https://discord.com/oauth2/authorize?client_id=879379218209861712&scope=bot&permissions=259846044864>
-
-#### QQ
-
-目前 QQ 上稳定运行的小可实例为小可三号机。由于腾讯风控问题，请[在此提交](https://github.com/Teahouse-Studios/bot/issues/new?assignees=OasisAkari&labels=New&template=add_new_group.yaml&title=%5BNEW%5D%3A+)入群申请。
-
-此外，你也可以加入我们的测试 QQ 群来测试命令：738829671
-
-QQ 频道的测试版支持也请在上方链接申请。我们正在进行 QQ 频道官方机器人入驻，未来可能会成为官方认证的机器人。
-
-#### Kook
-
-邀请链接：<https://www.kookapp.cn/app/oauth2/authorize?id=19512&permissions=949248&client_id=xiDWoVygvPsP6bov&redirect_uri=&scope=bot>
-
-### 自搭建
-
-你可以[参考这里](/docs/dev/deploy/intro)来进行尝试搭建。
-
-若遇到问题，可以通过 [Issue](https://github.com/Teahouse-Studios/bot/issues/new) 或其他方式咨询开发者。
-
-### 多语言
-
-关于小可的多语言问题，可前往 [Crowdin](https://crowdin.com/project/akari-bot) 参与改进。
-
-### 贡献
-
-如您想为我们编写新的模块，可以看看[这里](/docs/dev/new_module)。
-
-## 许可
-
-小可使用 AGPL-3.0 协议授权。详见 [LICENSE](https://github.com/Teahouse-Studios/akari-bot/blob/master/LICENSE)。
+[![](https://s1.ax1x.com/2023/08/22/pPJgUPJ.jpg)](https://s1.ax1x.com/2023/08/22/pPJgUPJ.jpg)
