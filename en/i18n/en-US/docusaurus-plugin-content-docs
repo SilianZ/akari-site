@@ -1,79 +1,126 @@
 ---
-sidebar_position: 3
-description: 下载小可的源代码
+sidebar_position: 4
+description: 安装小可运行时用到的依赖
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 下载源代码
+# 安装依赖
 
 ```mdx-code-block
-<Tabs groupId='operating-systems'>
+<Tabs groupId="operating-systems">
 <TabItem value="win" label="Windows" default>
 <Tabs>
-<TabItem value="c1" label="使用 Git 克隆" default>
+<TabItem value="c1" label="使用 Poetry" default>
 ```
 
-1.  安装 [Git](https://git-scm.com/)。
+如果您已经安装了 [Poetry](https://python-poetry.org/)，您可以跳过以下安装步骤。
 
-2.  请在要放置小可的文件夹中右键打开 Git Bash，并输入以下指令：
+1.  打开 Powershell，并执行以下指令来安装 Poetry：
 
-    ```sh
-    git clone https://github.com/Teahouse-studios/akari-bot.git
-    ```
-
-    直连GitHub的克隆速度较慢，在特殊情况下，您可以使用镜像站进行克隆：
-
-    ```sh
-    git clone https://gitclone.com/github.com/Teahouse-studios/akari-bot.git
+    ```powershell
+    (Invoke-WebRequest -Uri "https://install.python-poetry.org" -UseBasicParsing).Content | py -
     ```
 
     :::info
-    镜像站会在每天晚上进行仓库更新，所以若想在镜像站更新之前获取最新版本的代码，请使用原 GitHub 地址。
-    :::info
+    若您使用了 Microsoft Store 或 pyenv-windows 安装 Python，请将 `py` 替换为 `python`。
+    :::
 
-3.  按住 `Shift` + `右键`，选择`在此处打开 Powershell 窗口`或`在此处打开命令窗口`来打开终端。
+    :::caution
+    安装 Poetry 前请**务必**检查系统环境变量中是否存在多个 Python Executable Path（Python 可执行路径）并及时清除，否则安装 Poetry 后可能会出现 Python 环境混乱导致无法正常加载依赖的情况。
+    :::
+
+2.  安装完成后，请将以下目录添加到 PATH 环境变量，方便调用：
+
+    ```
+    %APPDATA%\Python\Scripts
+    ```
+
+    :::info
+    请善用搜索引擎寻找更改 PATH 的方法。
+    :::
+
+    :::info
+    在添加到 PATH 之后，您通常需要重启终端，甚至整个电脑才能使其生效。
+
+    您可以通过 `poetry --version` 确认安装是否有效。
+    :::
+
+3.  在安装完 Poetry 后，请执行以下指令：
+
+    ```powershell
+    poetry install
+    ```
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="c2" label="直接下载代码">
+<TabItem value="c2" label="使用 pip">
 ```
 
-1.  从 [Release 页面](https://github.com/Teahouse-Studios/bot/releases/latest) 的 Assets 板块中下载 Source code（源代码）。当然，您也可以下载 [master 分支的最新代码](https://github.com/Teahouse-Studios/akari-bot/archive/refs/heads/master.zip)。
+如果您不想使用 Poetry，您可以使用 pip 来安装依赖：
 
-    :::info
-    master 分支下的部署文档可能会有所不同，请在下载对应版本的源码后打开目录下的 DEPLOY.md 继续查看部署教程。
-    :::
-
-2.  解压源代码，按住 `Shift` + `右键`，选择 `在此处打开 Powershell 窗口` 或 `在此处打开命令窗口` 来打开终端，进入文件夹。
+```powershell
+pip install --no-deps -r requirements.txt
+```
 
 ```mdx-code-block
 </TabItem>
 </Tabs>
 </TabItem>
 <TabItem value="linux" label="Linux">
+<Tabs>
+<TabItem value="c1" label="使用 Poetry" default>
 ```
 
-1.  安装 [Git](https://git-scm.com/)。
+如果您已经安装了 [Poetry](https://python-poetry.org/)，您可以跳过以下安装步骤。
 
-2.  进入文件夹并执行以下指令：
+1.  打开终端，并执行以下指令来安装 Poetry：
 
     ```sh
-    git clone https://github.com/Teahouse-studios/akari-bot.git
+    curl -sSL "https://install.python-poetry.org" | python3 -
     ```
 
-    直连GitHub的克隆速度较慢，在特殊情况下，您可以使用镜像站进行克隆：
+    :::caution
+    安装 Poetry 前请**务必**检查系统环境变量中是否存在多个 Python Executable Path（Python 可执行路径）并及时清除，否则安装 Poetry 后可能会出现 Python 环境混乱导致无法正常加载依赖的情况。
+    :::
 
-    ```sh
-    git clone https://gitclone.com/github.com/Teahouse-studios/akari-bot.git
+2.  安装完成后，请将以下目录添加到 PATH 环境变量，方便调用：
+
+    ```
+    $HOME/.local/bin
     ```
 
     :::info
-    镜像站会在每天晚上进行仓库更新，所以若想在镜像站更新之前获取最新版本的代码，请使用原 GitHub 地址。
+    请善用搜索引擎寻找更改 PATH 的方法。
     :::
 
+    :::info
+    在添加到 PATH 之后，您通常需要重启终端，甚至整个电脑才能使其生效。
+
+    您可以通过 `poetry --version` 确认安装是否有效。
+    :::
+
+3.  在安装完 Poetry 后，请执行以下指令：
+
+    ```sh
+    poetry install
+    ```
+
 ```mdx-code-block
+</TabItem>
+<TabItem value="c2" label="使用 pip">
+```
+
+如果您不想使用 Poetry，您可以使用 pip 来安装依赖：
+
+```sh
+pip install --no-deps -r requirements.txt
+```
+
+```mdx-code-block
+</TabItem>
+</Tabs>
 </TabItem>
 </Tabs>
 ```
