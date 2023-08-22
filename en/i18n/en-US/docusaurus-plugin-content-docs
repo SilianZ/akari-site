@@ -1,16 +1,10 @@
 ---
-sidebar_position: 1
-description: 常规自搭建简介
+sidebar_position: 2
+description: 为搭建小可准备环境
 ---
 
-import DocCardList from '@theme/DocCardList';
+# 准备
 
-# 简介
-
-本文将会教您如何常规搭建自己的小可机器人。
-
-若您想使用 Docker 搭建，请转到 [使用 Docker 自搭建](/docs/dev/deploy/deploy_docker/intro)。
-
-```mdx-code-block
-<DocCardList />
-```
+1.  一台可运行 Python 的服务器或主机（电脑、树莓派、安装了 Termux 的手机、etc...）。
+2.  主机已安装并可运行 [Python 3 环境](https://www.python.org/) ，版本大于 3.8 皆可部署。
+3.  对应您需要运行的平台所需要的必要内容（环境、token 等）。
