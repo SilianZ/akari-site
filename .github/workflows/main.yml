@@ -1,0 +1,23 @@
+name: Auto i18n
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  update_i18n_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@v2
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v3.8.1 
+    - name: Install deps
+      run: npm install
+    - name: Write files
+      run: npm run write-translations -- --locale zh-Hans
+    - name: Commit files
+      run: |
+        git config --local user.name "Akari-bot"
+        git commit -a -m "Add changes"
+        git push
