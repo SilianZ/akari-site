@@ -6,6 +6,6 @@
     "className": "red",
     "link": null,
     "customProps": {
-      "description": "常规自搭建概览"
+        "description": "常规自搭建概览"
     }
 }
