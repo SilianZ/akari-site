@@ -6,6 +6,6 @@
     "className": "red",
     "link": null,
     "customProps": {
-      "description": "Docker 自搭建概览"
+        "description": "Docker 自搭建概览"
     }
 }
