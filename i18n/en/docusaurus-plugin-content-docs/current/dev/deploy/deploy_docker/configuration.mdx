@@ -38,13 +38,13 @@ Use `MySQL` as the primary database：
 SQLite is the best option if you do not want to study how to install a database (or buy a provider's database service) to deploy a robot.The disadvantage is that there may be a lock table problem (very low probability of occurring) and a future shipping error (error deleting db and no backup) leading to the destruction of the original user's data.
 :::
 
-If you choose SQLite, simply fill in the fields in the following format.无需再关注数据库搭建等问题：
+If you choose SQLite, simply fill in the fields in the following format.No need to pay attention to issues such as database deployment:
 
 **Format**: `db_path = "sqlite://<Relative Path>/<Database Filename>.db"`
 
-**实际示例**：`db_path = "sqlite:///database/save.db"`
+**Practical example**: `db_path = "sqlite://database/save.db"`
 
-此示例将会在 `database` 文件夹内创建 `save.db` 来存储用户数据。
+This example will create `save.db` in the `database` folder to store user data.
 
 ## 配置平台机器人
 
