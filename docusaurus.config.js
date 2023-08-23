@@ -82,24 +82,24 @@ const config = {
                 style: 'dark',
                 links: [
                     {
-                        title: 'Contact us',
+                        title: '联系我们',
                         items: [
                             {
-                                label: 'Bilibili',
+                                label: '哔哩哔哩',
                                 href: 'https://space.bilibili.com/406275313',
                             },
                             {
-                                label: 'Official website',
+                                label: '官网',
                                 href: 'https://teahouse.team/',
                             },
                             {
-                                label: 'Mail',
+                                label: '邮件',
                                 href: 'mailto:admin@teahou.se'
                             }
                         ],
                     },
                     {
-                        title: 'More',
+                        title: '更多',
                         items: [
                             {
                                 label: 'GitHub',
