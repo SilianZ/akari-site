@@ -22,5 +22,9 @@
   "link.item.label.邮件": {
     "message": "邮件",
     "description": "The label of footer link with label=邮件 linking to mailto:admin@teahou.se"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/Teahouse-Studios/"
   }
 }
