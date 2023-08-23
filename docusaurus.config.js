@@ -108,7 +108,7 @@ const config = {
                         ]
                     },
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} AkariBot. Built with Docusaurus.`,
+                copyright: `版权所有 © ${new Date().getFullYear()} AkariBot. 使用 Docusaurus 构建. 该文档改编自小可 · Wiki`,
             },
             prism: {
                 theme: lightCodeTheme,
