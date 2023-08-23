@@ -46,43 +46,43 @@ If you choose SQLite, simply fill in the fields in the following format.No need 
 
 This example will create `save.db` in the `database` folder to store user data.
 
-## 配置平台机器人
+## Platform Bots Configuration
 
 ### QQ
 
-我们在这里使用了 [aiocqhttp](https://github.com/nonebot/aiocqhttp) 来对接 [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) 客户端。
+We have used [aiocqhttp](https://github.com/nonebot/aiocqhttp) here to place [go-cqhttp](https://github.com/Mrs4s/go-cqhttp).
 
-如果您想使用 Docker 部署 go-cqhttp，请转到[使用 Docker](https://docs.go-cqhttp.org/guide/docker.html)。
+If you want to use Docker to deploy go-cqhttp, go to [Using Docker](https://docs.go-cqhttp.org/guide/docker.html) (The page is in Chinese. You can translate it with translate apps).
 
-1.  从 go-cqhttp 的官方仓库上下载最新的 [Release](https://github.com/Mrs4s/go-cqhttp/releases/latest)。
+1.  Download the latest [Release](https://github.com/Mrs4s/go-cqhttp/releases/latest) from the official repository of go-cqhttp.
 
-    | 系统类型           | 可执行文件                         | 压缩文件                            |
-    | -------------- | ----------------------------- | ------------------------------- |
-    | Intel 版 Macos  | Not available                 | `go-cqhttp_darwin_amd64.tar.gz` |
-    | M1 版 Macos     | Not available                 | `go-cqhttp_darwin_arm64.tar.gz` |
-    | 32 位 Linux     | Not available                 | `go-cqhttp_linux_386.tar.gz`    |
-    | 64 位 Linux     | Not available                 | `go-cqhttp_linux_amd64.tar.gz`  |
-    | arm64 Linux    | Not available                 | `go-cqhttp_linux_arm64.tar.gz`  |
-    | armv7 Linux    | Not available                 | `go-cqhttp_linux_armv7.tar.gz`  |
-    | 32 位 Windows   | `go-cqhttp_windows_386.exe`   | `go-cqhttp_windows_386.zip`     |
-    | 64 位 Windows   | `go-cqhttp_windows_amd64.exe` | `go-cqhttp_windows_amd64.zip`   |
-    | arm64 Windows  | `go-cqhttp_windows_arm64.exe` | `go-cqhttp_windows_arm64.zip`   |
-    | armv7 Windows  | `go-cqhttp_windows_armv7.exe` | `go-cqhttp_windows_armv7.zip`   |
+    | System type       | Executable files                    | Zip file                        |
+    | ----------------- | ----------------------------------- | ------------------------------- |
+    | Intel Macos       | Not available                       | `go-cqhttp_darwin_amd64.tar.gz` |
+    | M1 Macos          | Not available                       | `go-cqhttp_darwin_arm64.tar.gz` |
+    | 32-bit Linux      | Not available                       | `go-cqhttp_linux_386.tar.gz`    |
+    | 64-bit Linux      | Not available                       | `go-cqhttp_linux_amd64.tar.gz`  |
+    | arm64 Linux       | Not available                       | `go-cqhttp_linux_arm64.tar.gz`  |
+    | armv7 Linux       | Not available                       | `go-cqhttp_linux_armv7.tar.gz`  |
+    | 32-bit Windows    | `go-cqhttp_windows_386.exe`         | `go-cqhttp_windows_386.zip`     |
+    | 64-bit Windows    | `go-cqhttp_windows_amd64.exe`       | `go-cqhttp_windows_amd64.zip`   |
+    | arm64 Windows     | `go-cqhttp_windows_arm64.exe`       | `go-cqhttp_windows_arm64.zip`   |
+    | armv7 Windows     | `go-cqhttp_windows_armv7.exe`       | `go-cqhttp_windows_armv7.zip`   |
 
-2.  将下载好的文件解压到一个已经预先准备好的文件夹中。
+2.  Unpack downloaded files into a pre-prepared folder.
 
-3.  运行程序。
+3.  Run the program.
 
-4.  此时将提示
+4.  Notify at this time
 
     ```
     [WARNING]: 尝试加载配置文件 config.yml 失败: 文件不存在
     [INFO]: 默认配置文件已生成,请编辑 config.yml 后重启程序.
     ```
 
-    程序将会自动在存放 [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) 文件夹的目录下生成一个默认配置文件 `config.yml`。
+    The program will automatically generate a default configuration `config.yml` in the directory of the folder with [go-cqhttp](https://github.com/Mrs4s/go-cqhttp).
 
-    接下来，请配置 [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) 的 `config.yml` 文件中的对应的连接方式和签名服务器。
+    Next, please configure the corresponding connection and signature server in the `config.yml` file of [go-cqhttp](https://github.com/Mrs4s/go-cqhttp).
 
     ```yml title="go-cqhttp/config.yml"
     account:
