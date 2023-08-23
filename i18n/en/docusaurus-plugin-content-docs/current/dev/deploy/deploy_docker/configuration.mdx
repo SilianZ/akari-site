@@ -1,50 +1,50 @@
 ---
 sidebar_position: 4
-description: 配置小可
+description: Configure AkariBot
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 配置
+# Configuration
 
-从小可的 GitHub 仓库中下载 `config` 文件夹，并放到事先准备好的目录下。
+Download the `config` folder from AkariBot GitHub repository and place it in a pre-prepared directory.
 
-进入 `config` 文件夹，将 `config.toml.example` 重命名为 `config.toml`，然后开始配置您所需要的内容。
-
-:::info null
-由于目前配置文件后缀改为 `toml`，与 `cfg` 不同的是，请在填写好必要的字段后，请删除所有配置文件中留空的字段，否则程序无法正常运行。若您拥有旧版 `cfg` 文件，机器人会自动帮您转换为 `toml` 格式。
-:::
-
-## 配置数据库
+Go to the `config` folder, rename `config.toml.example` to `config.toml` and start configuring what you need.
 
 :::info null
-机器人需要一个数据库以用于存储用户数据，对于第一次的简单部署，我们只需要关注数据库字段即可，其余字段可留空。
+Since the current configuration suffix is changed to `toml`, unlike `cfg`, please delete the empty fields in all configuration files after filling out the required fields otherwise the program cannot function properly.If you have an old `cfg` file, the robot will automatically help you convert to the `toml` format.
 :::
 
-此字段需要填写一个可被 `sqlalchemy` 支持的数据库链接，以下为推荐方案，请任选一个：
+## Database Configuration
+
+:::info null
+The bot needs a database to store user data. For the first simple deployment, we need only focus on database fields and the rest can be left blank.
+:::
+
+This field requires a database link supported by `sqlalchemy`. Below are some recommended options. Please choose one：
 
 ### MySQL
 
-若使用 `MySQL` 作为主要使用数据库：
+Use `MySQL` as the primary database：
 
-**格式**：`db_path = "mysql+pymysql://<数据库用户名>:<数据库用户密码>@<数据库地址>"`
+**Format**: `db_path = "mysql+pymysql:/<Database Username>:<Database Userpassword>@<Database Address>"`
 
-**实际示例**：`db_path = "mysql+pymysql://bot:123456@example.com/bot_prod"`
+**Practical example**: `db_path = "mysql+pymysql:/bot:123456@example.com/bot_prod"`
 
 ### SQLite
 
 :::info null
-如果您不希望为了部署一个机器人而去研究如何安装数据库（或购买某服务商的数据库服务）的话，使用 SQLite 就是最佳选择。缺点是可能会遇到锁表问题（极小概率发生），以及将来运维失误（误删除 db 且没有备份）导致原先用户数据损毁的情况。
+SQLite is the best option if you do not want to study how to install a database (or buy a provider's database service) to deploy a robot.The disadvantage is that there may be a lock table problem (very low probability of occurring) and a future shipping error (error deleting db and no backup) leading to the destruction of the original user's data.
 :::
 
-如果您选择 SQLite，只需要将字段内容填写为以下格式即可。无需再关注数据库搭建等问题：
+If you choose SQLite, simply fill in the fields in the following format.No need to pay attention to issues such as database deployment:
 
-**格式**：`db_path = "sqlite:///<相对路径>/<数据库文件名>.db"`
+**Format**: `db_path = "sqlite://<Relative Path>/<Database Filename>.db"`
 
-**实际示例**：`db_path = "sqlite:///database/save.db"`
+**Practical example**: `db_path = "sqlite://database/save.db"`
 
-此示例将会在 `database` 文件夹内创建 `save.db` 来存储用户数据。
+This example will create `save.db` in the `database` folder to store user data.
 
 ## 配置平台机器人
 
