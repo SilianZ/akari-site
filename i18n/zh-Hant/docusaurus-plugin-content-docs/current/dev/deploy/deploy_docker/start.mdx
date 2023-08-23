@@ -1,0 +1,22 @@
+---
+sidebar_position: 4
+description: 运行小可机器人
+---
+
+# 运行机器人
+
+配置完成后，使用 `docker run` 开启小可：
+
+```sh
+docker run \ 
+> -d \ 
+> -v /path/to/akari-bot/config/config.toml:/akari-bot/config/config.toml \ # 请将路径修改成对应的位置。
+> -p 11451:11451  \ # WebSocket 服务器的端口，请根据你的配置文件更改。
+> -p 3306:3306  \ # 用于对接 mysql 数据库。（可选）
+> --name=akari-bot  \ # 指定容器名称。
+> bakabaka9/akari-bot
+```
+
+如果终端中返回了 `long_tag` 类型的容器 `ID`, 证明容器已创建完毕，这时我们可以执行 `docker logs akari-bot` 查看小可的日志。
+
+如果没有任何报错，恭喜您！您的小可机器人已经搭建成功！
