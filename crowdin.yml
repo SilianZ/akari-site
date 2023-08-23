@@ -1,7 +1,11 @@
 files:
-  # JSON 翻译文件
-  - source: /i18n/en/**/*
-    translation: /i18n/%two_letters_code%/**/%original_file_name%
-  # Markdown 文档文件 
+  - source: /i18n/zh-Hans/**/*.json
+    translation: /i18n/%language%/**/%original_file_name%
   - source: /docs/**/*
-    translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%
+    ignore:
+      - '**.json'
+    translation: /i18n/%language%/docusaurus-plugin-content-docs/current/**/%original_file_name%
+  - source: /src/pages/**/*
+    ignore:
+      - '**.css'
+    translation: /i18n/%language%/docusaurus-plugin-content-pages/**/%original_file_name%
