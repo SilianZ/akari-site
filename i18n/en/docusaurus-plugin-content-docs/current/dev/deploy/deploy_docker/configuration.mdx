@@ -14,7 +14,7 @@ Go to the `config` folder, rename `config.toml.example` to `config.toml` and sta
 
 :::info
 
-Since the current configuration suffix is changed to `toml`, unlike `cfg`, please delete the empty fields in all configuration files after filling out the required fields otherwise the program cannot function properly.If you have an old `cfg` file, the robot will automatically help you convert to the `toml` format.若您拥有旧版 `cfg` 文件，机器人会自动帮您转换为 `toml` 格式。
+Since the current configuration suffix is changed to `toml`, unlike `cfg`, please delete the empty fields in all configuration files after filling out the required fields otherwise the program cannot function properly.If you have an old `cfg` file, the robot will automatically help you convert to the `toml` format.
 
 :::
 
@@ -40,11 +40,11 @@ Use `MySQL` as the primary database：
 
 :::info
 
-SQLite is the best option if you do not want to study how to install a database (or buy a provider's database service) to deploy a robot.The disadvantage is that there may be a lock table problem (very low probability of occurring) and a future shipping error (error deleting db and no backup) leading to the destruction of the original user's data.缺点是可能会遇到锁表问题（极小概率发生），以及将来运维失误（误删除 db 且没有备份）导致原先用户数据损毁的情况。
+SQLite is the best option if you do not want to study how to install a database (or buy a provider's database service) to deploy a bot.The disadvantage is that there may be a lock table problem (very low probability of occurring) and a future shipping error (error deleting db and no backup) leading to the destruction of the original user's data.
 
 :::
 
-If you choose SQLite, simply fill in the fields in the following format.No need to pay attention to issues such as database deployment:无需再关注数据库搭建等问题：
+If you choose SQLite, simply fill in the fields in the following format.No need to pay attention to issues such as database deployment:
 
 **Format**: `db_path = "sqlite://<Relative Path>/<Database Filename>.db"`
 
@@ -149,7 +149,7 @@ To achieve this, you need to create a bot on [Discord Developer Portal](https://
 
 We have used [AIOGram](https://github.com/aiogram/aiogram) here to call the Telegram API.
 
-To achieve this, you need to search for `@BotFather` in Telegram to create bots.
+To achieve this, you need to search for `@BotFather` in Telegram to create a bot.
 
 `tg_token=` - Fill in the robot Token you received.
 
@@ -175,7 +175,7 @@ Once you get an Access Token, don't log out from the client, it is recommended t
 
 :::
 
-对于 Element 及其分支（如 SchindiChat），Access Token 可以从“所有设置” -> “帮助及关于” -> “高级” -> “访问令牌”中获取。
+For Element and its branch (e. g. SchindiChat), Access Token can be obtained from "Settings" -> "Help" -> "Advanced" -> "Access Token".
 
 For Cinny, Access Token can be extracted from the browser's localStorage (reference [cinnyapp/cinny#938](https://github.com/cinnyapp/cinny/issues/938)).
 
@@ -185,7 +185,7 @@ For users who do not have a suitable client, you can also use the following comm
 curl -XPOST -d '{"type":"m.login.password", "user":"<user>", "password":"<password>"}' "https://<homeserver>/_matrix/client/r0/login"
 ```
 
-Currently, robots are not supported by end-to-end encryption (e2ee) because libolm needs to be installed manually.
+Currently, the bot is not supported by end-to-end encryption (e2ee) because libolm needs to be installed manually.
 
 ## Configure Other Features
 
@@ -317,24 +317,24 @@ The contents of this module are mainly used to monitor Minecraft Wiki registrati
 
 `qq_disable_temp_session = true` - Whether to disable temporary session functions for QQ platform.
 
-`qq_enable_listening_self_message = false` - 是否启用 QQ 平台的自我消息处理（可能有助于多设备下使用，但也可能会导致误触发导致消息陷入死循环状态）。
+`qq_enable_listening_self_message = false` - Whether to enable self-handling of the QQ platform (may help to use under multiple devices, but may also cause the error to trigger the message into a life-cycle state).
 
-`enable_dirty_check = true` - 是否启用屏蔽词检查。
+`enable_dirty_check = true` - Enable word censoring check.
 
-`enable_urlmanager = true` - 是否启用 URL 管理（替换外部链接，提示非官方页面）。若停用此功能将同时停用 `wiki_audit` 命令。
+`enable_urlmanager = true` - Enable URL management (replace external links, prompt to unofficial pages).Disabling this feature will also disable the `wiki_audit` command.
 
-`slower_schedule = false` - 部分计划任务模块使用更长的时间间隔执行，可能有助于网络较差环境的优化。
+`slower_schedule = false` - Some scheduled task modules are executed using longer intervals, which may help to optimize the network environment.
 
-`enable_tos = false` - 是否启用内置的违反服务条款的检查。
+`enable_tos = false` - Enable built-in check for violation of the terms of service.
 
-`enable_analytics = true` - 是否启用内置的 `analytics` 命令，用于统计命令使用次数。
+`enable_analytics = true` - Whether to enable the built-in `analytics` command for counting how many times statistical commands are used.
 
-`enable_eval = true` - 是否启用内置的 `eval` 命令。
+`enable_eval = true` - Whether the built-in `eval` command is enabled.
 
-`allow_request_private_ip = true` - 是否允许机器人请求私有 IP 地址。
+`allow_request_private_ip = true` - Allow the bot to request private IP addresses.
 
-### 自定义确认词及命令前缀
+### Custom confirmation word and command prefix
 
-您可以通过编辑配置文件中的 `confirm_command` 来添加（或删除）机器人在部分场景下询问用户是否继续的确认词，编辑 `command_prefix` 来增加（或删除）可使用的默认命令前缀。
+You can add (or delete) the default prefix that you can use by editing the `confirm_command` in the configuration file to add (or delete) the default prefix that the bot will ask the user to continue in some scenarios.
 
-`command_prefix` 首位将被用作帮助文档中默认展示的前缀。
+The first prefix of `command_prefix` will be used as a default prefix in the help document.
