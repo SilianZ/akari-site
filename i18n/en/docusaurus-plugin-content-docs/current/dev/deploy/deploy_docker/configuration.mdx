@@ -123,7 +123,7 @@ If you want to use Docker to deploy go-cqhttp, go to [Using Docker](https://docs
 
     `qq_host = "127.0.0.1:11451"` - A Websocket server will be opened in completed IP addresses and ports for go-cqhttp reverse connections.
 
-    `qq_account = 2314163511` - Fill in the bot's QQ id.
+    `qq_account = 2314163511` - Fill in the bot's QQ Account.
 
     :::info
 
@@ -278,22 +278,22 @@ The `dice` module requires some additional parameters to work properly.
 
 `dice_roll_limit = 100` - Maximum number of times the dice is thrown.
 
-`dice_mod_max = 10000` - 投掷骰子的最大调节值。
+`dice_mod_max = 10000` - Maximum value for dice throwing.
 
-`dice_mod_min = -10000` - 投掷骰子的最小调节值。
+`dice_mod_min = -10000` - Minimum tuning value for dice throwing.
 
-`dice_output_cnt = 50` - 输出时的最大数据量，超过则无法正常显示。
+`dice_output_cnt = 50` - The maximum amount of data output, exceeding which cannot be displayed normally.
 
-`dice_detail_cnt= 5` - 多次投掷骰子的总数，超过则不再显示详细信息。
+`dice_detail_cnt=5` - The total number of dice rolled multiple times, exceeding which no longer displays detailed information.
 
-`dice_count_limit = 10` - 多项式最多的项数。
+`dice_count_limit = 10` - The maximum number of multiple items.
 
 #### maimai
 
-`maimai` 模块基于 [mai-bot](https://github.com/Diving-Fish/mai-bot) 修改而来。此模块需要额外的资源文件才可正常工作。
+The `maimai` module is based on [mai-bot](https://github.com/Diving-Fish/mai-bot).This module requires additional resource files to work properly.
 
-1.  下载 [资源文件](https://www.diving-fish.com/maibot/static.zip) ，并于 `assets` 目录下创建一个 `maimai` 文件夹。
-2.  解压资源文件，形成以下目录结构：
+1.  Download [source files](https://www.diving-fish.com/maibot/static.zip), and create a `maimai` folder in the `assets` folder.
+2.  Unzip the resource files to form the following directory structure:
 
     ```angular2html
     assets
@@ -309,13 +309,13 @@ The `dice` module requires some additional parameters to work properly.
 
 #### secret
 
-此模块下的内容主要用于监测 Minecraft Wiki 注册日志和滥用日志，如无需要可直接删除此模块的文件夹。
+The contents of this module are mainly used to monitor Minecraft Wiki registration and abuse logs and to remove folders directly from this module if not required.
 
-### 其他功能
+### Other Features
 
-`base_superuser =` - 设置机器人主超级用户。可用格式为 `QQ|<QQ号>`、`Discord|Client|<ClientID>`、`Telegram|Client|<ClientID>`、`Kook|User|<UserID>`，可在机器人开启后使用 `~whoami` 命令来查看自身的 ID，机器人启动后将自动标记对象为超级用户。
+`base_superuser =` - Set bot main superuser.Available formats are `QQ|<QQ Account>`, `Discord|Client|<ClientID>`, `Telegram|Client|<ClientID>`, `Kook|User|<UserID>`. You can use the '~whoami' command to view your ID after the bot is started, and the object will be automatically marked as a super user after the bot is started.
 
-`qq_disable_temp_session = true` - 是否禁用 QQ 平台的临时会话功能。
+`qq_disable_temp_session = true` - Whether to disable temporary session functions for QQ platform.
 
 `qq_enable_listening_self_message = false` - 是否启用 QQ 平台的自我消息处理（可能有助于多设备下使用，但也可能会导致误触发导致消息陷入死循环状态）。
 
