@@ -14,81 +14,81 @@ Go to the `config` folder, rename `config.toml.example` to `config.toml` and sta
 
 :::info
 
-由于目前配置文件后缀改为 `toml`，与 `cfg` 不同的是，请在填写好必要的字段后，请删除所有配置文件中留空的字段，否则程序无法正常运行。若您拥有旧版 `cfg` 文件，机器人会自动帮您转换为 `toml` 格式。
+Since the current configuration suffix is changed to `toml`, unlike `cfg`, please delete the empty fields in all configuration files after filling out the required fields otherwise the program cannot function properly.If you have an old `cfg` file, the robot will automatically help you convert to the `toml` format.若您拥有旧版 `cfg` 文件，机器人会自动帮您转换为 `toml` 格式。
 
 :::
 
-## 配置数据库
+## Database Configuration
 
 :::info
 
-机器人需要一个数据库以用于存储用户数据，对于第一次的简单部署，我们只需要关注数据库字段即可，其余字段可留空。
+The bot needs a database to store user data. For the first simple deployment, we need only focus on database fields and the rest can be left blank.
 
 :::
 
-此字段需要填写一个可被 `sqlalchemy` 支持的数据库链接，以下为推荐方案，请任选一个：
+This field requires a database link supported by `sqlalchemy`. Below are some recommended options. Please choose one：
 
 ### MySQL
 
-若使用 `MySQL` 作为主要使用数据库：
+Use `MySQL` as the primary database：
 
-**格式**：`db_path = "mysql+pymysql://<数据库用户名>:<数据库用户密码>@<数据库地址>"`
+**Format**: `db_path = "mysql+pymysql:/<Database Username>:<Database Userpassword>@<Database Address>"`
 
-**实际示例**：`db_path = "mysql+pymysql://bot:123456@example.com/bot_prod"`
+**Practical example**: `db_path = "mysql+pymysql:/bot:123456@example.com/bot_prod"`
 
 ### SQLite
 
 :::info
 
-如果您不希望为了部署一个机器人而去研究如何安装数据库（或购买某服务商的数据库服务）的话，使用 SQLite 就是最佳选择。缺点是可能会遇到锁表问题（极小概率发生），以及将来运维失误（误删除 db 且没有备份）导致原先用户数据损毁的情况。
+SQLite is the best option if you do not want to study how to install a database (or buy a provider's database service) to deploy a robot.The disadvantage is that there may be a lock table problem (very low probability of occurring) and a future shipping error (error deleting db and no backup) leading to the destruction of the original user's data.缺点是可能会遇到锁表问题（极小概率发生），以及将来运维失误（误删除 db 且没有备份）导致原先用户数据损毁的情况。
 
 :::
 
-如果您选择 SQLite，只需要将字段内容填写为以下格式即可。无需再关注数据库搭建等问题：
+If you choose SQLite, simply fill in the fields in the following format.No need to pay attention to issues such as database deployment:无需再关注数据库搭建等问题：
 
-**格式**：`db_path = "sqlite:///<相对路径>/<数据库文件名>.db"`
+**Format**: `db_path = "sqlite://<Relative Path>/<Database Filename>.db"`
 
-**实际示例**：`db_path = "sqlite:///database/save.db"`
+**Practical example**: `db_path = "sqlite://database/save.db"`
 
-此示例将会在 `database` 文件夹内创建 `save.db` 来存储用户数据。
+This example will create `save.db` in the `database` folder to store user data.
 
-## 配置平台机器人
+## Platform Bots Configuration
 
 ### QQ
 
-我们在这里使用了 [aiocqhttp](https://github.com/nonebot/aiocqhttp) 来对接 [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) 客户端。
+We have used [aiocqhttp](https://github.com/nonebot/aiocqhttp) here to place [go-cqhttp](https://github.com/Mrs4s/go-cqhttp).
 
-如果您想使用 Docker 部署 go-cqhttp，请转到[使用 Docker](https://docs.go-cqhttp.org/guide/docker.html)。
+If you want to use Docker to deploy go-cqhttp, go to [Using Docker](https://docs.go-cqhttp.org/guide/docker.html) (The page is in Chinese. You can translate it with translate apps).
 
-1.  从 go-cqhttp 的官方仓库上下载最新的 [Release](https://github.com/Mrs4s/go-cqhttp/releases/latest)。
+1.  Download the latest [Release](https://github.com/Mrs4s/go-cqhttp/releases/latest) from the official repository of go-cqhttp.
 
-    | 系统类型           | 可执行文件                         | 压缩文件                            |
-    | -------------- | ----------------------------- | ------------------------------- |
-    | Intel 版 Macos  | Not available                 | `go-cqhttp_darwin_amd64.tar.gz` |
-    | M1 版 Macos     | Not available                 | `go-cqhttp_darwin_arm64.tar.gz` |
-    | 32 位 Linux     | Not available                 | `go-cqhttp_linux_386.tar.gz`    |
-    | 64 位 Linux     | Not available                 | `go-cqhttp_linux_amd64.tar.gz`  |
-    | arm64 Linux    | Not available                 | `go-cqhttp_linux_arm64.tar.gz`  |
-    | armv7 Linux    | Not available                 | `go-cqhttp_linux_armv7.tar.gz`  |
-    | 32 位 Windows   | `go-cqhttp_windows_386.exe`   | `go-cqhttp_windows_386.zip`     |
-    | 64 位 Windows   | `go-cqhttp_windows_amd64.exe` | `go-cqhttp_windows_amd64.zip`   |
-    | arm64 Windows  | `go-cqhttp_windows_arm64.exe` | `go-cqhttp_windows_arm64.zip`   |
-    | armv7 Windows  | `go-cqhttp_windows_armv7.exe` | `go-cqhttp_windows_armv7.zip`   |
+    | System type       | Executable files                    | Zip file                        |
+    | ----------------- | ----------------------------------- | ------------------------------- |
+    | Intel Macos       | Not available                       | `go-cqhttp_darwin_amd64.tar.gz` |
+    | M1 Macos          | Not available                       | `go-cqhttp_darwin_arm64.tar.gz` |
+    | 32-bit Linux      | Not available                       | `go-cqhttp_linux_386.tar.gz`    |
+    | 64-bit Linux      | Not available                       | `go-cqhttp_linux_amd64.tar.gz`  |
+    | arm64 Linux       | Not available                       | `go-cqhttp_linux_arm64.tar.gz`  |
+    | armv7 Linux       | Not available                       | `go-cqhttp_linux_armv7.tar.gz`  |
+    | 32-bit Windows    | `go-cqhttp_windows_386.exe`         | `go-cqhttp_windows_386.zip`     |
+    | 64-bit Windows    | `go-cqhttp_windows_amd64.exe`       | `go-cqhttp_windows_amd64.zip`   |
+    | arm64 Windows     | `go-cqhttp_windows_arm64.exe`       | `go-cqhttp_windows_arm64.zip`   |
+    | armv7 Windows     | `go-cqhttp_windows_armv7.exe`       | `go-cqhttp_windows_armv7.zip`   |
 
-2.  将下载好的文件解压到一个已经预先准备好的文件夹中。
+2.  Unpack downloaded files into a pre-prepared folder.
 
-3.  运行程序。
+3.  Run the program.
 
-4.  此时将提示
+4.  Notify at this time
 
     ```
     [WARNING]: 尝试加载配置文件 config.yml 失败: 文件不存在
     [INFO]: 默认配置文件已生成,请编辑 config.yml 后重启程序.
     ```
 
-    程序将会自动在存放 [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) 文件夹的目录下生成一个默认配置文件 `config.yml`。
+    The program will automatically generate a default configuration `config.yml` in the directory of the folder with [go-cqhttp](https://github.com/Mrs4s/go-cqhttp).
 
-    接下来，请配置 [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) 的 `config.yml` 文件中的对应的连接方式和签名服务器。
+    Next, please configure the corresponding connection and signature server in the `config.yml` file of [go-cqhttp](https://github.com/Mrs4s/go-cqhttp).
 
     ```yml title="go-cqhttp/config.yml"
     account:
@@ -127,13 +127,14 @@ Go to the `config` folder, rename `config.toml.example` to `config.toml` and sta
 
     :::info
 
+    :::info
     由于最近 QQ 封控机制加强，go-cqhttp 若出现 Code45 报错情况，请配置签名服务器，请注意：目前 go-cqhttp 暂不支持最新版本的签名服务器。
 
     :::
 
     :::info
 
-    若在配置中遇到问题，请参阅 [go-cqhttp官方文档](https://docs.go-cqhttp.org/)。
+    Configure AkariBot
 
     :::
 
@@ -240,6 +241,7 @@ QQ频道消息的处理仍然处于测试阶段，由于 go-cqhttp 对频道消�
 
     :::info
 
+    :::info
     在填写好配置文件之后，请删除所有配置文件中的注释，否则程序无法正确读取配置。
 
     :::
