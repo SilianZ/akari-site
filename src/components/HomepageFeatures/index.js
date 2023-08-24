@@ -1,30 +1,30 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
-
+import Translate, {translate} from '@docusaurus/Translate';
 const FeatureList = [
   {
-    title: '快速上手',
+    title: translate({message:'快速上手', id: 'homepage.feature.title.1'}),
     description: (
-      <>
+      <Translate id='homepage.feature.desc.1'>
         为了更好地部署机器人，我们提供了 Docker 镜像和 Poetry 包管理器。
-      </>
+      </Translate>
     ),
   },
   {
-    title: '多平台消息支持',
+    title: translate({message:'多平台消息支持', id: 'homepage.feature.title.2'}),
     description: (
-      <>
+      <Translate id='homepage.feature.desc.2'>
         通过开发人员的共同努力，我们现在已经支持高达5个平台的消息类型。
-      </>
+      </Translate>
     ),
   },
   {
-    title: '模块拓展支持',
+    title: translate({message:'模块拓展支持', id: 'homepage.feature.title.3'}),
     description: (
-      <>
+      <Translate id='homepage.feature.desc.3'>
         通过我们的教程文档，您可以在短时间内编写出一个属于您自己的模块！
-      </>
+      </Translate>
     ),
   },
 ];
