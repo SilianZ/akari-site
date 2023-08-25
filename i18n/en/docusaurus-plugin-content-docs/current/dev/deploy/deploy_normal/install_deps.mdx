@@ -79,12 +79,12 @@ pip install --no-deps -r requirements.txt
 </TabItem>
 <TabItem value="linux" label="Linux">
 <Tabs>
-<TabItem value="c1" label="使用 Poetry" default>
+<TabItem value="c1" label="Using Poetry" default>
 ```
 
-如果您已经安装了 [Poetry](https://python-poetry.org/)，您可以跳过以下安装步骤。
+If you have installed [Poetry](https://python-poetry.org/), you can skip the following installation steps.
 
-1.  打开终端，并执行以下指令来安装 Poetry：
+1.  Open the terminal, and execute the following commands to install Poetry:
 
     ```sh
     curl -sSL "https://install.python-poetry.org" | python3 -
@@ -92,11 +92,11 @@ pip install --no-deps -r requirements.txt
 
     :::caution
 
-    安装 Poetry 前请**务必**检查系统环境变量中是否存在多个 Python Executable Path（Python 可执行路径）并及时清除，否则安装 Poetry 后可能会出现 Python 环境混乱导致无法正常加载依赖的情况。
+    Before installing Poetry, **Make sure** that check that multiple Python Executable Paths exist in System Environment Variables and clear them in time. Otherwise, the installation of Poetry may cause a Python environment to disrupt the load dependency.
 
     :::
 
-2.  安装完成后，请将以下目录添加到 PATH 环境变量，方便调用：
+2.  After the installation is complete, add the following directory to the PATH environment variable and make it easier to call:
 
     ```
     $HOME/.local/bin
@@ -104,19 +104,19 @@ pip install --no-deps -r requirements.txt
 
     :::info
 
-    请善用搜索引擎寻找更改 PATH 的方法。
+    Please use the search engines to find ways to change PATH.
 
     :::
 
     :::info
 
-    在添加到 PATH 之后，您通常需要重启终端，甚至整个电脑才能使其生效。
+    After adding to PATH, you usually need to reboot the terminal, or even restart the computer.
 
-    您可以通过 `poetry --version` 确认安装是否有效。
+    You can confirm whether the installation is valid via `poetry --version`.
 
     :::
 
-3.  在安装完 Poetry 后，请执行以下指令：
+3.  After installing Poetry, please execute the following commands:
 
     ```sh
     poetry install
@@ -124,10 +124,10 @@ pip install --no-deps -r requirements.txt
 
 ```mdx-code-block
 </TabItem>
-<TabItem value="c2" label="使用 pip">
+<TabItem value="c2" label="Using pip">
 ```
 
-如果您不想使用 Poetry，您可以使用 pip 来安装依赖：
+If you don't want to use Poetry, you can use pip to install the dependencies:
 
 ```sh
 pip install --no-deps -r requirements.txt
