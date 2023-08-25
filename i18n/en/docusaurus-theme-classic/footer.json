@@ -1,22 +1,22 @@
 {
   "link.title.联系我们": {
-    "message": "联系我们",
+    "message": "Contact us",
     "description": "The title of the footer links column with title=联系我们 in the footer"
   },
   "link.title.更多": {
-    "message": "更多",
+    "message": "More",
     "description": "The title of the footer links column with title=更多 in the footer"
   },
   "link.item.label.哔哩哔哩": {
-    "message": "哔哩哔哩",
+    "message": "Bilibili",
     "description": "The label of footer link with label=哔哩哔哩 linking to https://space.bilibili.com/406275313"
   },
   "link.item.label.官网": {
-    "message": "官网",
+    "message": "Official website",
     "description": "The label of footer link with label=官网 linking to https://teahouse.team/"
   },
   "link.item.label.邮件": {
-    "message": "邮件",
+    "message": "Mail",
     "description": "The label of footer link with label=邮件 linking to mailto:admin@teahou.se"
   },
   "link.item.label.GitHub": {
@@ -24,7 +24,7 @@
     "description": "The label of footer link with label=GitHub linking to https://github.com/Teahouse-Studios/"
   },
   "copyright": {
-    "message": "版权所有 © 2023 AkariBot. 使用 Docusaurus 构建. 该文档改编自小可 · Wiki",
+    "message": "Copyright ©️ 2023 Akaribot. Build with Docusaurus. The document is adapted from AkariBot Wiki",
     "description": "The footer copyright"
   }
 }
