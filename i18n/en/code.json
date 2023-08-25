@@ -1,21 +1,21 @@
 {
   "homepage.feature.title.1": {
-    "message": "快速上手"
+    "message": "Getting Started"
   },
   "homepage.feature.desc.1": {
-    "message": "为了更好地部署机器人，我们提供了 Docker 镜像和 Poetry 包管理器。"
+    "message": "To better deploy the bot, we provide Docker image and Poetry Pack Manager."
   },
   "homepage.feature.title.2": {
-    "message": "多平台消息支持"
+    "message": "Multi-platform message support"
   },
   "homepage.feature.desc.2": {
-    "message": "通过开发人员的共同努力，我们现在已经支持高达5个平台的消息类型。"
+    "message": "Through the joint efforts of the developers, we now support the message type of up to five platforms."
   },
   "homepage.feature.title.3": {
-    "message": "模块拓展支持"
+    "message": "Module extension support"
   },
   "homepage.feature.desc.3": {
-    "message": "通过我们的教程文档，您可以在短时间内编写出一个属于您自己的模块！"
+    "message": "With our help document, you can write a module that belongs to you in a short time!"
   },
   "theme.ErrorPageContent.title": {
     "message": "页面已崩溃。",
