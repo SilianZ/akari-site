@@ -4,19 +4,19 @@
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.开发": {
-    "message": "开发",
+    "message": "Development",
     "description": "The label for category 开发 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.自搭建": {
-    "message": "自搭建",
+    "message": "Deployment",
     "description": "The label for category 自搭建 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.常规自搭建": {
-    "message": "常规自搭建",
+    "message": "Normal Deployment",
     "description": "The label for category 常规自搭建 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.使用 Docker 自搭建": {
-    "message": "使用 Docker 自搭建",
+    "message": "Deploy with Docker",
     "description": "The label for category 使用 Docker 自搭建 in sidebar tutorialSidebar"
   }
 }
