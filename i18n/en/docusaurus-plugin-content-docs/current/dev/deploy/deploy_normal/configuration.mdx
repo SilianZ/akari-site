@@ -1,6 +1,6 @@
 ---
-sidebar_position: 4
-description: 配置小可
+sidebar_position: 5
+description: Configure AkariBot
 ---
 
 import Tabs from '@theme/Tabs';
@@ -38,11 +38,11 @@ Use `MySQL` as the primary database：
 
 :::info
 
-SQLite is the best option if you do not want to study how to install a database (or buy a provider's database service) to deploy a bot.The disadvantage is that there may be a lock table problem (very low probability of occurring) and a future shipping error (error deleting db and no backup) leading to the destruction of the original user's data.缺点是可能会遇到锁表问题（极小概率发生），以及将来运维失误（误删除 db 且没有备份）导致原先用户数据损毁的情况。
+SQLite is the best option if you do not want to study how to install a database (or buy a provider's database service) to deploy a bot.The disadvantage is that there may be a lock table problem (very low probability of occurring) and a future shipping error (error deleting db and no backup) leading to the destruction of the original user's data.
 
 :::
 
-If you choose SQLite, simply fill in the fields in the following format.No need to pay attention to issues such as database deployment:无需再关注数据库搭建等问题：
+If you choose SQLite, simply fill in the fields in the following format.No need to pay attention to issues such as database deployment:
 
 **Practical example**: `db_path = "sqlite://database/save.db"`
 
