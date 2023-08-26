@@ -94,31 +94,31 @@ If you want to use Docker to deploy go-cqhttp, go to [Using Docker](https://docs
     </Tabs>
     ```
 
-3.  运行 go-cqhttp：
+3.  Run go-cqhttp:
 
     ```mdx-code-block
     <Tabs groupId="operating-systems">
     <TabItem value="win" label="Windows">
     ```
 
-    1.  双击 `go-cqhttp_*.exe`，根据提示生成运行脚本。
-    2.  双击运行脚本。
+    1.  Double click 'go-cqhttp\_\*.exe ', and generate and run scripts according to the prompts.
+    2.  Double-click to run the script.
 
     ```mdx-code-block
     </TabItem>
     <TabItem value="linux" label="Linux">
     ```
 
-    1.  通过 SSH 连接到服务器。
-    2.  `cd` 到解压目录。
-    3.  输入 `./go-cqhttp`，`Enter` 运行。
+    1.  Connect to the server via SSH.
+    2.  `cd` to extract directory.
+    3.  Enter the `./go-cqhttp`, and `Enter` to run.
 
     ```mdx-code-block
     </TabItem>
     </Tabs>
     ```
 
-4.  此时将提示：
+4.  Notify at this time: 
 
     ```
     [WARNING]: 尝试加载配置文件 config.yml 失败: 文件不存在
@@ -228,7 +228,7 @@ Currently, the bot is not supported by end-to-end encryption (e2ee) because libo
 
 ## Configure Other Features
 
-由于小可有较多功能，部分功能需要进一步的配置才能使用。
+As AkariBot has many functions, some of them require further configuration before they can be used.
 
 Some fields may not have been pre-checked in `config.toml.example`. You can add them manually.
 
@@ -236,7 +236,7 @@ Some fields may not have been pre-checked in `config.toml.example`. You can add 
 
 AkariBot is built-in to [Aliyun Content Security Service](https://www.aliyun.com/product/lvwang), which can be used to check the safety of sending text below the QQ and Kook platform for robot account security.
 
-如有需求，请前往阿里云进行开通并获取 AccessKeyID 及 AccessKeySecret。未填写字段将不会使用屏蔽词服务。
+If required, go to Aliyun to open and get AccessKeyID and Access KeySecret.The unfilled field will not use the word censoring service.
 
 `check_accessKeySecret =` - Fill in AccessKeySecret.
 
@@ -262,7 +262,7 @@ For Code45 or other login issues that arise when go-cqhttp is logged in using th
 
 ### Webrender
 
-此为小可的外置服务。主要用于处理 html 渲染图片及部分功能的访问代理。
+This is an AkariBot external service.Access agents primarily handle html rendering images and some features.
 
 #### Deployment
 
@@ -281,7 +281,7 @@ For Code45 or other login issues that arise when go-cqhttp is logged in using th
     在填写好配置文件之后，请删除所有配置文件中的注释，否则程序无法正确读取配置。
     :::
 
-4.  In the terminal, use `node ./src/index.js` to run the service.There will be no content output.服务无任何内容输出。
+4.  In the terminal, use `node ./src/index.js` to run the service.There will be no content output.
 
 You can also deploy this service using the cloud service provider Serverless service.
 
@@ -289,7 +289,7 @@ You can also deploy this service using the cloud service provider Serverless ser
 
 `web_render =` - Webrender address (IP or domain name) and port.
 
-`web_render_local =` - Local Webrender address.(can be the same parameter as previous field)（可与上一字段同一参数）
+`web_render_local =` - Local Webrender address.(can be the same parameter as previous field)
 
 **Example**
 
@@ -350,7 +350,7 @@ The contents of this module are mainly used to monitor Minecraft Wiki registrati
 
 ### Other Features
 
-`base_superuser =` - 设置机器人主超级用户。`base_superuser =` - Set bot main superuser.Available formats are `QQ|<QQ Account>`, `Discord|Client|<ClientID>`, `Telegram|Client|<ClientID>`, `Kook|User|<UserID>`. You can use the '~whoami' command to view your ID after the bot is started, and the object will be automatically marked as a super user after the bot is started.
+`base_superuser =` - Set bot main superuser.Available formats are `QQ|<QQ Account>`, `Discord|Client|<ClientID>`, `Telegram|Client|<ClientID>`, `Kook|User|<UserID>`. You can use the '~whoami' command to view your ID after the bot is started, and the object will be automatically marked as a super user after the bot is started.
 
 `qq_disable_temp_session = true` - Whether to disable temporary session functions for QQ platform.
 
@@ -358,7 +358,7 @@ The contents of this module are mainly used to monitor Minecraft Wiki registrati
 
 `enable_dirty_check = true` - Enable word censoring check.
 
-`enable_urlmanager = true` - Enable URL management (replace external links, prompt to unofficial pages).Disabling this feature will also disable the `wiki_audit` command.若停用此功能将同时停用 `wiki_audit` 命令。
+`enable_urlmanager = true` - Enable URL management (replace external links, prompt to unofficial pages).Disabling this feature will also disable the `wiki_audit` command.
 
 `slower_schedule = false` - Some scheduled task modules are executed using longer intervals, which may help to optimize the network environment.
 
