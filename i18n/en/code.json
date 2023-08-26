@@ -1,6 +1,24 @@
 {
+  "homepage.feature.title.1": {
+    "message": "Getting Started"
+  },
+  "homepage.feature.desc.1": {
+    "message": "To better deploy the bot, we provide Docker image and Poetry Pack Manager."
+  },
+  "homepage.feature.title.2": {
+    "message": "Multi-platform message support"
+  },
+  "homepage.feature.desc.2": {
+    "message": "Through the joint efforts of the developers, we now support the message type of up to five platforms."
+  },
+  "homepage.feature.title.3": {
+    "message": "Module extension support"
+  },
+  "homepage.feature.desc.3": {
+    "message": "With our help document, you can write a module that belongs to you in a short time!"
+  },
   "theme.ErrorPageContent.title": {
-    "message": "This page crashed.",
+    "message": "The page crashed.",
     "description": "The title of the fallback page when the page crashed"
   },
   "theme.NotFound.title": {
@@ -123,6 +141,9 @@
     "message": "{nDocsTagged} with \"{tagName}\"",
     "description": "The title of the page for a docs tag"
   },
+  "theme.docs.versionBadge.label": {
+    "message": "Version: {versionLabel}"
+  },
   "theme.docs.versions.unreleasedVersionLabel": {
     "message": "This is unreleased documentation for {siteTitle} {versionLabel} version.",
     "description": "The label used to tell the user that he's browsing an unreleased doc version"
@@ -138,9 +159,6 @@
   "theme.docs.versions.latestVersionLinkLabel": {
     "message": "latest version",
     "description": "The label used for the latest version suggestion link label"
-  },
-  "theme.docs.versionBadge.label": {
-    "message": "Version: {versionLabel}"
   },
   "theme.common.editThisPage": {
     "message": "Edit this page",

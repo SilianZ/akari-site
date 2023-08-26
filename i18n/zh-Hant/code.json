@@ -1,4 +1,22 @@
 {
+  "homepage.feature.title.1": {
+    "message": "快速上手"
+  },
+  "homepage.feature.desc.1": {
+    "message": "为了更好地部署机器人，我们提供了 Docker 镜像和 Poetry 包管理器。"
+  },
+  "homepage.feature.title.2": {
+    "message": "多平台消息支持"
+  },
+  "homepage.feature.desc.2": {
+    "message": "通过开发人员的共同努力，我们现在已经支持高达5个平台的消息类型。"
+  },
+  "homepage.feature.title.3": {
+    "message": "模块拓展支持"
+  },
+  "homepage.feature.desc.3": {
+    "message": "通过我们的教程文档，您可以在短时间内编写出一个属于您自己的模块！"
+  },
   "theme.ErrorPageContent.title": {
     "message": "页面已崩溃。",
     "description": "The title of the fallback page when the page crashed"
@@ -123,6 +141,9 @@
     "message": "{nDocsTagged}「{tagName}」",
     "description": "The title of the page for a docs tag"
   },
+  "theme.docs.versionBadge.label": {
+    "message": "版本：{versionLabel}"
+  },
   "theme.docs.versions.unreleasedVersionLabel": {
     "message": "此为 {siteTitle} {versionLabel} 版尚未发行的文档。",
     "description": "The label used to tell the user that he's browsing an unreleased doc version"
@@ -138,9 +159,6 @@
   "theme.docs.versions.latestVersionLinkLabel": {
     "message": "最新版本",
     "description": "The label used for the latest version suggestion link label"
-  },
-  "theme.docs.versionBadge.label": {
-    "message": "版本：{versionLabel}"
   },
   "theme.common.editThisPage": {
     "message": "编辑此页",
