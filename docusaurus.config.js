@@ -78,6 +78,12 @@ const config = {
                     },
                 ],
             },
+            algolia: {
+                appId: 'H5CUWFTRHE',
+                apiKey: '1ad461050e83cfe36e9667bf07114615',
+                indexName: 'akari-bot',
+                contextualSearch: true,
+            },            
             footer: {
                 style: 'dark',
                 links: [
