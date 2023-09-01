@@ -3,16 +3,23 @@ sidebar_position: 3
 description: Pulling the image from Docker Hub
 ---
 
-# Pull Image
+import Asciinema from '@site/src/components/Asciinema';
 
-Enter the command below to pull the image.
+# 拉取镜像
+
+输入下面的指令拉取镜像。
 
 :::info
 
-Currently, the framework supported by AkariBot's Docker image is only arm64 and amd64.
+目前小可的 Docker 镜像支持的架构仅为 arm64 和 amd64。
 
 :::
 
 ```sh
 docker pull bakabaka9/akari-bot:latest
 ```
+
+<Asciinema
+url="https://asciinema.org/a/605776.cast"
+options={{ theme: "monokai", poster: "npt:21.5", cols: 100, rows: 30, idleTimeLimit: 0.1 }}
+/>
