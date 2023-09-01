@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-description: Configure AkariBot
+description: 配置小可
 ---
 
 import Tabs from '@theme/Tabs';
@@ -12,7 +12,7 @@ Go to the `config` folder, rename `config.toml.example` to `config.toml` and sta
 
 :::info
 
-Since the current configuration suffix is changed to `toml`, unlike `cfg`, please delete the empty fields in all configuration files after filling out the required fields otherwise the program cannot function properly.If you have an old `cfg` file, the robot will automatically help you convert it to the `toml` format.
+由于目前配置文件后缀改为 `toml`，与 `cfg` 不同的是，请在填写好必要的字段后，请删除所有配置文件中留空的字段，否则程序无法正常运行。Since the current configuration suffix is changed to `toml`, unlike `cfg`, please delete the empty fields in all configuration files after filling out the required fields otherwise the program cannot function properly.If you have an old `cfg` file, the robot will automatically help you convert to the `toml` format.若您拥有旧版 `cfg` 文件，机器人会自动帮您转换为 `toml` 格式。
 
 :::
 
@@ -38,11 +38,11 @@ Use `MySQL` as the primary database：
 
 :::info
 
-SQLite is the best option if you do not want to study how to install a database (or buy a provider's database service) to deploy a bot.The disadvantage is that there may be a lock table problem (very low probability of occurring) and a future shipping error (error deleting db and no backup) leading to the destruction of the original user's data.
+SQLite is the best option if you do not want to study how to install a database (or buy a provider's database service) to deploy a bot.The disadvantage is that there may be a lock table problem (very low probability of occurring) and a future shipping error (error deleting db and no backup) leading to the destruction of the original user's data.缺点是可能会遇到锁表问题（极小概率发生），以及将来运维失误（误删除 db 且没有备份）导致原先用户数据损毁的情况。
 
 :::
 
-If you choose SQLite, simply fill in the fields in the following format.No need to pay attention to issues such as database deployment:
+If you choose SQLite, simply fill in the fields in the following format.No need to pay attention to issues such as database deployment:无需再关注数据库搭建等问题：
 
 **Practical example**: `db_path = "sqlite://database/save.db"`
 
@@ -80,7 +80,7 @@ If you want to use Docker to deploy go-cqhttp, go to [Using Docker](https://docs
     <TabItem value="win" label="Windows">
     ```
 
-    Please use a familiar decompression software to unpack yourself.
+    请使用自己熟悉的解压软件自行解压。
 
     ```mdx-code-block
     </TabItem>
@@ -118,7 +118,7 @@ If you want to use Docker to deploy go-cqhttp, go to [Using Docker](https://docs
     </Tabs>
     ```
 
-4.  Notify at this time: 
+4.  Notify at this time:
 
     ```
     [WARNING]: 尝试加载配置文件 config.yml 失败: 文件不存在
@@ -194,7 +194,7 @@ To achieve this, you need to search for `@BotFather` in Telegram to create a bot
 
 ### Kook
 
-`kook_token=` - Fill in the robot token you received.
+您需要在 [Kook 开发者平台](https://developer.kookapp.cn/)创建一个机器人并获取 Token。
 
 You need to create a bot on the [Kook Developer Portal](https://developer.keokapp.cn/) and get token.
 
@@ -228,7 +228,7 @@ Currently, the bot is not supported by end-to-end encryption (e2ee) because libo
 
 ## Configure Other Features
 
-As AkariBot has many functions, some of them require further configuration before they can be used.
+由于小可有较多功能，部分功能需要进一步的配置才能使用。
 
 Some fields may not have been pre-checked in `config.toml.example`. You can add them manually.
 
@@ -236,7 +236,7 @@ Some fields may not have been pre-checked in `config.toml.example`. You can add 
 
 AkariBot is built-in to [Aliyun Content Security Service](https://www.aliyun.com/product/lvwang), which can be used to check the safety of sending text below the QQ and Kook platform for robot account security.
 
-If required, go to Aliyun to open and get AccessKeyID and Access KeySecret.The unfilled field will not use the word censoring service.
+如有需求，请前往阿里云进行开通并获取 AccessKeyID 及 AccessKeySecret。未填写字段将不会使用屏蔽词服务。
 
 `check_accessKeySecret =` - Fill in AccessKeySecret.
 
@@ -262,7 +262,7 @@ For Code45 or other login issues that arise when go-cqhttp is logged in using th
 
 ### Webrender
 
-This is an AkariBot external service.Access agents primarily handle html rendering images and some features.
+此为小可的外置服务。主要用于处理 html 渲染图片及部分功能的访问代理。
 
 #### Deployment
 
@@ -279,11 +279,11 @@ This is an AkariBot external service.Access agents primarily handle html renderi
 
     :::info
 
-    After completing the configuration file, delete all the annotations in the configuration files, otherwise the configuration could not be read correctly.
+    在填写好配置文件之后，请删除所有配置文件中的注释，否则程序无法正确读取配置。
 
     :::
 
-4.  In the terminal, use `node ./src/index.js` to run the service.There will be no content output.
+4.  In the terminal, use `node ./src/index.js` to run the service.There will be no content output.服务无任何内容输出。
 
 You can also deploy this service using the cloud service provider Serverless service.
 
@@ -291,7 +291,7 @@ You can also deploy this service using the cloud service provider Serverless ser
 
 `web_render =` - Webrender address (IP or domain name) and port.
 
-`web_render_local =` - Local Webrender address.(can be the same parameter as previous field)
+`web_render_local =` - Local Webrender address.(can be the same parameter as previous field)（可与上一字段同一参数）
 
 **Example**
 
@@ -313,7 +313,7 @@ The `coin` module requires some additional parameters to work properly.
 
 The `dice` module requires some additional parameters to work properly.
 
-`dice_mod_min = -10000` - Minimum tuning value for dice throwing.
+`dice_limit = 10000` - 一次可投掷的骰子最大个数。
 
 `dice_limit = 10000` - Maximum number of dice that can be thrown at once.
 
@@ -329,7 +329,7 @@ The `dice` module requires some additional parameters to work properly.
 
 #### maimai
 
-The `maimai` module is based on [mai-bot](https://github.com/Diving-Fish/mai-bot).This module requires additional resource files to work properly.This module requires additional resource files to work properly.
+The `maimai` module is based on [mai-bot](https://github.com/Diving-Fish/mai-bot).This module requires additional resource files to work properly.此模块需要额外的资源文件才可正常工作。此模块需要额外的资源文件才可正常工作。
 
 1.  Download [source files](https://www.diving-fish.com/maibot/static.zip), and create a `maimai` folder in the `assets` folder.
 2.  Unzip the resource files to form the following directory structure:
@@ -352,7 +352,7 @@ The contents of this module are mainly used to monitor Minecraft Wiki registrati
 
 ### Other Features
 
-`base_superuser =` - Set bot main superuser.Available formats are `QQ|<QQ Account>`, `Discord|Client|<ClientID>`, `Telegram|Client|<ClientID>`, `Kook|User|<UserID>`. You can use the '~whoami' command to view your ID after the bot is started, and the object will be automatically marked as a super user after the bot is started.
+`base_superuser =` - 设置机器人主超级用户。`base_superuser =` - Set bot main superuser.Available formats are `QQ|<QQ Account>`, `Discord|Client|<ClientID>`, `Telegram|Client|<ClientID>`, `Kook|User|<UserID>`. You can use the '~whoami' command to view your ID after the bot is started, and the object will be automatically marked as a super user after the bot is started.
 
 `qq_disable_temp_session = true` - Whether to disable temporary session functions for QQ platform.
 
@@ -360,7 +360,7 @@ The contents of this module are mainly used to monitor Minecraft Wiki registrati
 
 `enable_dirty_check = true` - Enable word censoring check.
 
-`enable_urlmanager = true` - Enable URL management (replace external links, prompt to unofficial pages).Disabling this feature will also disable the `wiki_audit` command.
+`enable_urlmanager = true` - Enable URL management (replace external links, prompt to unofficial pages).Disabling this feature will also disable the `wiki_audit` command.若停用此功能将同时停用 `wiki_audit` 命令。
 
 `slower_schedule = false` - Some scheduled task modules are executed using longer intervals, which may help to optimize the network environment.
 
