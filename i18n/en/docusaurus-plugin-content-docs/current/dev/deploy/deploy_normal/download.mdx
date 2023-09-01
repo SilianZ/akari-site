@@ -5,6 +5,7 @@ description: Download the AkariBot source code
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Asciinema from '@site/src/components/Asciinema';
 
 # Download Source Code
 
@@ -17,7 +18,7 @@ import TabItem from '@theme/TabItem';
 
 1.  Install [Git](https://git-scm.com/).
 
-2.  Please right-click and open Git Bash in a folder to place an AkariBot and enter the following command: 
+2.  Please right-click and open Git Bash in a folder to place an AkariBot and enter the following command:
 
     ```sh
     git clone https://github.com/Teahouse-studios/akari-bot.git
@@ -46,11 +47,17 @@ import TabItem from '@theme/TabItem';
 
     :::info
 
-    The deployment docs under the master branch may differ. Please open DEPLOY.md in the directory after downloading the corresponding version of the source code.
+    We are no longer providing downloads for Releases because we cannot guarantee stability in the Release version.
 
     :::
 
-2.  Press `Shift` + `Right-click` and open the terminal and enter the folder.
+    :::info
+
+    Direct downloading of code deployment is not recommended, as you will not be able to update the code using Git or using the bot built-in command.
+
+    :::
+
+2.  Extract the source code, press `Shift` + `Right-click` and open the terminal and enter the folder.
 
 ```mdx-code-block
 </TabItem>
@@ -83,3 +90,8 @@ import TabItem from '@theme/TabItem';
 </TabItem>
 </Tabs>
 ```
+
+<Asciinema
+url="https://asciinema.org/a/605626.cast"
+options={{ theme: "monokai", poster: "npt:21.5", cols: 100, rows: 30, idleTimeLimit: 0.25 }}
+/>

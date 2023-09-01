@@ -12,7 +12,7 @@ Go to the `config` folder, rename `config.toml.example` to `config.toml` and sta
 
 :::info
 
-Since the current configuration suffix is changed to `toml`, unlike `cfg`, please delete the empty fields in all configuration files after filling out the required fields otherwise the program cannot function properly.If you have an old `cfg` file, the robot will automatically help you convert to the `toml` format.若您拥有旧版 `cfg` 文件，机器人会自动帮您转换为 `toml` 格式。
+Since the current configuration suffix is changed to `toml`, unlike `cfg`, please delete the empty fields in all configuration files after filling out the required fields otherwise the program cannot function properly.If you have an old `cfg` file, the robot will automatically help you convert to the `toml` format.
 
 :::
 
@@ -118,7 +118,7 @@ If you want to use Docker to deploy go-cqhttp, go to [Using Docker](https://docs
     </Tabs>
     ```
 
-4.  Notify at this time: 
+4.  Notify at this time:
 
     ```
     [WARNING]: 尝试加载配置文件 config.yml 失败: 文件不存在
@@ -194,9 +194,9 @@ To achieve this, you need to search for `@BotFather` in Telegram to create a bot
 
 ### Kook
 
-`kook_token=` - Fill in the robot token you received.
-
 You need to create a bot on the [Kook Developer Portal](https://developer.keokapp.cn/) and get token.
+
+`kook_token=` - Fill in the robot token you received.
 
 ### Matrix
 
@@ -279,7 +279,7 @@ This is an AkariBot external service.Access agents primarily handle html renderi
 
     :::info
 
-    在填写好配置文件之后，请删除所有配置文件中的注释，否则程序无法正确读取配置。
+    After completing the configuration file, delete all the annotations in the configuration files, otherwise the configuration could not be read correctly.
 
     :::
 
@@ -329,7 +329,7 @@ The `dice` module requires some additional parameters to work properly.
 
 #### maimai
 
-The `maimai` module is based on [mai-bot](https://github.com/Diving-Fish/mai-bot).This module requires additional resource files to work properly.此模块需要额外的资源文件才可正常工作。
+The `maimai` module is based on [mai-bot](https://github.com/Diving-Fish/mai-bot).This module requires additional resource files to work properly.
 
 1.  Download [source files](https://www.diving-fish.com/maibot/static.zip), and create a `maimai` folder in the `assets` folder.
 2.  Unzip the resource files to form the following directory structure:
@@ -352,7 +352,7 @@ The contents of this module are mainly used to monitor Minecraft Wiki registrati
 
 ### Other Features
 
-`base_superuser =` - Set bot main superuser.Available formats are `QQ|<QQ Account>`, `Discord|Client|<ClientID>`, `Telegram|Client|<ClientID>`, `Kook|User|<UserID>`. You can use the '~whoami' command to view your ID after the bot is started, and the object will be automatically marked as a super user after the bot is started.
+`base_superuser =` - Set bot main superuser.`base_superuser =` - Set bot main superuser.Available formats are `QQ|<QQ Account>`, `Discord|Client|<ClientID>`, `Telegram|Client|<ClientID>`, `Kook|User|<UserID>`. You can use the '~whoami' command to view your ID after the bot is started, and the object will be automatically marked as a super user after the bot is started.
 
 `qq_disable_temp_session = true` - Whether to disable temporary session functions for QQ platform.
 
