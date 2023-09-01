@@ -289,30 +289,30 @@
     "description": "The title of the tag list page"
   },
   "theme.SearchBar.seeAll": {
-    "message": "查看全部 {count} 个结果"
+    "message": "See all {count} results"
   },
   "theme.SearchPage.documentsFound.plurals": {
-    "message": "找到 {count} 份文件",
+    "message": "One document found|{count} documents found",
     "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.SearchPage.existingResultsTitle": {
-    "message": "「{query}」的搜索结果",
+    "message": "Search results for \"{query}\"",
     "description": "The search page title for non-empty query"
   },
   "theme.SearchPage.emptyResultsTitle": {
-    "message": "在文档中搜索",
+    "message": "Search the documentation",
     "description": "The search page title for empty query"
   },
   "theme.SearchPage.inputPlaceholder": {
-    "message": "在此输入搜索字词",
+    "message": "Type your search here",
     "description": "The placeholder for search page input"
   },
   "theme.SearchPage.inputLabel": {
-    "message": "搜索",
+    "message": "Search",
     "description": "The ARIA label for search page input"
   },
   "theme.SearchPage.algoliaLabel": {
-    "message": "通过 Algolia 搜索",
+    "message": "Search by Algolia",
     "description": "The ARIA label for Algolia mention"
   },
   "theme.SearchPage.noResultsText": {
