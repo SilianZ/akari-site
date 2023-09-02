@@ -18,5 +18,13 @@
   "sidebar.tutorialSidebar.category.使用 Docker 自搭建": {
     "message": "使用 Docker 自搭建",
     "description": "The label for category 使用 Docker 自搭建 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.功能": {
+    "message": "功能",
+    "description": "The label for category 功能 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.模块": {
+    "message": "模块",
+    "description": "The label for category 模块 in sidebar tutorialSidebar"
   }
 }

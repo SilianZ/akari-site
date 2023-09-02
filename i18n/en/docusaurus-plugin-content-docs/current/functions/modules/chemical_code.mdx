@@ -1,0 +1,100 @@
+---
+description: 此模块可以生成一个化学结构式，并要求给出对应的分子式
+slug: /chemical_code
+---
+
+# chemical_code
+
+-   别名：`cc`、`ccode`
+
+此模块可以生成一个化学结构式，并要求给出对应的分子式。
+
+本模块修改自 [Chemical_Code](https://github.com/lunarbunnys/Chemical_Code)，信息源来自 [ChemSpider](https://www.chemspider.com/) 。
+
+:::caution
+
+此命令易被滥用，请勿在短时间内使用太多次，否则会触发[滥用警告](/docs/abuse_warning)。滥用命令是违反[服务条款](https://bot.teahouse.team/wiki/服务条款)的行为，不仅会影响正常交流，还有可能导致机器人账号被风控。
+
+:::
+
+## `chemical_code`
+
+-   [公开](permissions)
+
+用法：`~chemical_code [<ChemSpider ID>]`
+
+此命令可以生成一个结构式，使用者需要在限定时间内回答。
+
+输入 ChemSpider ID 可自定义题目，未输入则默认随机。答案使用字母表顺序。
+
+:::info 例子
+
+返回的结果示例：
+
+![](https://bot-cdn.teahouse.team/thumb/9/9b/Benzene.png/300px-Benzene.png)
+
+```
+>>> ~chemical_code
+<<< ID：236
+请在 2 分钟内发送这个化合物的分子式。(除C、H外使用字母表顺序，如：CHBrClF）
+```
+
+正确回答示例：
+
+```
+>>> C6H6
+<<< 回答正确。
+```
+
+超时未正确回答示例：
+
+```
+<<< 已超时，正确答案是 C6H6。
+```
+
+:::
+
+## `chemical_code captcha`
+
+-   [公开](permissions)
+
+-   别名：`ccaptcha`
+
+用法：`~chemical_code captcha`
+
+标准的验证码样式。去除了计时器系统，以发起者发起后发送的第一条消息为答案，不支持自定义题目。
+
+:::info 例子
+
+返回的结果示例：
+
+![](https://bot-cdn.teahouse.team/thumb/9/9b/Benzene.png/300px-Benzene.png)
+
+```
+>>> ~chemical_code captcha
+<<< ID：236
+请发送这个化合物的分子式。(除C、H外使用字母表顺序，如：CHBrClF）
+```
+
+正确回答示例：
+
+```
+>>> C6H6
+<<< 回答正确。
+```
+
+未正确回答示例：
+
+```
+<<< 回答错误，正确答案是 C6H6。
+```
+
+:::
+
+## `chemical_code stop`
+
+-   [公开](permissions)
+
+用法：`~chemical_code stop`
+
+此命令在模块正在运行时使用，则会停止。
