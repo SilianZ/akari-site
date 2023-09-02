@@ -1,0 +1,174 @@
+# 数学表达式
+
+本页面为使用 Python 数学表达式的模块（如 [calc](https://bot.teahouse.team/wiki/calc)）提供帮助。
+
+## 运算符
+
+### 算数运算符
+
+| 运算符 | 意义                                                         | 示例         |
+| ------ | ------------------------------------------------------------ | ------------ |
+| `+`    | 和                                                           | `1 + 2 = 3`  |
+| `-`    | 差                                                           | `3 - 1 = 2`  |
+| `*`    | 积                                                           | `2 * 3 = 6`  |
+| `**`   | 幂                                                           | `2 ** 3 = 8` |
+| `/`    | 商                                                           | `6 / 3 = 2`  |
+| `//`   | 取整除                                                       | `7 // 4 = 1` |
+| `%`    | 取模                                                         | `5 % 2 = 1`  |
+
+### 比较运算符
+
+| 运算符 | 意义     | 示例             |
+| ------ | -------- | ---------------- |
+| `==`   | 等于     | `1 == 1 = True`  |
+| `!=`   | 不等于   | `1 != 1 = False` |
+| `<`    | 小于     | `1 < 2 = True`   |
+| `>`    | 大于     | `2 > 1 = True`   |
+| `<=`   | 小于等于 | `1 <= 2 = True`  |
+| `>=`   | 大于等于 | `2 >= 1 = True`  |
+
+### 按位运算符
+
+| 运算符 | 意义                                                         | 示例           | 二进制                 |
+| ------ | ------------------------------------------------------------ | -------------- | ---------------------- |
+| `&`    | 按位与                                                       | `10 & 12 = 8`  | `1010 & 1100 = 1000`   |
+| `|`    | 按位或                                                       | `10 | 12 = 14` | `1010 | 1100 = 1110`   |
+| `^`    | 按位异或                                                     | `10 ^ 12 = 6`  | `1010 ^ 1100 = 0110`   |
+| `~`    | 按位取反                                                     | `~ 12 = - 13`  | `~ 1100 = 0011`        |
+| `>>`   | 右移                                                         | `12 >> 2 = 3`  | `001100 >> 2 = 000011` |
+| `<<`   | 左移                                                         | `12 << 2 = 48` | `001100 << 2 = 110000` |
+
+### 逻辑运算符
+
+| 运算符 | 意义   | 示例                     |
+| ------ | ------ | ------------------------ |
+| `and`  | 逻辑与 | `True and False = False` |
+| `or`   | 逻辑或 | `True or False = True`   |
+| `not`  | 逻辑非 | `not True = False`       |
+
+## 类
+
+### 内置类
+
+- [dict](https://docs.python.org/zh-cn/3/library/stdtypes.html#mapping-types-dict)
+- [list](https://docs.python.org/zh-cn/3/library/stdtypes.html#lists)
+- [dict](https://docs.python.org/zh-cn/3/library/stdtypes.html#tuples)
+- [set](https://docs.python.org/zh-cn/3/library/stdtypes.html#set)
+
+### Decimal
+
+[浮点数精度问题](https://zh.wikipedia.org/wiki/浮点数#准确性)可能会导致奇怪的结果，比如 3.3000000000000003。若遇到了此问题，请尝试使用 Decimal。
+
+float 类型是反人类的，它甚至无法准确地表示 1.1 的值。Decimal 类型的“设计是基于考虑人类习惯的浮点数模型，并且因此具有以下最高指导原则 —— 计算机必须提供与人们在学校所学习的算术相一致的算术。”
+
+碍于篇幅，我们不在此赘述 Decimal 的具体用法，请见 [Python 官方文档](https://docs.python.org/zh-cn/3/library/decimal.html)。请注意上方的数学函数都不能用于 Decimal，但 Decimal 对象有内置的数学方法。
+
+### Fractions
+
+请见 [Python 官方文档](https://docs.python.org/zh-cn/3/library/fractions.html)。
+
+## 函数
+
+### 内置函数
+
+为了安全和易用性考虑，仅支持部分 Python 内置函数，其具体用法请见 [Python 文档](https://docs.python.org/zh-cn/3/library/functions.html)。
+
+| 函数            | 意义                                                         | 示例                       |
+| --------------- | ------------------------------------------------------------ | -------------------------- |
+| `int(x)`        | 整型                                                         | `int(3.14) = 3`            |
+| `float(x)`      | 浮点数                                                       | `float(3) = 3.0`           |
+| `bool(x)`       | 布尔值                                                       | `bool(1) = True`           |
+| `complex(r, j)` | [复数](https://zh.wikipedia.org/wiki/复数)                   | `complex(5, 2) = (5 + 2j)` |
+| `divmod(x, y)`  | 除法，返回商和余数                                           | `divmod(5, 2) = (2, 1)`    |
+| `len(x)`        | 对象长度（元素个数）                                         | `len('bot') = 3`           |
+| `round(x[, d])` | [四舍五入](https://zh.wikipedia.org/wiki/四舍五入)至小数点后 d 位 | `round(pi, 4) = 3.1416`    |
+| `bin(x)`        | [二进制](https://zh.wikipedia.org/wiki/二进制)               | `bin(268) = 0b100001100`   |
+| `oct(x)`        | [八进制](https://zh.wikipedia.org/wiki/八进制)               | `oct(268) = 0o414`         |
+| `hex(x)`        | [十六进制](https://zh.wikipedia.org/wiki/十六进制)           | `hex(268) = 0x10c`         |
+
+### 随机数函数
+
+请注意：此处产生的随机数不是密码学安全的。您可以使用 [random](https://bot.teahouse.team/wiki/random) 模块确保密码学安全。
+
+| 函数         | 意义                    | 示例                          |
+| ------------ | ----------------------- | ----------------------------- |
+| `randint(x)` | 小于 x 的随机整型       | `randint(6) = 5`              |
+| `rand()`     | 0 与 1 之间的随机浮点数 | `rand() = 0.5789015836448923` |
+
+### 数学函数
+
+本段落列举了 Python `math` 模块的常见数学函数。
+
+所有数学函数，参见 [Python 文档](https://docs.python.org/zh-cn/3/library/math.html)。
+
+若计算结果属于复数，请加入`cmath.`前缀（下略），参见 [Python 文档](https://docs.python.org/zh-cn/3/library/cmath.html)。
+
+请注意，所有返回结果均为浮点数。
+
+#### 代数函数
+
+| 函数             | 意义                                                         | 示例                             |
+| ---------------- | ------------------------------------------------------------ | -------------------------------- |
+| `ceil(x)`        | [向上取整](https://zh.wikipedia.org/wiki/向上取整)           | `ceil(pi) = 4`                   |
+| `floor(x)`       | [向下取整](https://zh.wikipedia.org/wiki/向下取整)           | `floor(pi) = 3`                  |
+| `gcd(a, b, ...)` | [最大公因数](https://zh.wikipedia.org/wiki/最大公因数)       | `gcd(4, 14) = 2`                 |
+| `lcm(a, b, ...)` | [最小公倍数](https://zh.wikipedia.org/wiki/最小公倍数)       | `lcm(4, 14) = 28`                |
+| `perm(n, k)`     | [排列](https://zh.wikipedia.org/wiki/排列)                   | `perm(4, 2) = 12`                |
+| `comb(n, k)`     | [组合](https://zh.wikipedia.org/wiki/组合)                   | `comb(4, 2) = 6`                 |
+| `factorial(x)`   | [阶乘](https://zh.wikipedia.org/wiki/阶乘)                   | `factorial(3) = 6`               |
+| `fabs(x)`        | [绝对值](https://zh.wikipedia.org/wiki/绝对值)               | `fabs(-1) = 1.0`                 |
+| `fmod(x, y)`     | 取模                                                         | `fmod(5, 2) = 1.0`               |
+| `pow(x, y)`      | [幂](https://zh.wikipedia.org/wiki/幂)                       | `pow(2, 3) = 8.0`                |
+| `exp(x)`         | *e* 的 x 次幂                                                | `exp(2) = 7.38905609893065`      |
+| `sqrt(x)`        | [平方根](https://zh.wikipedia.org/wiki/平方根)               | `sqrt(4) = 2.0`                  |
+| `log(x[, a])`    | [对数](https://zh.wikipedia.org/wiki/对数) （默认为自然对数） | `log(e) = 1.0` `log(4, 2) = 2.0` |
+| `log2(x)`        | 以 2 为底的对数                                              | `log2(4) = 2.0`                  |
+| `log10(x)`       | 以 10 为底的对数                                             | `log10(100) = 2.0`               |
+
+#### 角度转换/三角函数/双曲函数
+
+| 函数         | 意义                                                   | 示例                                  |
+| ------------ | ------------------------------------------------------ | ------------------------------------- |
+| `sin(x)`     | [正弦](https://zh.wikipedia.org/wiki/正弦)             | `sin(pi / 4) = 0.7071067811865475`    |
+| `cos(x)`     | [余弦](https://zh.wikipedia.org/wiki/余弦)             | `cos(pi / 4) = 0.7071067811865476`    |
+| `tan(x)`     | [正切](https://zh.wikipedia.org/wiki/正切)             | `tan(pi / 4) = 0.9999999999999999`    |
+| `asin(x)`    | [反正弦](https://zh.wikipedia.org/wiki/反正弦)         | `asin(pi / 4) = 0.9033391107665127`   |
+| `acos(x)`    | [反余弦](https://zh.wikipedia.org/wiki/反余弦)         | `acos(pi / 4) = 0.6674572160283838`   |
+| `atan(x)`    | [反正切](https://zh.wikipedia.org/wiki/反正切)         | `atan(pi / 4) = 0.6657737500283538`   |
+| `sinh(x)`    | [双曲正弦](https://zh.wikipedia.org/wiki/双曲正弦)     | `sinh(pi / 4) = 0.8686709614860095`   |
+| `cosh(x)`    | [双曲余弦](https://zh.wikipedia.org/wiki/双曲余弦)     | `cosh(pi / 4) = 1.3246090892520057`   |
+| `tanh(x)`    | [双曲正切](https://zh.wikipedia.org/wiki/双曲正切)     | `tanh(pi / 4) = 0.6557942026326724`   |
+| `asinh(x)`   | [反双曲正弦](https://zh.wikipedia.org/wiki/反双曲正弦) | `asinh(pi / 4) = 0.7212254887267798`  |
+| `acosh(x)`   | [反双曲余弦](https://zh.wikipedia.org/wiki/反双曲余弦) | `acosh(pi / 4) = 0.6674572160283838j` |
+| `atanh(x)`   | [反双曲正切](https://zh.wikipedia.org/wiki/反双曲正切) | `atanh(pi / 4) = 1.0593061708232432`  |
+| `degrees(x)` | 弧度转角度                                             | `degrees(pi / 4) = 45.0`              |
+| `radians(x)` | 角度转弧度                                             | `radians(45) = 0.7853981633974483`    |
+
+#### 常数
+
+| 函数  | 意义                                                   | 示例                      |
+| ----- | ------------------------------------------------------ | ------------------------- |
+| `pi`  | [圆周率](https://zh.wikipedia.org/wiki/圆周率)         | `pi = 3.141592653589793`  |
+| `tau` | 圆常数                                                 | `tau = 6.283185307179586` |
+| `e`   | [自然常数](https://zh.wikipedia.org/wiki/e_(數學常數)) | `e = 2.718281828459045`   |
+| `inf` | 浮点正无穷大                                           |                           |
+| `nan` | 浮点非数字                                             |                           |
+
+### 统计函数
+
+本段落列举了 Python `statistics` 模块的常见统计函数。
+
+所有统计函数，参见 [Python 文档](https://docs.python.org/zh-cn/3/library/statistics.html)。
+
+| 函数               | 意义                                                   | 示例                                                 |
+| ------------------ | ------------------------------------------------------ | ---------------------------------------------------- |
+| `mean()`           | [算术平均数](https://zh.wikipedia.org/wiki/算术平均数) | `mean([1, 2, 3, 4]) = 2.5`                           |
+| `geometric_mean()` | [几何平均数](https://zh.wikipedia.org/wiki/几何平均数) | `geometric_mean([1, 2, 3, 4]) = 2.2133638394006434 ` |
+| `harmonic_mean()`  | [调和平均数](https://zh.wikipedia.org/wiki/调和平均数) | `harmonic_mean([1, 2, 3, 4]) = 1.92`                 |
+| `median()`         | [中位数](https://zh.wikipedia.org/wiki/中位数)         | `median([1, 3, 5, 7]) = 4.0`                         |
+| `median_low()`     | 低中位数                                               | `median_low([1, 3, 5, 7]) = 3`                       |
+| `median_high()`    | 高中位数                                               | `median_high([1, 3, 5, 7]) = 5`                      |
+| `variance()`       | 样本[方差](https://zh.wikipedia.org/wiki/方差)         | `variance([0.5, 1, 1.5]) = 0.25`                     |
+| `stdev()`          | 样本[标准差](https://zh.wikipedia.org/wiki/标准差)     | `stdev([0.5, 1, 1.5]) = 0.5`                         |
+| `pvariance()`      | 总体方差                                               | `pvariance([0.5, 1, 1.5]) = 0.16666666666666666`     |
+| `pstdev()`         | 总体标准差                                             | `pstdev([0.5, 1, 1.5]) = 0.408248290463863`          |
