@@ -3,20 +3,27 @@ sidebar_position: 4
 description: Run AkariBot
 ---
 
-# Run Bot
+import Asciinema from '@site/src/components/Asciinema';
 
-After the configuration is completed, use 'Docker run' to run AkariBot:
+# 运行机器人
+
+配置完成后，使用 `docker run` 开启小可：
 
 ```sh
 docker run \ 
 > -d \ 
-> -v /path/to/akari-bot/config/config.toml:/akari-bot/config/config.toml \ # Please modify the path to the corresponding location.
-> -p 11451:11451  \ # Please change the port of the WebSocket server according to your configuration file.
-> -p 3306:3306  \ # Used for docking with MySQL databases. (Optional)
-> --name=akari-bot  \ # Specify the container name.
+> -v /path/to/akari-bot/config/config.toml:/akari-bot/config/config.toml \ # 请将路径修改成对应的位置。
+> -p 11451:11451  \ # WebSocket 服务器的端口，请根据你的配置文件更改。
+> -p 3306:3306  \ # 用于对接 mysql 数据库。（可选）
+> --name=akari-bot  \ # 指定容器名称。
 > bakabaka9/akari-bot
 ```
 
-If a container of the `long_tag` type is returned in the terminal, it is proven that the container has been created, and then we can perform the `docker logs akari-bot` to view the AkariBot's log.
+如果终端中返回了 `long_tag` 类型的容器 `ID`, 证明容器已创建完毕，这时我们可以执行 `docker logs akari-bot` 查看小可的日志。
 
-If there are no errors reported, congratulations!Your AkariBot has been deployed successfully!
+如果没有任何报错，恭喜您！您的小可机器人已经搭建成功！
+
+<Asciinema
+url="https://asciinema.org/a/605780.cast"
+options={{ theme: "monokai", poster: "npt:21.5", cols: 100, rows: 30, idleTimeLimit: 0.1 }}
+/>

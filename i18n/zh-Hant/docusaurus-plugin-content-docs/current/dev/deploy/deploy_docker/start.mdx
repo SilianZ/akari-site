@@ -3,6 +3,8 @@ sidebar_position: 4
 description: 运行小可机器人
 ---
 
+import Asciinema from '@site/src/components/Asciinema';
+
 # 运行机器人
 
 配置完成后，使用 `docker run` 开启小可：
@@ -20,3 +22,8 @@ docker run \
 如果终端中返回了 `long_tag` 类型的容器 `ID`, 证明容器已创建完毕，这时我们可以执行 `docker logs akari-bot` 查看小可的日志。
 
 如果没有任何报错，恭喜您！您的小可机器人已经搭建成功！
+
+<Asciinema
+url="https://asciinema.org/a/605780.cast"
+options={{ theme: "monokai", poster: "npt:21.5", cols: 100, rows: 30, idleTimeLimit: 0.1 }}
+/>
