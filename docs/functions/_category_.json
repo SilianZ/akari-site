@@ -1,0 +1,10 @@
+{
+    "position": 2,
+    "label": "功能",
+    "collapsible": true,
+    "collapsed": false,
+    "link": null,
+    "customProps": {
+      "description": "功能概览"
+    }
+}

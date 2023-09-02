@@ -1,0 +1,56 @@
+---
+description: 此模块可以设置机器人管理员，而无需群组管理员权限
+slug: /admin
+---
+
+# admin
+
+此模块可以设置机器人管理员，而无需群组管理员权限。
+
+此模块设置各群组独立，非全局权限。
+
+## `admin add`
+
+- [仅管理员](/docs/permissions)
+
+用法：`~admin add <用户 ID>`
+
+此命令可以设置成员为机器人管理员，以实现不设置成员为群组管理员的情况下管理机器人的功能。已是群组管理员无需设置此项目。
+
+## `admin del`
+
+- [仅管理员](/docs/permissions)
+
+用法：`~admin del <用户 ID>`
+
+此命令可以设置移除成员为机器人管理员。
+
+## `admin list`
+
+- [仅管理员](/docs/permissions)
+
+用法：`~admin list`
+
+此命令可以列出本群组内所有的机器人管理员。
+
+## `admin ban`
+
+- [仅管理员](/docs/permissions)
+
+用法：`~admin ban <用户 ID>`
+
+此命令可以限制某人在本群使用机器人。
+
+:::info
+
+若你的群组中有多个机器人且可能会产生循环调用的问题，可使用此命令让小可不对机器人用户做出响应。
+
+:::
+
+## `admin unban`
+
+- [仅管理员](/docs/permissions)
+
+用法：`~admin unban <用户 ID>`
+
+此命令可以解除对某人在本群使用机器人的限制。

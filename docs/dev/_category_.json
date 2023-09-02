@@ -3,7 +3,6 @@
     "label": "开发",
     "collapsible": true,
     "collapsed": false,
-    "className": "red",
     "link": null,
     "customProps": {
       "description": "开发概览"
