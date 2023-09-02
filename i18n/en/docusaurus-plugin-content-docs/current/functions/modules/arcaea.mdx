@@ -1,0 +1,106 @@
+# arcaea
+
+此模块可以查询 Arcaea 游戏中的信息。
+
+:::info
+
+根据 Arcaea TOS 3.2.6 规定，歌曲查分功能将无限期停用，详见[此处](https://arcaea.lowiro.com/zh/terms_of_service)。
+
+:::
+
+## `arcaea random`
+
+-   [公开](https://bot.teahouse.team/wiki/权限)
+
+用法：`~arcaea random`
+
+此模块可以让随机一首 Arcaea 曲目。
+
+## `arcaea rank free`
+
+-   [公开](https://bot.teahouse.team/wiki/权限)
+
+用法：`~arcaea rank free`
+
+此模块可以查看当前免费包游玩排行。
+
+<details>
+<summary>例子</summary>
+
+返回的结果示例：
+
+```
+>>> ~arcaea rank free
+<<< 1. Chronostasis (0)
+2. GOODTEK (Arcaea Edit) (0)
+3. Lost Civilization (0)
+4. Kanagawa Cyber Culvert (2)
+5. Sakura Fubuki (-1)
+6. Ignotus (-1)
+7. Infinity Heaven (0)
+8. Dement ~after legend~ (3)
+9. Red and Blue (0)
+10. Purgatorium (-2)
+11. qualia -ideaesthesia- (1)
+12. Anökumene (-2)
+13. san skia (0)
+14. world.execute(me); (3)
+15. Bookmaker (2D Version) (0)
+```
+
+</details>
+
+## `arcaea rank paid`
+
+-   [公开](https://bot.teahouse.team/wiki/权限)
+
+此模块可以查看当前付费包游玩排行。
+
+用法：`~arcaea rank paid`
+
+<details>
+<summary>例子</summary>
+
+返回的结果示例：
+
+```
+>>> ~arcaea rank paid
+<<< 1. Grievous Lady (0)
+2. Fracture Ray (1)
+3. Tempestissimo (-1)
+4. PRAGMATISM (0)
+5. Ether Strike (1)
+6. Cyaegha (-1)
+7. Sheriruth (0)
+8. #1f1e33 (0)
+9. Singularity (0)
+10. Axium Crisis (0)
+11. Heavensdoor (2)
+12. Halcyon (2)
+13. Dantalion (-2)
+14. trappola bewitching (-2)
+15. Ringed Genesis (2)
+```
+
+</details>
+
+## `arcaea download`
+
+-   [公开](https://bot.teahouse.team/wiki/权限)
+
+用法：`~arcaea download`
+
+此模块可以获取最新版本的游戏 apk。
+
+<details>
+<summary>例子</summary>
+
+返回的结果示例：
+
+```
+>>> ~arcaea download
+<<< 目前的最新版本为 4.4.6c。
+下载地址：https://arcaea-static.lowiro-cdn.net/oZ5a0l4m4h6jDi0VdyJFDyX2IHRFl5ssq4eGZMb7APZKxIkJc0BCJZMAGXbKKHS5Lup4TJYMZ%2Fe5DWJU%2BHhroRcMFJ%2BcuF%2BxurrmpW%2BnNg%2Ffcnc%2FNVj6kavkjjN5E9XeW7hcJ8bmDSNEZk8%3D?filename=arcaea_4.4.6c.apk
+```
+
+</details>
