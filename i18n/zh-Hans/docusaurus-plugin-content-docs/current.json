@@ -26,5 +26,13 @@
   "sidebar.tutorialSidebar.category.模块": {
     "message": "模块",
     "description": "The label for category 模块 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.color": {
+    "message": "color",
+    "description": "The label for category color in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.帮助": {
+    "message": "帮助",
+    "description": "The label for category 帮助 in sidebar tutorialSidebar"
   }
 }
