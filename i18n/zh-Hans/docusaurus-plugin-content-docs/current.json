@@ -34,5 +34,25 @@
   "sidebar.tutorialSidebar.category.帮助": {
     "message": "帮助",
     "description": "The label for category 帮助 in sidebar tutorialSidebar"
+  },
+  "sidebar.dev.category.自搭建": {
+    "message": "自搭建",
+    "description": "The label for category 自搭建 in sidebar dev"
+  },
+  "sidebar.dev.category.常规自搭建": {
+    "message": "常规自搭建",
+    "description": "The label for category 常规自搭建 in sidebar dev"
+  },
+  "sidebar.dev.category.使用 Docker 自搭建": {
+    "message": "使用 Docker 自搭建",
+    "description": "The label for category 使用 Docker 自搭建 in sidebar dev"
+  },
+  "sidebar.functions.category.模块": {
+    "message": "模块",
+    "description": "The label for category 模块 in sidebar functions"
+  },
+  "sidebar.functions.category.color": {
+    "message": "color",
+    "description": "The label for category color in sidebar functions"
   }
 }
