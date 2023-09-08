@@ -6,24 +6,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: 'AkariBot (Unofficial)',
-    favicon: 'img/favicon.ico',
-
-    // Set the production url of your site here
-    url: 'https://docusaurus-2.netlify.app',
-    // Set the /<baseUrl>/ pathname under which your site is served
-    // For GitHub pages deployment, it is often '/<projectName>/'
+    title: 'AkariBot',
+    favicon: 'img/logo.svg',
+    url: 'https://www.akari-bot.top',
     baseUrl: '/',
-
-    // GitHub pages deployment config.
-    // If you aren't using GitHub pages, you don't need these.
-
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
-
-    // Even if you don't use internalization, you can use this field to set useful
-    // metadata like html lang. For example, if your site is Chinese, you may want
-    // to replace "en" with "zh-Hans".
     i18n: {
         defaultLocale: 'zh-Hans',
         locales: ['en', 'zh-Hans', 'zh-Hant'],
@@ -36,8 +24,6 @@ const config = {
             ({
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
                     editUrl:
                         'https://github.com/SilianZ/akari-site/tree/main',
                 },
@@ -52,20 +38,25 @@ const config = {
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
-            // Replace with your project's social card
             image: 'img/docusaurus-social-card.jpg',
             navbar: {
                 title: 'AkariBot',
                 logo: {
                     alt: 'AkariBot Logo',
-                    src: 'img/favicon.ico',
+                    src: 'img/logo.svg',
                 },
                 items: [
                     {
                         type: 'docSidebar',
-                        sidebarId: 'tutorialSidebar',
+                        sidebarId: 'functions',
                         position: 'left',
-                        label: '文档',
+                        label: '功能',
+                    },
+                    {
+                        type: 'docSidebar',
+                        sidebarId: 'dev',
+                        position: 'left',
+                        label: '开发',
                     },
                     {
                         type: 'localeDropdown',
