@@ -25,18 +25,20 @@ slug: /chemical_code
 
 此命令可以生成一个结构式，使用者需要在限定时间内回答。
 
-输入 ChemSpider ID 可自定义题目，未输入则默认随机。答案使用字母表顺序。
+输入 ChemSpider ID 可自定义题目，输入为 0 或留空则随机。答案使用字母表顺序。
+
+若回答正确可获得 1 片花瓣，自定义题目不会获得花瓣。
 
 :::info 例子
 
 返回的结果示例：
 
-![](https://bot-cdn.teahouse.team/thumb/9/9b/Benzene.png/300px-Benzene.png)
+![](https://s1.ax1x.com/2023/09/02/pPBLVgg.png)
 
 ```
 >>> ~chemical_code
 <<< ID：236
-请在 2 分钟内发送这个化合物的分子式。(除C、H外使用字母表顺序，如：CHBrClF）
+请在 2 分钟内发送这个化合物的分子式。（除C、H外使用字母表顺序，如：CHBrClF）
 ```
 
 正确回答示例：
@@ -64,16 +66,18 @@ slug: /chemical_code
 
 标准的验证码样式。去除了计时器系统，以发起者发起后发送的第一条消息为答案，不支持自定义题目。
 
+若回答正确可获得 2 片花瓣。
+
 :::info 例子
 
 返回的结果示例：
 
-![](https://bot-cdn.teahouse.team/thumb/9/9b/Benzene.png/300px-Benzene.png)
+![](https://s1.ax1x.com/2023/09/02/pPBLVgg.png)
 
 ```
 >>> ~chemical_code captcha
 <<< ID：236
-请发送这个化合物的分子式。(除C、H外使用字母表顺序，如：CHBrClF）
+请发送这个化合物的分子式。（除C、H外使用字母表顺序，如：CHBrClF）
 ```
 
 正确回答示例：
