@@ -59,6 +59,12 @@ const config = {
                         label: '开发',
                     },
                     {
+                        type: 'docSidebar',
+                        sidebarId: 'help',
+                        position: 'left',
+                        label: '帮助',
+                    },
+                    {
                         type: 'localeDropdown',
                         position: 'right',
                     },
