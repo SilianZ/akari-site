@@ -1,0 +1,156 @@
+---
+sidebar_position: 4
+description: 安装小可运行时用到的依赖
+---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Asciinema from '@site/src/components/Asciinema';
+
+# 安装依赖
+
+```mdx-code-block
+<Tabs groupId="operating-systems">
+<TabItem value="win" label="Windows" default>
+<Tabs>
+<TabItem value="c1" label="使用 Poetry" default>
+```
+
+如果您已经安装了 [Poetry](https://python-poetry.org/)，您可以跳过以下安装步骤。
+
+1. 打开 Powershell，并执行以下指令来安装 Poetry：
+
+   ```powershell
+   (Invoke-WebRequest -Uri "https://install.python-poetry.org" -UseBasicParsing).Content | py -
+   ```
+
+   :::info
+
+   若您使用了 Microsoft Store 或 pyenv-windows 安装 Python，请将 `py` 替换为 `python`。
+   
+   :::
+
+   :::caution
+
+	安装 Poetry 前请**务必**检查系统环境变量中是否存在多个 Python Executable Path（Python 可执行路径）并及时清除，否则安装 Poetry 后可能会出现 Python 环境混乱导致无法正常加载依赖的情况。
+   
+   :::
+
+2. 安装完成后，请将以下目录添加到 PATH 环境变量，方便调用：
+
+   ```
+   %APPDATA%\Python\Scripts
+   ```
+
+   :::info
+
+   请善用搜索引擎寻找更改 PATH 的方法。
+   
+   :::
+
+   :::info
+
+   在添加到 PATH 之后，您通常需要重启终端，甚至整个电脑才能使其生效。
+
+   您可以通过 `poetry --version` 确认安装是否有效。
+   
+   :::
+
+3. 在安装完 Poetry 后，请执行以下指令：
+
+   ```powershell
+   poetry install
+   ```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="c2" label="使用 pip">
+```
+
+如果您不想使用 Poetry，您可以使用 pip 来安装依赖：
+
+```powershell
+pip install --no-deps -r requirements.txt
+```
+
+```mdx-code-block
+</TabItem>
+</Tabs>
+</TabItem>
+<TabItem value="linux" label="Linux">
+<Tabs>
+<TabItem value="c1" label="使用 Poetry" default>
+```
+
+如果您已经安装了 [Poetry](https://python-poetry.org/)，您可以跳过以下安装步骤。
+
+1. 打开终端，并执行以下指令来安装 Poetry：
+
+   ```sh
+   curl -sSL "https://install.python-poetry.org" | python3 -
+   ```
+
+   :::caution
+
+	安装 Poetry 前请**务必**检查系统环境变量中是否存在多个 Python Executable Path（Python 可执行路径）并及时清除，否则安装 Poetry 后可能会出现 Python 环境混乱导致无法正常加载依赖的情况。
+   
+   :::
+
+2. 安装完成后，请将以下目录添加到 PATH 环境变量，方便调用：
+
+   ```
+   $HOME/.local/bin
+   ```
+
+   :::info
+
+   请善用搜索引擎寻找更改 PATH 的方法。
+   
+   :::
+
+   :::info
+
+   在添加到 PATH 之后，您通常需要重启终端，甚至整个电脑才能使其生效。
+
+   您可以通过 `poetry --version` 确认安装是否有效。
+   
+   :::
+
+3. 在安装完 Poetry 后，请执行以下指令：
+
+   ```sh
+   poetry install
+   ```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="c2" label="使用 pip">
+```
+
+如果您不想使用 Poetry，您可以使用 pip 来安装依赖：
+
+```sh
+pip install --no-deps -r requirements.txt
+```
+
+```mdx-code-block
+</TabItem>
+</Tabs>
+</TabItem>
+</Tabs>
+```
+
+
+<Asciinema
+url="https://asciinema.org/a/604782.cast"
+options={{ theme: "monokai", poster: "npt:21.5", cols: 100, rows: 30, idleTimeLimit: 1 }}
+/>
+
+<Asciinema
+url="https://asciinema.org/a/605659.cast"
+options={{ theme: "monokai", poster: "npt:21.5", cols: 100, rows: 30, idleTimeLimit: 0.25 }}
+/>
+
+<Asciinema
+url="https://asciinema.org/a/605643.cast"
+options={{ theme: "monokai", poster: "npt:21.5", cols: 100, rows: 30, idleTimeLimit: 0.1 }}
+/>
