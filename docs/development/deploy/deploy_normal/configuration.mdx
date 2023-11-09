@@ -55,6 +55,16 @@ import TabItem from '@theme/TabItem';
 
 我们在这里使用了 [aiocqhttp](https://github.com/nonebot/aiocqhttp) 来对接 [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) 客户端。
 
+:::info
+
+根据 go-cqhttp 官方仓库的消息：[QQ Bot 的未来以及迁移建议](https://github.com/Mrs4s/go-cqhttp/issues/2471)，开发者已无力继续维护此项目。
+
+:::
+
+一个新注册的 QQ 账号仅需完成基础配置部分即可，为了避免在机器人使用后期时遇到 Code45 等问题，我们建议按照进阶配置来配置签名服务器。
+
+#### 基础配置
+
 如果您想使用 Docker 部署 go-cqhttp，请转到[使用 Docker](https://docs.go-cqhttp.org/guide/docker.html)。
 
 1. 从 go-cqhttp 的官方仓库上下载最新的 [Release](https://github.com/Mrs4s/go-cqhttp/releases/latest)。
@@ -123,25 +133,28 @@ import TabItem from '@theme/TabItem';
 
 由于 QQ 风控机制的加强，go-cqhttp 若出现 Code45 报错情况时，请参照以下步骤配置签名服务器：
 
-5. 安装 JRE 1.8（Jave Runtime Environment 1.8），请善用搜索引擎查找安装方法。
+5. 安装 JRE 17（Jave Runtime Environment 17），请善用搜索引擎查找安装方法。
 
-6. 在 [unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign) 的 Release 界面中下载最新版本的 unidbg-fetch-qsign 并解压到一个提前准备好的文件夹中。
+6. 在 ~~[unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)~~（作者已删库，请自行在 GitHub 上搜索有关 `qsign` 的仓库）的 Release 界面中下载最新版本的 unidbg-fetch-qsign 并解压到一个提前准备好的文件夹中。
 
-7. 在 [go-cqhttp dev 分支的 Actions 界面](https://github.com/Mrs4s/go-cqhttp/actions/workflows/ci.yml?query=branch%3Adev+event%3Apush) 中，点入最新的构建版本，并在 Artifacts 板块中下载对应系统类型的 go-cqhttp 构建文件并**替换**掉原正式版本的 go-cqhttp。
+7. 删除与 go-cqhttp 同一目录下的 `data` 文件夹和 `device.json` 文件。
 
-8. 删除与 go-cqhttp 同一目录下的 `data` 文件夹及 `config.yml` 文件。
-
-9. 运行 go-cqhttp 并生成 `config.yml` 默认配置文件。
-
-10. 在存放 unidbg-fetch-qsign 的文件夹中，运行以下命令：
+8. 在存放 unidbg-fetch-qsign 的文件夹中，运行以下命令：
 
     ```sh
-    bin\unidbg-fetch-qsign --basePath=txlib\8.9.71
+    bin\unidbg-fetch-qsign --basePath=txlib\<您要使用的版本>
     ```
 
-11. 按照先前步骤配置 go-cqhttp 的 `config.yml` 文件。
+    请替换 `<您要使用的版本>` 字段为在存放 unidbg-fetch-qsign 的文件夹 `txlib` 文件夹存在的版本。
 
-12. 接下来，请配置 go-cqhttp 的 `config.yml` 文件中的签名服务器：
+    例：`--basePath=txlib\8.9.73`
+
+    > 在选择版本时，应当遵从以下原则：
+    升级版本应当**一个一个版本**升，以后冻结了可能就没机会回退版本了。Code45 了应当先尝试删除 go-cqhttp 的 `device.json` 文件和 `data\cache` 文件夹并重新登录，而不是第一时间升级版本。
+
+9. 按照先前步骤配置 go-cqhttp 的 `config.yml` 文件。
+
+10. 接下来，请配置 go-cqhttp 的 `config.yml` 文件中的签名服务器：
 
     ```yml
     account: # 账号相关
@@ -155,23 +168,17 @@ import TabItem from '@theme/TabItem';
     ...
     ```
 
-13. 运行 go-cqhttp 以生成设备文件。
+11. 运行 go-cqhttp 以生成设备文件。
 
-14. 下载[安卓手机协议](https://github.com/MrXiaoM/qsign/blob/mirai/txlib/8.9.71/android_phone.json)并将其重命名为 `1.json` 。将该文件储存在与 go-cqhttp 同一目录下的 `data\versions` 文件夹中。
+12. 下载对应版本的[安卓手机协议](https://github.com/MrXiaoM/qsign/blob/mirai/txlib/)并将其重命名为 `1.json` 。将该文件储存在与 go-cqhttp 同一目录下的 `data\versions` 文件夹中。
 
-15. 在与 go-cqhttp 同一目录下的 `device.json` 文件夹中，并修改以下字段：
+13. 在与 go-cqhttp 同一目录下的 `device.json` 文件夹中，并修改以下字段：
 
     ```json
     "protocol": 1,
     ```
 
-16. 重启 go-cqhttp 完成最终配置。
-
-:::info
-
-若在执行以上步骤中遇到问题，请访问 [go-cqhttp 官方讨论板块](https://github.com/Mrs4s/go-cqhttp/discussions)或在哔哩哔哩上查找合适的教程。
-
-:::
+14. 重启 go-cqhttp 完成最终配置。
 
 ### Discord
 
@@ -201,27 +208,39 @@ import TabItem from '@theme/TabItem';
 
 `matrix_homeserver =` - 填写您使用的 Matrix server URL（只包括协议与主机，最后无需添加`/`）。
 
-`matrix_user =` - 填写机器人的[用户 ID](https://spec.matrix.org/v1.7/appendices/#user-identifiers)（包括`@`与`:`）。
+`matrix_user =` - 填写机器人的[完全限定用户 ID](https://spec.matrix.org/v1.7/appendices/#user-identifiers)（包括`@`与`:`）。
+
+`matrix_device_id =` - 填写机器人的设备 ID（即 Element 的会话 ID）
+
+`matrix_device_name =` - 填写机器人的设备名称（可随便乱写，给人看的）
 
 `matrix_token =` - 填写机器人任意设备的 Access Token。
 
 :::info
 
-获取完 Access Token 后，不要使用客户端的退出登录功能，推荐通过浏览器隐私模式登陆并获取 Token。
+不推荐使用其他客户端获取 Access Token，这样容易导致 olm 会话非常混乱。
+如果（不怕死）使用客户端获取 Access Token，不要使用客户端的退出登录功能，推荐通过浏览器隐私模式登陆并获取 Token。
 
 :::
 
-对于 Element 及其分支（如 SchindiChat），Access Token 可以从“所有设置” -> “帮助及关于” -> “高级” -> “访问令牌”中获取。
-
-对于 Cinny，Access Token 可以从浏览器的的 localStorage 中提取（参考 [cinnyapp/cinny#938](https://github.com/cinnyapp/cinny/issues/938)）。
-
-对于没有合适的客户端的用户（？），您也可以使用以下命令进行密码登录（但仍需手动完成后续的[设备验证](https://spec.matrix.org/v1.7/client-server-api/#device-verification)、[交叉签名](https://spec.matrix.org/v1.7/client-server-api/#cross-signing)和[服务端密钥备份](https://spec.matrix.org/v1.7/client-server-api/#server-side-key-backups)恢复等流程）：
-
-```
+```sh
 curl -XPOST -d '{"type":"m.login.password", "user":"<user>", "password":"<password>"}' "https://<homeserver>/_matrix/client/r0/login"
 ```
 
-目前，由于 libolm 在一些情况下需要手动安装，机器人没有端对端加密（e2ee）支持。
+#### E2E 加密
+
+目前，由于 libolm 在一些情况下需要手动配置，机器人默认没有启用端对端加密（e2ee）支持。
+
+若要启用 E2EE 支持，请执行以下命令：
+
+```sh
+poetry run -- pip3 install matrix-nio[e2e] ; Poetry
+pip3 install matrix-nio[e2e] ; PIP
+```
+
+`matrix_megolm_backup_passphrase =` - （可选）填写机器人的 megolm 备份密码短语，建议使用随机的长密码，不填写则不会导出 megolm 备份。
+
+如果需要导入 megolm 备份，请将备份文件放置在 `matrix_store/megolm_backup/restore.txt` 下，并将密码短语写入 `matrix_store/megolm_backup/restore-passphrase.txt`。
 
 ## 配置其他功能
 
@@ -239,7 +258,7 @@ curl -XPOST -d '{"type":"m.login.password", "user":"<user>", "password":"<passwo
 
 `check_accessKeySecret =` - 填写获取的 AccessKeySecret。
 
-### QQ 频道消息处理（beta）
+### QQ 频道消息处理（Beta）
 
 通过上文的 [aiocqhttp](https://github.com/nonebot/aiocqhttp) 对接 [go-cqhttp](https://github.com/Mrs4s/go-cqhttp) 方式，可以按需选择是否启用 QQ 频道消息处理功能。
 
@@ -247,7 +266,7 @@ curl -XPOST -d '{"type":"m.login.password", "user":"<user>", "password":"<passwo
 
 :::caution
 
-QQ频道消息的处理仍然处于测试阶段，由于 go-cqhttp 对频道消息支持的不完善，频道内消息无法撤回，且频道列表不会自动刷新（加入新频道需要手动重启一次 gocqhttp）。
+QQ 频道消息的处理仍然处于测试阶段，由于 go-cqhttp 对频道消息支持的不完善，频道内消息无法撤回，且频道列表不会自动刷新（加入新频道需要手动重启一次 gocqhttp）。
 
 :::
 
@@ -263,13 +282,13 @@ QQ频道消息的处理仍然处于测试阶段，由于 go-cqhttp 对频道消�
 
 #### 部署
 
-1. 此服务使用 JavaScript 编写，由 `Puppeteer` 驱动，为此，您需要安装好 [Node.js](https://nodejs.org/) 环境，以及安装好 [Chrome](https://www.google.cn/intl/zh-CN/chrome/) 。
+1. 此服务使用 JavaScript 编写，由 `Puppeteer` 驱动，为此，您需要安装好 [Node.js](https://nodejs.org/) 环境，以及安装好 [Chrome](https://www.google.cn/intl/zh-CN/chrome/)。
    
-2. 下载 [源代码文件](https://github.com/Teahouse-Studios/oa-web-render) ，并在终端内使用 `npm install` 安装依赖。
+2. 下载[源代码文件](https://github.com/Teahouse-Studios/oa-web-render)，并在终端内使用 `npm install` 安装依赖。
 
 3. 于 `package.json` 同级目录中，创建 `.env` 文件，并于内填写以下字段：
 
-    ```
+    ```conf
     CHROMIUM_PATH="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" # 填写 chrome.exe 的绝对路径
     FC_SERVER_PORT=15551 # 填写服务运行的端口
     ```
@@ -328,7 +347,8 @@ QQ频道消息的处理仍然处于测试阶段，由于 go-cqhttp 对频道消�
 
 `maimai` 模块基于 [mai-bot](https://github.com/Diving-Fish/mai-bot) 修改而来。此模块需要额外的资源文件才可正常工作。
 
-1. 下载 [资源文件](https://www.diving-fish.com/maibot/static.zip) ，并于 `assets` 目录下创建一个 `maimai` 文件夹。
+1. 下载[资源文件](https://www.diving-fish.com/maibot/static.zip)，并于 `assets` 目录下创建一个 `maimai` 文件夹。
+
 2. 解压资源文件，形成以下目录结构：
 
     ```angular2html

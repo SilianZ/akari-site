@@ -12,16 +12,8 @@ import Asciinema from '@site/src/components/Asciinema';
 
 ## 运行平台机器人
 
-:::info
-
-您可能需要使用 `poetry shell` 切换 poetry 的虚拟环境来调用先前安装的依赖。
-
-:::
-
-```mdx-code-block
 <Tabs groupId="operating-systems">
 <TabItem value="win" label="Windows" default>
-```
 
 我们不推荐双击运行 `start.bat` 来启动程序。
 
@@ -31,18 +23,19 @@ import Asciinema from '@site/src/components/Asciinema';
 2. 选择 `在此处打开 Powershell 窗口` 或 `在此处打开命令窗口`。
 3. 于终端内输入 `.\start.bat` （Powershell） 或 `start.bat` （cmd）来启动机器人。
 
-```mdx-code-block
 </TabItem>
 <TabItem value="linux" label="Linux">
-```
 
 1. 于终端内，设置 `start` 脚本的执行权限：`chmod +x start`。
 2. 启动脚本：`./start`。
 
-```mdx-code-block
 </TabItem>
 </Tabs>
-```
+
+<Asciinema
+url="https://asciinema.org/a/605774.cast"
+options={{ theme: "monokai", poster: "npt:21.5", cols: 100, rows: 30, idleTimeLimit: 0.25 }}
+/>
 
 ## 运行测试控制台
 
@@ -56,34 +49,24 @@ import Asciinema from '@site/src/components/Asciinema';
 
 :::
 
-```mdx-code-block
 <Tabs groupId="operating-systems">
 <TabItem value="win" label="Windows" default>
-```
 
 1. 于 `console.py` 所在目录，按下 `Shift` + `右键` 来打开右键菜单。
 2. 选择 `在此处打开 Powershell 窗口` 或 `在此处打开命令窗口`。
 3. 于终端内输入 `python console.py` 来启动测试控制台。
 
-```mdx-code-block
 </TabItem>
 <TabItem value="linux" label="Linux">
-```
 
 1. 于 `console.py` 所在目录，打开终端。
 2. 于终端内输入 `python console.py` 来启动测试控制台。
 
-```mdx-code-block
 </TabItem>
 </Tabs>
-```
 
 <Asciinema
 url="https://asciinema.org/a/605772.cast"
 options={{ theme: "monokai", poster: "npt:21.5", cols: 100, rows: 30, idleTimeLimit: 0.25 }}
 />
 
-<Asciinema
-url="https://asciinema.org/a/605774.cast"
-options={{ theme: "monokai", poster: "npt:21.5", cols: 100, rows: 30, idleTimeLimit: 0.25 }}
-/>
