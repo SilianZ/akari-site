@@ -1,7 +1,7 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const {themes} = require('prism-react-renderer');
+const { themes } = require('prism-react-renderer');
 const lightTheme = themes.github;
 const darkTheme = themes.dracula;
 
@@ -39,7 +39,14 @@ const config = {
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
-            image: 'img/docusaurus-social-card.jpg',
+            announcementBar: {
+                id: 'new_version',
+                content:
+                    '小可文档已更新至 <a href="https://docusaurus.io/">Docusaurus v3</a>！',
+                backgroundColor: '#fafbfc',
+                textColor: '#091E42',
+                isCloseable: true,
+            },
             navbar: {
                 title: 'AkariBot',
                 logo: {
@@ -81,8 +88,15 @@ const config = {
                 apiKey: '1ad461050e83cfe36e9667bf07114615',
                 indexName: 'akari-bot',
                 contextualSearch: true,
-            },            
+            },
             footer: {
+                logo: {
+                    alt: 'AkariBot Logo',
+                    src: 'img/logo.svg',
+                    width: 150,
+                    height: 150,
+                    href: 'https://teahouse.team/',
+                },
                 style: 'dark',
                 links: [
                     {
@@ -98,7 +112,7 @@ const config = {
                             },
                             {
                                 label: '邮件',
-                                href: 'mailto:admin@teahou.se'
+                                href: 'mailto:admin@teahou.se',
                             }
                         ],
                     },
@@ -107,17 +121,17 @@ const config = {
                         items: [
                             {
                                 label: 'GitHub',
-                                href: 'https://github.com/Teahouse-Studios/'
+                                href: 'https://github.com/Teahouse-Studios/',
                             },
                         ]
                     },
                 ],
-                copyright: `版权所有 © ${new Date().getFullYear()} AkariBot. 使用 Docusaurus 构建. 该文档改编自小可 · Wiki`,
+                copyright: '版权所有 © ${new Date().getFullYear()} AkariBot. 使用 Docusaurus 构建. 该文档改编自小可 · Wiki',
             },
             prism: {
                 theme: lightTheme,
                 darkTheme: darkTheme,
-                additionalLanguages: ['bash', 'diff', 'json', 'conf']
+                additionalLanguages: ['bash', 'diff', 'json']
             },
         }),
 };
