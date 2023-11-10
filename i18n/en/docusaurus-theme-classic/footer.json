@@ -26,5 +26,9 @@
   "copyright": {
     "message": "Copyright ©️ 2023 Akaribot. Build with Docusaurus. The document is adapted from AkariBot Wiki",
     "description": "The footer copyright"
+  },
+  "logo.alt": {
+    "message": "AkariBot Logo",
+    "description": "The alt text of footer logo"
   }
 }
