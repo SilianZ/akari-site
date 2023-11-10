@@ -26,5 +26,9 @@
   "copyright": {
     "message": "版权所有 © 2023 AkariBot. 使用 Docusaurus 构建. 该文档改编自小可 · Wiki",
     "description": "The footer copyright"
+  },
+  "logo.alt": {
+    "message": "AkariBot Logo",
+    "description": "The alt text of footer logo"
   }
 }
