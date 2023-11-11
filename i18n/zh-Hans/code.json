@@ -21,38 +21,6 @@
     "message": "页面已崩溃。",
     "description": "The title of the fallback page when the page crashed"
   },
-  "theme.NotFound.title": {
-    "message": "找不到页面",
-    "description": "The title of the 404 page"
-  },
-  "theme.NotFound.p1": {
-    "message": "我们找不到您要找的页面。",
-    "description": "The first paragraph of the 404 page"
-  },
-  "theme.NotFound.p2": {
-    "message": "请联系原始链接来源网站的所有者，并告知他们链接已损坏。",
-    "description": "The 2nd paragraph of the 404 page"
-  },
-  "theme.admonition.note": {
-    "message": "备注",
-    "description": "The default label used for the Note admonition (:::note)"
-  },
-  "theme.admonition.tip": {
-    "message": "提示",
-    "description": "The default label used for the Tip admonition (:::tip)"
-  },
-  "theme.admonition.danger": {
-    "message": "危险",
-    "description": "The default label used for the Danger admonition (:::danger)"
-  },
-  "theme.admonition.info": {
-    "message": "信息",
-    "description": "The default label used for the Info admonition (:::info)"
-  },
-  "theme.admonition.caution": {
-    "message": "警告",
-    "description": "The default label used for the Caution admonition (:::caution)"
-  },
   "theme.BackToTopButton.buttonAriaLabel": {
     "message": "回到顶部",
     "description": "The ARIA label for the back to top button"
@@ -184,9 +152,37 @@
     "message": "选择版本",
     "description": "The label for the navbar versions dropdown on mobile view"
   },
+  "theme.NotFound.title": {
+    "message": "找不到页面",
+    "description": "The title of the 404 page"
+  },
   "theme.tags.tagsListLabel": {
     "message": "标签：",
     "description": "The label alongside a tag list"
+  },
+  "theme.admonition.caution": {
+    "message": "警告",
+    "description": "The default label used for the Caution admonition (:::caution)"
+  },
+  "theme.admonition.danger": {
+    "message": "危险",
+    "description": "The default label used for the Danger admonition (:::danger)"
+  },
+  "theme.admonition.info": {
+    "message": "信息",
+    "description": "The default label used for the Info admonition (:::info)"
+  },
+  "theme.admonition.note": {
+    "message": "备注",
+    "description": "The default label used for the Note admonition (:::note)"
+  },
+  "theme.admonition.tip": {
+    "message": "提示",
+    "description": "The default label used for the Tip admonition (:::tip)"
+  },
+  "theme.admonition.warning": {
+    "message": "注意",
+    "description": "The default label used for the Warning admonition (:::warning)"
   },
   "theme.AnnouncementBar.closeButtonAriaLabel": {
     "message": "关闭",
@@ -212,9 +208,13 @@
     "message": "切换自动换行",
     "description": "The title attribute for toggle word wrapping button of code block lines"
   },
-  "theme.DocSidebarItem.toggleCollapsedCategoryAriaLabel": {
-    "message": "打开/收起侧边栏菜单「{label}」",
-    "description": "The ARIA label to toggle the collapsible sidebar category"
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "展开侧边栏分类 '{label}'",
+    "description": "The ARIA label to expand the sidebar category"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "折叠侧边栏分类 '{label}'",
+    "description": "The ARIA label to collapse the sidebar category"
   },
   "theme.NavBar.navAriaLabel": {
     "message": "主导航",
@@ -223,6 +223,14 @@
   "theme.navbar.mobileLanguageDropdown.label": {
     "message": "选择语言",
     "description": "The label for the mobile language switcher dropdown"
+  },
+  "theme.NotFound.p1": {
+    "message": "我们找不到您要找的页面。",
+    "description": "The first paragraph of the 404 page"
+  },
+  "theme.NotFound.p2": {
+    "message": "请联系原始链接来源网站的所有者，并告知他们链接已损坏。",
+    "description": "The 2nd paragraph of the 404 page"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "本页总览",
@@ -275,18 +283,6 @@
   "theme.docs.sidebar.expandButtonAriaLabel": {
     "message": "展开侧边栏",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
-  },
-  "theme.ErrorPageContent.tryAgain": {
-    "message": "重试",
-    "description": "The label of the button to try again rendering when the React error boundary captures an error"
-  },
-  "theme.common.skipToMainContent": {
-    "message": "跳到主要内容",
-    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
-  },
-  "theme.tags.tagsPageTitle": {
-    "message": "标签",
-    "description": "The title of the tag list page"
   },
   "theme.SearchBar.seeAll": {
     "message": "查看全部 {count} 个结果"
@@ -419,17 +415,17 @@
     "message": "搜索文档",
     "description": "The placeholder of the input of the DocSearch pop-up modal"
   },
-  "theme.admonition.warning": {
-    "message": "注意",
-    "description": "The default label used for the Warning admonition (:::warning)"
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "重试",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
   },
-  "theme.DocSidebarItem.expandCategoryAriaLabel": {
-    "message": "展开侧边栏分类 '{label}'",
-    "description": "The ARIA label to expand the sidebar category"
+  "theme.common.skipToMainContent": {
+    "message": "跳到主要内容",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
-  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
-    "message": "折叠侧边栏分类 '{label}'",
-    "description": "The ARIA label to collapse the sidebar category"
+  "theme.tags.tagsPageTitle": {
+    "message": "标签",
+    "description": "The title of the tag list page"
   },
   "theme.unlistedContent.title": {
     "message": "未列出页",
