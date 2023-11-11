@@ -14,11 +14,12 @@ jobs:
       uses: actions/setup-node@v3.8.1 
     - name: Install deps
       run: npm install
+    - name: Delete i18n
+      run: rm -rf .\i18n\zh-Hans
     - name: Write files
       run: npm run write-translations -- --locale zh-Hans
     - name: Commit files
       run: |
         git config --local user.name "Akari-bot"
-        git add -r .\i18n
         git commit -a -m ":sparkles: 更新 i18n"
         git push
