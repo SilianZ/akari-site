@@ -15,7 +15,7 @@ jobs:
     - name: Install deps
       run: npm install
     - name: Delete i18n
-      run: git rm -r .\i18n\zh-Hans
+      run: git rm -r /i18n/zh-Hans
     - name: Write files
       run: npm run write-translations -- --locale zh-Hans
     - name: Commit files
