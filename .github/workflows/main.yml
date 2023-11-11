@@ -20,6 +20,6 @@ jobs:
       run: npm run write-translations -- --locale zh-Hans
     - name: Commit files
       run: |
-        git config --local user.name "Akari-bot"
+        git config --global user.name "Akari-bot"
         git commit -a -m ":sparkles: 更新 i18n"
         git push
