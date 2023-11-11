@@ -24,7 +24,7 @@
     "description": "The label of footer link with label=GitHub linking to https://github.com/Teahouse-Studios/"
   },
   "copyright": {
-    "message": "版权所有 © 2023 AkariBot. 使用 Docusaurus 构建. 该文档改编自小可 · Wiki",
+    "message": "版权所有 © ${new Date().getFullYear()} AkariBot. 使用 Docusaurus 构建. 该文档改编自小可 · Wiki",
     "description": "The footer copyright"
   },
   "logo.alt": {
