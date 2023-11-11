@@ -3,8 +3,8 @@ sidebar_position: 5
 description: 配置小可
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
 # 配置
 
@@ -85,9 +85,22 @@ import TabItem from '@theme/TabItem';
 
 2.  解压下载好的文件到一个已经预先准备好的文件夹中：
 
-    **Windows** - 请使用自己熟悉的解压软件自行解压。
+    <Tabs groupId="operating-systems">
+        <TabItem value="win" label="Windows" default>
 
-    **Linux** - 请在命令行中输入 `tar -xzvf [文件名]`。
+    ```
+    请使用自己熟悉的解压软件自行解压。
+
+    </TabItem>
+
+    <TabItem value="linux" label="Linux">
+
+    请在命令行中输入 `tar -xzvf [文件名]`。
+
+    </TabItem>
+    ```
+
+    </Tabs>
 
 3.  运行 go-cqhttp。
 
@@ -102,7 +115,7 @@ import TabItem from '@theme/TabItem';
 
     接下来，请配置 go-cqhttp 的 `config.yml` 文件中的对应的连接方式。
 
-    ```yml
+    ```yml title="config.yml"
     ...
     # 连接服务列表
     servers:
@@ -150,17 +163,21 @@ import TabItem from '@theme/TabItem';
 
     例：`--basePath=txlib\8.9.73`
 
-    > 在选择版本时，应当遵从以下原则：
-    > 升级版本应当**一个一个版本**升，以后冻结了可能就没机会回退版本了。Code45 了应当先尝试删除 go-cqhttp 的 `device.json` 文件和 `data\cache` 文件夹并重新登录，而不是第一时间升级版本。
+    :::info
+
+    在选择版本时，应当遵从以下原则：
+    升级版本应当**一个一个版本**升，以后冻结了可能就没机会回退版本了。Code45 了应当先尝试删除 go-cqhttp 的 `device.json` 文件和 `data\cache` 文件夹并重新登录，而不是第一时间升级版本。
+
+    :::
 
 9.  按照先前步骤配置 go-cqhttp 的 `config.yml` 文件。
 
 10. 接下来，请配置 go-cqhttp 的 `config.yml` 文件中的签名服务器：
 
-    ```yml
+    ```yml title="config.yml"
     account: # 账号相关
       # 数据包的签名服务器列表，第一个作为主签名服务器，后续作为备用
-      sign-servers: 
+      sign-servers:
         - url: 'http://127.0.0.1:8080'  # 主签名服务器地址， 必填
           key: '114514'  # 签名服务器所需要的apikey, 如果签名服务器的版本在1.1.0及以下则此项无效
           authorization: '-'   # authorization 内容, 依服务端设置，如 'Bearer xxxx'
@@ -175,7 +192,7 @@ import TabItem from '@theme/TabItem';
 
 13. 在与 go-cqhttp 同一目录下的 `device.json` 文件夹中，并修改以下字段：
 
-    ```json
+    ```json title="device.json"
     "protocol": 1,
     ```
 
@@ -230,7 +247,7 @@ curl -XPOST -d '{"type":"m.login.password", "user":"<user>", "password":"<passwo
 
 #### E2E 加密
 
-目前，由于 libolm 在一些情况下需要手动配置，机器人默认没有启用端对端加密（e2ee）支持。
+目前，由于 libolm 在一些情况下需要手动配置，机器人默认没有启用端对端加密（E2EE）支持。
 
 若要启用 E2EE 支持，请执行以下命令：
 
@@ -265,7 +282,7 @@ pip3 install matrix-nio[e2e] ; PIP
 
 根据 go-cqhttp 的文档，iPad / Android Pad / Android Phone 协议支持处理 QQ 频道消息，可以在其生成的 `device.json` 中寻找 `"protocol":6,` 字段，将本处的数值修改为 1（Android Phone）、5（iPad）或 6（Android Pad）任意一个均可调用本功能。
 
-:::caution
+:::warning
 
 QQ 频道消息的处理仍然处于测试阶段，由于 go-cqhttp 对频道消息支持的不完善，频道内消息无法撤回，且频道列表不会自动刷新（加入新频道需要手动重启一次 gocqhttp）。
 
@@ -289,7 +306,7 @@ QQ 频道消息的处理仍然处于测试阶段，由于 go-cqhttp 对频道消
 
 3.  于 `package.json` 同级目录中，创建 `.env` 文件，并于内填写以下字段：
 
-    ```conf
+    ```conf title=".env"
     CHROMIUM_PATH="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" # 填写 chrome.exe 的绝对路径
     FC_SERVER_PORT=15551 # 填写服务运行的端口
     ```
