@@ -5,7 +5,7 @@ on:
     branches:
       - main
 jobs:
-  update_i18n_job:
+  update_i18n:
     runs-on: ubuntu-latest
     steps:
     - name: 检出仓库
