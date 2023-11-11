@@ -1,0 +1,307 @@
+---
+description: 此模块可以查询 Maimai 游戏中的信息
+slug: /maimai
+---
+
+# maimai
+
+-   [闭源](/docs/help/faq#为什么有些模块没有开源)
+-   别名：`mai`
+
+此模块可以查询 Maimai 游戏中的信息。
+
+本模块移植自 [Maibot](https://github.com/Diving-Fish/mai-bot) 。
+
+如非特别说明，本页面的难度支持全称、三字母缩写和中文缩写（绿黄红紫白），字母大小写不敏感。
+
+为防止影响正常交流，结果超过 10 条则采用图片形式，超过 200 条则不显示。
+
+:::warning
+
+本模块的命令使用的数据源为 Diving-Fish 提供的[查分器](https://www.diving-fish.com/maimaidx/prober/)，第一次使用本命令前请先按照对应说明注册账号并设置。
+
+:::
+
+## `maimai base`
+
+-   [公开](permissions)
+
+用法：`~maimai base <定数> [<最大定数>]`
+
+此命令可以根据定数搜索对应歌曲。
+
+## `maimai level`
+
+-   [公开](permissions)
+
+用法：`~maimai level <等级>`
+
+此命令可以根据等级搜索对应歌曲。
+
+使用本命令可正常显示超过 200 条结果。
+
+## `maimai search`
+
+-   [公开](permissions)
+
+用法：`~maimai search <搜索词>`
+
+此命令可以根据歌曲名称（或一部分）搜索对应歌曲。
+
+## `maimai alias`
+
+-   [公开](permissions)
+
+用法：`~maimai alias <ID>`
+
+此命令可以查询歌曲的别名。歌曲别名库由 Xray 提供。
+
+## `maimai b50`
+
+-   [公开](permissions)
+
+用法：`~maimai b50 [<查分器用户名>]`
+
+此命令可以用于查询 B50 信息。
+
+用户名留空则默认为绑定 QQ 号对应的用户名。
+
+:::info 例子
+
+返回的结果示例：
+
+```
+>>> ~maimai b50
+```
+
+![](https://z1.ax1x.com/2023/11/11/piGZWRJ.png)
+
+:::
+
+:::tip 无法使用？
+
+请检查您是否输入的是**查分器用户名**（非游戏名或昵称）。
+
+:::
+
+## `maimai info`
+
+-   [公开](permissions)
+
+用法：`~maimai info <ID 或别名> [<查分器用户名>]`
+
+此命令可以根据 ID 或别名查询歌曲的谱面成绩。
+
+ID 需要加入前缀“id”，别名请使用下划线“\_”代替空格。
+
+用户名留空则默认为绑定 QQ 号对应的用户名。
+
+:::info 例子
+
+返回的结果示例：
+
+```
+>>> ~maimai info id834
+<<< 834. PANDORA PARADOXXX Basic 7+
+100.7275 SSS+ FC
+Advanced 11
+100.7481 SSS+ FC
+Expert 13+
+100.4628 SSS FC
+Master 14+
+98.8164 S+
+Re:MASTER 15
+97.5142 S
+```
+
+:::
+
+:::tip 无法使用？
+
+请检查您是否输入的是**查分器用户名**（非游戏名或昵称）。
+
+:::
+
+## `maimai plate`
+
+-   [公开](permissions)
+
+用法：`~maimai plate <名牌板> [<查分器用户名>]`
+
+此命令可以查看玩家的名牌板完成进度。
+
+用户名留空则默认为绑定 QQ 号对应的用户名。
+
+:::info 例子
+
+返回的结果示例：
+
+```
+>>> ~maimai plate 舞神
+<<< 您的舞神剩余进度如下：
+Basic 剩余 524 首，
+Advanced 剩余 524 首，
+Expert 剩余 524 首，
+Master 剩余 524 首，
+Re:MASTER 剩余 84 首。
+<<< 您还有 208 首等级大于 13+ 的曲目。
+```
+
+:::
+
+:::tip 无法使用？
+
+请检查您是否输入的是**查分器用户名**（非游戏名或昵称）。
+
+:::
+
+## `maimai process`
+
+-   [公开](permissions)
+
+用法：`~maimai process <等级> <目标> [<查分器用户名>]`
+
+此命令可以查看玩家在对应等级的评价完成进度。
+
+用户名留空则默认为绑定 QQ 号对应的用户名。
+
+支持的目标评价：
+
+-   等级：`A`、`AA`、`AAA`、`S`、`S+`、`SS`、`SS+`、`SSS`、`SSS+`
+-   连击：`FC`、`FC+`、`AP`、`AP+`
+-   同步率：`FS`、`FS+`、`FDX`、`FDX+`
+
+:::tip 无法使用？
+
+请检查您是否输入的是**查分器用户名**（非游戏名或昵称）。
+
+:::
+
+## `maimai rank`
+
+-   [公开](permissions)
+
+用法：`~maimai rank [<查分器用户名>]`
+
+此命令可以查询用户在查分器的分数排名。
+
+用户名留空则默认为绑定 QQ 号对应的用户名。
+
+:::info 例子
+
+返回的结果示例：
+
+```
+>>> ~maimai rank
+<<< 截至 2023-06-18 11:07:10，
+查分器共有 12603 名用户，平均分数为 12315.1980，
+（用户）的分数为 14833，排名为 #2388，
+你已经超越了 81.05% 的玩家。
+```
+
+:::
+
+:::tip 无法使用？
+
+请检查您是否输入的是**查分器用户名**（非游戏名或昵称）。
+
+:::
+
+## `maimai scorelist`
+
+-   [公开](permissions)
+
+用法：`~maimai scorelist <等级> [<查分器用户名>]`
+
+此命令可以查询用户在对应等级的分数列表。
+
+使用本命令可正常显示超过 200 条结果。
+
+## `maimai song`
+
+-   [公开](permissions)
+
+用法：`~maimai song <ID 或别名> [<难度>]`
+
+此命令可以根据 ID 或别名查询歌曲或谱面信息。
+
+ID 需要加入前缀“id”，别名请使用下划线“\_”代替空格。
+
+:::info 例子
+
+返回的结果示例：
+
+歌曲：
+
+```
+>>> ~maimai song id834
+<<< 834. PANDORA PARADOXXX
+艺术家：削除
+分类：舞萌
+BPM：150
+版本：maimai FiNALE
+难度：7.7/11.5/13.9/14.9/15.0
+```
+
+谱面：
+
+```
+>>> ~maimai song id834 Re:MASTER
+<<< 834. PANDORA PARADOXXX
+Re:MASTER 15（15.0）
+TAP：1165
+HOLD：72
+SLIDE：90
+BREAK：15
+谱师：PANDORA PARADOXXX
+```
+
+:::
+
+## `maimai random`
+
+-   [公开](permissions)
+
+用法：
+
+-   指定条件：`~maimai random <等级+难度> [<类型>]`
+
+-   完全随机：`~maimai random`
+
+此命令可以随机一首指定条件的歌曲，若不输入参数则完全随机。
+
+如果不想指定难度和等级则输入`#`跳过，难度和等级之间不需要空格。
+
+类型可输入`SD`或`DX`之一，留空或输入其他内容则不筛选。
+
+## `maimai scoreline`
+
+-   [公开](permissions)
+
+用法：`~maimai scoreline <ID> <难度> <分数线>`
+
+此命令可以查找某首曲目的分数线。
+
+命令将返回分数线允许的 TAP GREAT 容错以及 BREAK 2500 或 BREAK 2000 等价的TAP GREAT 数。
+
+:::info 例子
+
+返回的结果示例：
+
+```
+>>> ~maimai scoreline 834 Re:MASTER 100
+<<< PANDORA PARADOXXX Re:MASTER
+分数线 100.0% 允许的最多 TAP GREAT 数量为 82.70（每个-0.0121%），
+BREAK 2550（一共 15 个）等价于 1.378 个 TAP GREAT（-0.0167%），
+BREAK 2000（一共 15 个）等价于 8.308 个 TAP GREAT（-0.1005%）。
+```
+
+:::
+
+## `maimai update`
+
+-   [仅超级用户](permissions)
+
+用法：`~maimai update`
+
+此命令可以更新 Maimai 资源文件，如别名和封面图。
