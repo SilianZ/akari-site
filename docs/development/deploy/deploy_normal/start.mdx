@@ -2,9 +2,10 @@
 sidebar_position: 6
 description: 启动小可机器人
 ---
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import Asciinema from '@site/src/components/Asciinema';
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Asciinema from "@site/src/components/Asciinema";
 
 # 运行机器人
 
@@ -19,22 +20,32 @@ import Asciinema from '@site/src/components/Asciinema';
 
 建议在启动机器人之前，先打开终端（cmd 或 Powershell）再运行 `start.bat`。
 
-1. 于 `start.bat` 所在目录，按下 `Shift` + `右键` 来打开右键菜单。
-2. 选择 `在此处打开 Powershell 窗口` 或 `在此处打开命令窗口`。
-3. 于终端内输入 `.\start.bat` （Powershell） 或 `start.bat` （cmd）来启动机器人。
+1. 于 `start.bat` 所在目录，打开终端。
+2. 在终端内输入 `./start.bat` （Powershell） 或 `start.bat` （cmd）来启动机器人。
 
 </TabItem>
 <TabItem value="linux" label="Linux">
 
-1. 于终端内，设置 `start` 脚本的执行权限：`chmod +x start`。
+1. 于终端内，设置 `start` 脚本的执行权限：
+
+    ```sh
+    chmod +x start
+    ```
+
 2. 启动脚本：`./start`。
 
 </TabItem>
 </Tabs>
 
 <Asciinema
-url="https://asciinema.org/a/605774.cast"
-options={{ theme: "monokai", poster: "npt:21.5", cols: 100, rows: 30, idleTimeLimit: 0.25 }}
+    url="https://asciinema.org/a/605774.cast"
+    options={{
+        theme: "monokai",
+        poster: "npt:21.5",
+        cols: 100,
+        rows: 30,
+        idleTimeLimit: 0.25,
+    }}
 />
 
 ## 运行测试控制台
@@ -49,24 +60,16 @@ options={{ theme: "monokai", poster: "npt:21.5", cols: 100, rows: 30, idleTimeLi
 
 :::
 
-<Tabs groupId="operating-systems">
-<TabItem value="win" label="Windows" default>
-
-1. 于 `console.py` 所在目录，按下 `Shift` + `右键` 来打开右键菜单。
-2. 选择 `在此处打开 Powershell 窗口` 或 `在此处打开命令窗口`。
-3. 于终端内输入 `python console.py` 来启动测试控制台。
-
-</TabItem>
-<TabItem value="linux" label="Linux">
-
 1. 于 `console.py` 所在目录，打开终端。
-2. 于终端内输入 `python console.py` 来启动测试控制台。
-
-</TabItem>
-</Tabs>
+2. 在终端内输入 `python console.py` 来启动测试控制台。
 
 <Asciinema
-url="https://asciinema.org/a/605772.cast"
-options={{ theme: "monokai", poster: "npt:21.5", cols: 100, rows: 30, idleTimeLimit: 0.25 }}
+    url="https://asciinema.org/a/605772.cast"
+    options={{
+        theme: "monokai",
+        poster: "npt:21.5",
+        cols: 100,
+        rows: 30,
+        idleTimeLimit: 0.25,
+    }}
 />
-
