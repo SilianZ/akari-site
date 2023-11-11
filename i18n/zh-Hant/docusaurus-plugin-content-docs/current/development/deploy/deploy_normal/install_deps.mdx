@@ -3,9 +3,9 @@ sidebar_position: 4
 description: 安装小可运行时用到的依赖
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import Asciinema from '@site/src/components/Asciinema';
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Asciinema from "@site/src/components/Asciinema";
 
 # 安装依赖
 
@@ -28,7 +28,7 @@ import Asciinema from '@site/src/components/Asciinema';
 
     :::
 
-    :::caution
+    :::warning
 
     安装 Poetry 前请**务必**检查系统环境变量中是否存在多个 Python Executable Path（Python 可执行路径）并及时清除，否则安装 Poetry 后可能会出现 Python 环境混乱导致无法正常加载依赖的情况。
 
@@ -91,7 +91,7 @@ pip install -r requirements.txt
     curl -sSL "https://install.python-poetry.org" | python3 -
     ```
 
-    :::caution
+    :::warning
 
     安装 Poetry 前请**务必**检查系统环境变量中是否存在多个 Python Executable Path（Python 可执行路径）并及时清除，否则安装 Poetry 后可能会出现 Python 环境混乱导致无法正常加载依赖的情况。
 
@@ -142,16 +142,37 @@ pip install -r requirements.txt
 :::
 
 <Asciinema
-url="https://asciinema.org/a/604782.cast"
-options={{ theme: "monokai", poster: "npt:21.5", cols: 100, rows: 30, idleTimeLimit: 1 }}/>
+    url="https://asciinema.org/a/604782.cast"
+    options={{
+        theme: "monokai",
+        poster: "npt:21.5",
+        cols: 100,
+        rows: 30,
+        idleTimeLimit: 1,
+    }}
+/>
 
 <Asciinema
-url="https://asciinema.org/a/605659.cast"
-options={{ theme: "monokai", poster: "npt:21.5", cols: 100, rows: 30, idleTimeLimit: 0.25 }}/>
+    url="https://asciinema.org/a/605659.cast"
+    options={{
+        theme: "monokai",
+        poster: "npt:21.5",
+        cols: 100,
+        rows: 30,
+        idleTimeLimit: 0.25,
+    }}
+/>
 
 <Asciinema
-url="https://asciinema.org/a/605643.cast"
-options={{ theme: "monokai", poster: "npt:21.5", cols: 100, rows: 30, idleTimeLimit: 0.1 }}/>
+    url="https://asciinema.org/a/605643.cast"
+    options={{
+        theme: "monokai",
+        poster: "npt:21.5",
+        cols: 100,
+        rows: 30,
+        idleTimeLimit: 0.1,
+    }}
+/>
 
 </TabItem>
 </Tabs>
