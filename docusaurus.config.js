@@ -147,7 +147,7 @@ const config = {
                         items: [
                             {
                                 label: 'Vercel',
-                                href: 'https://vercel.com',
+                                href: 'https://vercel.com/',
                             },
                             {
                                 label: 'Docusaurus',
