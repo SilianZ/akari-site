@@ -109,15 +109,15 @@ const config = {
                             },
                             {
                                 label: '功能',
-                                href: '/docs/functions',
+                                href: '/docs/functions/intro',
                             },
                             {
                                 label: '开发',
-                                href: '/docs/development',
+                                href: '/docs/development/intro',
                             },
                             {
                                 label: '帮助',
-                                href: '/docs/help',
+                                href: '/docs/help/intro',
                             }
                         ],
                     },
@@ -159,7 +159,7 @@ const config = {
                 copyright: `版权所有 © ${new Date().getFullYear()} AkariBot. 
                 使用 <a href="https://docusaurus.io/">Docusaurus</a> 构建. 
                 改编自<a href="https://bot.teahouse.team/">小可 · Wiki</a>.
-                除非另有声明，本网站内容采用<a href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享</a>授权。`,
+                除非另有声明，本网站内容采用<a href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享</a>授权.`,
             },
             prism: {
                 theme: lightTheme,
