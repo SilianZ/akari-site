@@ -1,24 +1,24 @@
-name: Auto i18n
+name: 自动 i18n
 
 on:
   push:
     branches:
       - main
 jobs:
-  update_i18n_job:
+  update_i18n:
     runs-on: ubuntu-latest
     steps:
-    - name: Check out the repository
+    - name: 检出仓库
       uses: actions/checkout@v2
-    - name: Setup Node.js environment
+    - name: 配置 Node.js 环境
       uses: actions/setup-node@v3.8.1 
-    - name: Install deps
+    - name: 安装依赖
       run: npm install
-    - name: Delete i18n
+    - name: 删除 i18n
       run: git rm -r i18n/zh-Hans
-    - name: Write files
+    - name: 写入文件
       run: npm run write-translations -- --locale zh-Hans
-    - name: Commit files
+    - name: 提交文件
       run: |
         git add i18n/zh-Hans
         git config --global user.name "Akari-bot"
