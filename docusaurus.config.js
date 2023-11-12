@@ -26,7 +26,9 @@ const config = {
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),
                     editUrl:
-                        'https://github.com/SilianZ/akari-site/tree/main',
+                        'https://github.com/SilianZ/akari-site/edit/main',
+                    showLastUpdateAuthor: true,
+                    showLastUpdateTime: true,
                 },
                 blog: false,
                 theme: {
@@ -92,13 +94,33 @@ const config = {
             footer: {
                 logo: {
                     alt: 'AkariBot Logo',
-                    src: 'img/logo.svg',
-                    width: 150,
-                    height: 150,
+                    src: 'img/logo-full.svg',
+                    width: 250,
                     href: 'https://teahouse.team/',
                 },
                 style: 'dark',
                 links: [
+                    {
+                        title: '文档',
+                        items: [
+                            {
+                                label: '简介',
+                                href: '/docs/intro',
+                            },
+                            {
+                                label: '功能',
+                                href: '/docs/functions',
+                            },
+                            {
+                                label: '开发',
+                                href: '/docs/development',
+                            },
+                            {
+                                label: '帮助',
+                                href: '/docs/help',
+                            }
+                        ],
+                    },
                     {
                         title: '联系我们',
                         items: [
@@ -113,20 +135,31 @@ const config = {
                             {
                                 label: '邮件',
                                 href: 'mailto:admin@teahou.se',
-                            }
-                        ],
-                    },
-                    {
-                        title: '更多',
-                        items: [
+                            },
                             {
                                 label: 'GitHub',
                                 href: 'https://github.com/Teahouse-Studios/',
                             },
+                        ],
+                    },
+                    {
+                        title: '支持',
+                        items: [
+                            {
+                                label: 'Vercel',
+                                href: 'https://vercel.com',
+                            },
+                            {
+                                label: 'Docusaurus',
+                                href: 'https://docusaurus.io/',
+                            }
                         ]
                     },
                 ],
-                copyright: '版权所有 © ${new Date().getFullYear()} AkariBot. 使用 Docusaurus 构建. 该文档改编自小可 · Wiki',
+                copyright: `版权所有 © ${new Date().getFullYear()} AkariBot. 
+                使用 <a href="https://docusaurus.io/">Docusaurus</a> 构建. 
+                改编自<a href="https://bot.teahouse.team/">小可 · Wiki</a>.
+                除非另有声明，本网站内容采用<a href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享</a>授权。`,
             },
             prism: {
                 theme: lightTheme,
