@@ -17,15 +17,15 @@
   },
   "link.item.label.功能": {
     "message": "功能",
-    "description": "The label of footer link with label=功能 linking to /docs/functions"
+    "description": "The label of footer link with label=功能 linking to /docs/functions/intro"
   },
   "link.item.label.开发": {
     "message": "开发",
-    "description": "The label of footer link with label=开发 linking to /docs/development"
+    "description": "The label of footer link with label=开发 linking to /docs/development/intro"
   },
   "link.item.label.帮助": {
     "message": "帮助",
-    "description": "The label of footer link with label=帮助 linking to /docs/help"
+    "description": "The label of footer link with label=帮助 linking to /docs/help/intro"
   },
   "link.item.label.哔哩哔哩": {
     "message": "哔哩哔哩",
@@ -45,14 +45,14 @@
   },
   "link.item.label.Vercel": {
     "message": "Vercel",
-    "description": "The label of footer link with label=Vercel linking to https://vercel.com"
+    "description": "The label of footer link with label=Vercel linking to https://vercel.com/"
   },
   "link.item.label.Docusaurus": {
     "message": "Docusaurus",
     "description": "The label of footer link with label=Docusaurus linking to https://docusaurus.io/"
   },
   "copyright": {
-    "message": "版权所有 © 2023 AkariBot. \n                使用 <a href=\"https://docusaurus.io/\">Docusaurus</a> 构建. \n                改编自<a href=\"https://bot.teahouse.team/\">小可 · Wiki</a>.\n                除非另有声明，本网站内容采用<a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">知识共享署名-相同方式共享</a>授权。",
+    "message": "版权所有 © 2023 AkariBot. \n                使用 <a href=\"https://docusaurus.io/\">Docusaurus</a> 构建. \n                改编自<a href=\"https://bot.teahouse.team/\">小可 · Wiki</a>.\n                除非另有声明，本网站内容采用<a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">知识共享署名-相同方式共享</a>授权.",
     "description": "The footer copyright"
   },
   "logo.alt": {
