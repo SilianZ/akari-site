@@ -1,0 +1,75 @@
+---
+description: 此模块用于管理 wiki 站点的黑白名单
+slug: /wiki_audit
+---
+
+# wiki_audit
+
+-   [开源](/docs/help/faq#为什么有些模块没有开源)
+-   依赖：[wiki](wiki)
+
+此模块用于管理 wiki 站点的黑白名单。
+
+## `wiki_audit trust`
+
+-   [仅超级用户](permissions)
+
+用法：`~wiki_audit trust <wiki 域名/脚本路径>`
+
+此命令可以将 wiki 站点加入白名单。
+
+:::tip 脚本路径
+
+“脚本路径”指的是 wiki 的 index.php、api.php 所在的目录。
+
+-   在 WMF 所属的网站（维基百科、维基词典等）和 Miraheze 农场，此目录在 `<域名>/w/`。
+-   在 Fandom 农场的英文 wiki 上，此目录在 `<域名>`。
+-   在 Fandom 农场的其他语言 wiki 上，此目录在 `<域名>/<语言代码>/`。
+
+如果您的 wiki 是自行搭建的，或您的农场没有在此列出，下面是获取脚本路径的方法。
+
+1. 在搜索框内输入：`Special:Version`。
+2. 打开页面后，向下滑，找到第二个表格。对于中文 wiki 来说，此表格的名称为“接入点URL”。
+3. 找到此表格的第二行（对于中文 wiki 来说，这一行的表头为“脚本路径”）第二列（对于中文 wiki 来说，这一列的表头为“URL”）内容。右键此字符并复制链接，即为此 wiki 的脚本路径。
+
+:::
+
+## `wiki_audit block`
+
+-   [仅超级用户](permissions)
+
+用法：`~wiki_audit block <wiki 域名/脚本路径>`
+
+此命令可以将 wiki 站点加入黑名单。
+
+## `wiki_audit distrust`
+
+-   [仅超级用户](permissions)
+
+用法：`~wiki_audit ditrust <wiki 域名/脚本路径>`
+
+此命令可以将 wiki 站点移出白名单。
+
+## `wiki_audit unblock`
+
+-   [仅超级用户](permissions)
+
+用法：`~wiki_audit unblock <wiki 域名/脚本路径>`
+
+此命令可以将 wiki 站点移出黑名单。
+
+## `wiki_audit query`
+
+-   [仅超级用户](permissions)
+
+用法：`~wiki_audit query <wiki 域名/脚本路径>`
+
+此命令可以允许机器人询问是否访问此 wiki 站点。
+
+## `wiki_audit list`
+
+-   [仅超级用户](permissions)
+
+用法：`~wiki_audit list`
+
+此命令可以查看现有黑白名单列表。
