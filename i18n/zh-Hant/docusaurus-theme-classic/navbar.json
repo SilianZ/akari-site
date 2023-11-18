@@ -7,17 +7,13 @@
     "message": "AkariBot Logo",
     "description": "The alt text of navbar logo"
   },
-  "item.label.功能": {
-    "message": "功能",
-    "description": "Navbar item with label 功能"
+  "item.label.文档": {
+    "message": "文档",
+    "description": "Navbar item with label 文档"
   },
-  "item.label.开发": {
-    "message": "开发",
-    "description": "Navbar item with label 开发"
-  },
-  "item.label.帮助": {
-    "message": "帮助",
-    "description": "Navbar item with label 帮助"
+  "item.label.博客": {
+    "message": "博客",
+    "description": "Navbar item with label 博客"
   },
   "item.label.GitHub": {
     "message": "GitHub",
