@@ -30,7 +30,11 @@ const config = {
                     showLastUpdateAuthor: true,
                     showLastUpdateTime: true,
                 },
-                blog: false,
+                blog: {
+                    blogTitle: 'Docusaurus blog!',
+                    blogDescription: 'A Docusaurus powered blog!',
+                    postsPerPage: 'ALL',
+                },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
                 },
@@ -58,21 +62,14 @@ const config = {
                 items: [
                     {
                         type: 'docSidebar',
-                        sidebarId: 'functions',
+                        sidebarId: 'docs',
                         position: 'left',
-                        label: '功能',
+                        label: '文档',
                     },
                     {
-                        type: 'docSidebar',
-                        sidebarId: 'dev',
+                        to: 'blog',
+                        label: '博客',
                         position: 'left',
-                        label: '开发',
-                    },
-                    {
-                        type: 'docSidebar',
-                        sidebarId: 'help',
-                        position: 'left',
-                        label: '帮助',
                     },
                     {
                         type: 'localeDropdown',
@@ -104,21 +101,25 @@ const config = {
                         title: '文档',
                         items: [
                             {
-                                label: '简介',
-                                href: '/docs/intro',
+                                label: '服务条款',
+                                href: '/docs/policy',
+                            },
+                            {
+                                label: '免责声明',
+                                href: '/docs/disclaimer',
                             },
                             {
                                 label: '功能',
-                                href: '/docs/functions/intro',
+                                href: '/docs/functions',
                             },
                             {
                                 label: '开发',
-                                href: '/docs/development/intro',
+                                href: '/docs/development',
                             },
                             {
                                 label: '帮助',
-                                href: '/docs/help/intro',
-                            }
+                                href: '/docs/help',
+                            },
                         ],
                     },
                     {
@@ -159,7 +160,7 @@ const config = {
                 copyright: `版权所有 © ${new Date().getFullYear()} AkariBot. 
                 使用 <a href="https://docusaurus.io/">Docusaurus</a> 构建. 
                 改编自<a href="https://bot.teahouse.team/">小可 · Wiki</a>.
-                除非另有声明，本网站内容采用<a href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享</a>授权.`,
+                除非另有声明，本网站内容采用<a href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0</a> 授权.`,
             },
             prism: {
                 theme: lightTheme,
