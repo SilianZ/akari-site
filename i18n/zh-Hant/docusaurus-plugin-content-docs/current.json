@@ -3,24 +3,36 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.dev.category.自搭建": {
-    "message": "自搭建",
-    "description": "The label for category 自搭建 in sidebar dev"
+  "sidebar.docs.category.功能": {
+    "message": "功能",
+    "description": "The label for category 功能 in sidebar docs"
   },
-  "sidebar.dev.category.常规自搭建": {
-    "message": "常规自搭建",
-    "description": "The label for category 常规自搭建 in sidebar dev"
-  },
-  "sidebar.dev.category.使用 Docker 自搭建": {
-    "message": "使用 Docker 自搭建",
-    "description": "The label for category 使用 Docker 自搭建 in sidebar dev"
-  },
-  "sidebar.functions.category.模块": {
+  "sidebar.docs.category.模块": {
     "message": "模块",
-    "description": "The label for category 模块 in sidebar functions"
+    "description": "The label for category 模块 in sidebar docs"
   },
-  "sidebar.functions.category.color": {
+  "sidebar.docs.category.color": {
     "message": "color",
-    "description": "The label for category color in sidebar functions"
+    "description": "The label for category color in sidebar docs"
+  },
+  "sidebar.docs.category.开发": {
+    "message": "开发",
+    "description": "The label for category 开发 in sidebar docs"
+  },
+  "sidebar.docs.category.自搭建": {
+    "message": "自搭建",
+    "description": "The label for category 自搭建 in sidebar docs"
+  },
+  "sidebar.docs.category.常规自搭建": {
+    "message": "常规自搭建",
+    "description": "The label for category 常规自搭建 in sidebar docs"
+  },
+  "sidebar.docs.category.使用 Docker 自搭建": {
+    "message": "使用 Docker 自搭建",
+    "description": "The label for category 使用 Docker 自搭建 in sidebar docs"
+  },
+  "sidebar.docs.category.帮助": {
+    "message": "帮助",
+    "description": "The label for category 帮助 in sidebar docs"
   }
 }
