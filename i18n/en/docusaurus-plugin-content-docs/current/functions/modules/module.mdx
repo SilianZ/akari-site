@@ -1,78 +1,78 @@
 ---
-description: 此模块可以启用或禁用模块
+description: This module can be enabled or disabled
 slug: /module
 ---
 
-# module
+# Module
 
--   [开源](/docs/help/faq#为什么有些模块没有开源)
--   强制开启
+-   [开源]\(/docs/help/faq#Why some modules are not open sources)
+-   Force turn on
 
-此模块可以启用或禁用模块。
+This module can be enabled or disabled.
 
 ## `module enable`
 
 -   [仅管理员](permissions)
--   别名：`enable`
+-   Alias：`enable`
 
-用法：
+Usage：
 
--   指定：`~module enable <模块 1> [<模块 2>...] [-g]`
--   全部：`~module enable all [-g]`
+-   Specify：\`~module enabling \<Module 1> [<Module 2>...] [-g]
+-   All：`~module enables all [-g]`
 
-参数：
+Parameter：
 
--   `-g`：应用至频道全局。
+-   `-g`：applies to the channel globally.
 
-此命令可以开启指定或所有模块。
+This command can turn on specified or all modules.
 
 ## `module disable`
 
 -   [仅管理员](permissions)
--   别名：`disable`
+-   Alias：`disable`
 
-用法：
+Usage：
 
--   指定：`~module disble <模块 1> [<模块 2>...] [-g]`
--   全部：`~module disable all [-g]`
+-   Specify：\`~module disable\<Module 1> [<Module 2>...] [-g]
+-   All：`~module disable all [-g]`
 
-参数：
+Parameter：
 
--   `-g`：应用至频道全局。
+-   `-g`：applies to the channel globally.
 
-此命令可以关闭指定或所有模块。
+This command can close the specified or all modules.
 
 ## `module list`
 
 -   [仅管理员](permissions)
 
-用法：`~module list`
+Use：`~module list`
 
-此命令可以列出目前机器人的所有模块。
-
-## `module reload`
-
--   [仅超级用户](permissions)
--   别名：`reload`
-
-用法：`~module reload <模块 1> [<模块 2>...]`
-
-此命令可以重新加载模块。
-
-## `module unload`
-
--   [仅超级用户](permissions)
--   别名：`unload`
-
-用法：`~module unload <模块 1> [<模块 2>...]`
-
-此命令可以卸载模块，并使其在重启时不加载。
+This command can list all modules of the current robot.
 
 ## `module load`
 
 -   [仅超级用户](permissions)
--   别名：`load`
+-   Alias：`load`
 
-用法：`~module load <模块 1> [<模块 2>...]`
+Use：`~module load <1> [<Module 2>...]`
 
-此命令可以加载已卸载的模块。
+This command can reload the module.
+
+## `module unload`
+
+-   [仅超级用户](permissions)
+-   Alias：`unload`
+
+Use：`~module unload<Module 1> [<Module 2>...]`
+
+This command can uninstall the module and leave it unloaded on reboot.
+
+## `module load`
+
+-   [仅超级用户](permissions)
+-   Alias：`load`
+
+Use：`~module load <Module 1> [<Module 2>...]`
+
+This command can load uninstalled modules.
