@@ -1,37 +1,37 @@
 ---
-description: 此模块可以更方便地使用关于 maimai 相关的命令
+description: This module can make more accessible about the maimai related commands
 slug: /maimai_regex
 ---
 
 # maimai_regex
 
--   [闭源](/docs/help/faq#为什么有些模块没有开源)
--   依赖：[maimai](maimai)
--   别名：`mai_regex`
+-   [闭源]\(/docs/help/faq#Why some modules are not open sources)
+-   Depends：[maimai](maimai)
+-   Alias：`mai_regex`
 
-此模块可以更方便地使用关于 `maimai` 相关的命令。
+This module makes it easier to use the commands associated with the `maimai`.
 
 ## `maimai_regex song`
 
 -   [公开](permissions)
 
-用法：`<ID 或别名>是什么歌`
+Which song is using：\`\<ID 或别名>
 
-此命令可以通过歌曲 ID 或别名获取歌曲信息，ID 需要加入前缀“id”。
+This command can fetch song information by song ID or aliase, which needs to be prefix 'id'.
 
 ## `maimai_regex info`
 
 -   [公开](permissions)
 
-用法：`<ID 或别名>有什么分 [<查分器用户名>]`
+Usage：`<ID 或别名>at what point [<detector username>]`
 
-此命令可以根据 ID 或别名查询歌曲的谱面成绩，ID 需要加入前缀“id”。
+This command can query song's beatmap grade by ID or aliase, which needs to be prefix 'id'.
 
-用户名留空则默认为绑定 QQ 号对应的用户名。
+Leave blank to default to the username corresponding to the QQ number.
 
-:::tip 无法使用？
+:::tip Unusable?
 
-请检查您是否输入的是**查分器用户名**（非游戏名或昵称）。
+Please check if you have entered **the identifier** (non-game name or nickname).
 
 :::
 
@@ -39,31 +39,31 @@ slug: /maimai_regex
 
 -   [公开](permissions)
 
-用法：`<ID>有什么别名`
+Use：`<ID>with alias`
 
-此命令可以通过歌曲 ID 获取歌曲别名。
+This command can get song aliases by song ID.
 
 ## `maimai_regex random`
 
 -   [公开](permissions)
 
-用法：`随个[(dx|标准)][(绿|黄|红|紫|白)]<难度>`
+Use：`with [(dx|standard)][(green|yellow|red|purible|white)]<difficulty>`
 
-此命令可以随机一首指定条件的歌曲。
+This command can randomly specify a song.
 
 ## `maimai_regex plate`
 
 -   [公开](permissions)
 
-用法：`<名牌板>进度 [<查分器用户名>]`
+Use：`<names> progress [<detector username>]`
 
-此命令可以查看玩家的名牌板完成进度。
+This command allows you to view the progress of the player's nameplate completion.
 
-用户名留空则默认为绑定 QQ 号对应的用户名。
+Leave blank to default to the username corresponding to the QQ number.
 
-:::tip 无法使用？
+:::tip Unusable?
 
-请检查您是否输入的是**查分器用户名**（非游戏名或昵称）。
+Please check if you have entered **the identifier** (non-game name or nickname).
 
 :::
 
@@ -71,20 +71,20 @@ slug: /maimai_regex
 
 -   [公开](permissions)
 
-用法：`<等级> <目标>进度 [<查分器用户名>]`
+Use：`<Rank> <Destination >Progress [<Quantifier Username >]`
 
-此命令可以查看玩家在对应等级的评价完成进度。
+This command can see how far players have completed their ratings at the corresponding level.
 
-用户名留空则默认为绑定 QQ 号对应的用户名。
+Leave blank to default to the username corresponding to the QQ number.
 
-支持的目标评价：
+Supported target ratings：
 
--   等级：`A`、`AA`、`AAA`、`S`、`S+`、`SS`、`SS+`、`SSS`、`SSS+`
--   连击：`FC`、`FC+`、`AP`、`AP+`
--   同步率：`FS`、`FS+`、`FDX`、`FDX+`
+-   Level：`A`, `AAA`, `S`, `S+`, `SS+`, `SSS`, `SSS+`
+-   Strike：`FC`, `FC+`, `AP`, `AP+`
+-   Sync rate：`FS`, `FS+`, `FDX`, `FDX+`
 
-:::tip 无法使用？
+:::tip Unusable?
 
-请检查您是否输入的是**查分器用户名**（非游戏名或昵称）。
+Please check if you have entered **the identifier** (non-game name or nickname).
 
 :::
