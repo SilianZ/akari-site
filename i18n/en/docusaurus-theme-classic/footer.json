@@ -1,46 +1,46 @@
 {
   "link.title.文档": {
-    "message": "文档",
+    "message": "Documentation",
     "description": "The title of the footer links column with title=文档 in the footer"
   },
   "link.title.联系我们": {
-    "message": "联系我们",
+    "message": "Contact us",
     "description": "The title of the footer links column with title=联系我们 in the footer"
   },
   "link.title.支持": {
-    "message": "支持",
+    "message": "Support",
     "description": "The title of the footer links column with title=支持 in the footer"
   },
   "link.item.label.服务条款": {
-    "message": "服务条款",
+    "message": "Terms of Service",
     "description": "The label of footer link with label=服务条款 linking to /docs/policy"
   },
   "link.item.label.免责声明": {
-    "message": "免责声明",
+    "message": "Disclaimer",
     "description": "The label of footer link with label=免责声明 linking to /docs/disclaimer"
   },
   "link.item.label.功能": {
-    "message": "功能",
+    "message": "Function",
     "description": "The label of footer link with label=功能 linking to /docs/functions"
   },
   "link.item.label.开发": {
-    "message": "开发",
+    "message": "Development",
     "description": "The label of footer link with label=开发 linking to /docs/development"
   },
   "link.item.label.帮助": {
-    "message": "帮助",
+    "message": "Help",
     "description": "The label of footer link with label=帮助 linking to /docs/help"
   },
   "link.item.label.哔哩哔哩": {
-    "message": "哔哩哔哩",
+    "message": "Beep beep",
     "description": "The label of footer link with label=哔哩哔哩 linking to https://space.bilibili.com/406275313"
   },
   "link.item.label.官网": {
-    "message": "官网",
+    "message": "Web site",
     "description": "The label of footer link with label=官网 linking to https://teahouse.team/"
   },
   "link.item.label.邮件": {
-    "message": "邮件",
+    "message": "Email",
     "description": "The label of footer link with label=邮件 linking to mailto:admin@teahou.se"
   },
   "link.item.label.GitHub": {
@@ -52,11 +52,11 @@
     "description": "The label of footer link with label=Vercel linking to https://vercel.com/"
   },
   "link.item.label.Docusaurus": {
-    "message": "Docusaurus",
+    "message": "Docusaur",
     "description": "The label of footer link with label=Docusaurus linking to https://docusaurus.io/"
   },
   "copyright": {
-    "message": "版权所有 © 2023 AkariBot. \n                使用 <a href=\"https://docusaurus.io/\">Docusaurus</a> 构建. \n                改编自<a href=\"https://bot.teahouse.team/\">小可 · Wiki</a>.\n                除非另有声明，本网站内容采用<a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">知识共享署名-相同方式共享 4.0</a> 授权.",
+    "message": "Copyright ©️ 2023 Akaribot. \n                to build with <a href=\"https://docusaurus.io/\">Docusaur</a> . \n                to adapt from<a href=\"https://bot.teahouse.team/\">Noble Wiki</a>.\n                unless otherwise stated, the content of this site is in<a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons Attribution - share 4</a> authorization.",
     "description": "The footer copyright"
   },
   "logo.alt": {
