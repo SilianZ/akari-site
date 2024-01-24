@@ -1,33 +1,33 @@
 ---
-description: 此模块可以查询某个 MediaWiki 网站中的用户信息
+description: This module provides access to user information on a MediaWiki website
 slug: /user
 ---
 
 # user
 
--   [开源](/docs/help/faq#为什么有些模块没有开源)
--   别名：`u`
+-   [开源]\(/docs/help/faq#Why some modules are not open sources)
+-   Alias：`u`
 
-此模块可以查询某个 MediaWiki 网站中的用户信息。
+This module provides access to user information on a MediaWiki website.
 
 ## `user`
 
 -   [公开](permissions)
 
-此命令可以查询某个 MediaWiki 网站中的用户信息。
+This command can query user information on a MediaWiki website.
 
-用法：`~user [-<p|r>] [~<Gamepedia 网站域名>] [<interwiki>:]<用户名>`
+Use：`~user [-<p|r>] [~<Gamepedia 网站域名>] [<interwiki>:]<Username>`
 
-参数：
+Parameter：
 
--   `-p`：返回一张在 Gamepedia 的用户的详情图片，若非 Gamepedia 用户，则图片中只会展示编辑数。
--   `-r`：返回 Gamepedia 取得的更多信息。
+-   `-p`：returns an image of a user in Gamepedia and only the number of edits will be displayed in a picture other than Gamepedia user.
+-   `-r`：returns more information from Gamepedia.
 
-:::info 例子
+:::info Example
 
-返回的结果示例：
+Result Example：
 
-常规：
+General：
 
 ```
 >>> ~user HlDoroWolf
@@ -43,7 +43,7 @@ slug: /user
 https://minecraft.fandom.com/zh/wiki/UserProfile%3AHlDoroWolf
 ```
 
-图片样式：
+Image Style：
 
 ![](https://z1.ax1x.com/2023/11/18/piN0Bmd.png)
 
@@ -51,6 +51,6 @@ https://minecraft.fandom.com/zh/wiki/UserProfile%3AHlDoroWolf
 
 :::warning
 
-某些网站已经被列入黑名单，使用此命令无法获取某些网站的某些信息。即使网站不在黑名单内，返回的内容仍将经过小可云智能过滤。请不要作死。
+Some websites have been blacklisted, and some information on some sites cannot be obtained using this command.Even if the web is not blacklisted, the returned content will still be cloudable and intelligible.Don't die.
 
 :::
