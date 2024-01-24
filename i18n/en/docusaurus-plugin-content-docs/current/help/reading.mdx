@@ -10,11 +10,11 @@ Use the `~wiki` command as example：
 ~wiki [<interwiki>:]<page name>
 ```
 
-`<页面名>` 代表**参数**。即使用 `<` 和 `>` 包含的参数，默认必填。
+`<page>` represents **parameters**.This is required by default using the parameters contained in ``<` and ``>\`\`.
 
-`[<interwiki>:]` 代表**选填参数**。即使用 `[` 和 `]` 包含的参数。Normally, the help document refers to default values if the optional parameter is not entered.
+`[<interwiki>:]` represents **fill the argument**.Use the parameters contained in `[` and `]`.Normally, the help document refers to default values if the optional parameter is not entered.
 
-另外，带有 `(|)` 则代表**或**，即使用两种（及以上）选择的任意一种都可以响应命令。
+Also, with `(|)` represents **or **, that is, either of the two (or more) selects can respond to the command.
 
 Error Example
 
@@ -24,7 +24,7 @@ Do not imitate this command, it will not be answered correctly.
 
 ## Sample Command
 
-命令示例有时会出现在页面中，以下是命令示例的格式，以 `~whoami` 命令作为示例：
+Command examples sometimes appear on pages, below is the command example format, with the `~whoami` command as an example：
 
 :::info Example
 
@@ -36,34 +36,34 @@ Result Example：
 ID of this conversation is：QQQ|Group|xxx
 ```
 
-其中，`>>>` 代表输入（即你发送给机器人的命令），`<<<` 代表命令的输出（即机器人发送给你的结果）。
+where,`>>>` represents the input (i.e. the command you send to the robot), and `<<<` indicates the output of the command (i.e. the result sent to you by the robot).
 
 :::
 
-## 指导
+## Instructions
 
-指导通常会出现在文档和命令的开头。
+Guidance usually appears at the beginning of the document and command.
 
-### 是否开源
+### Open source
 
--   [开源](/docs/help/faq#为什么有些模块没有开源)：此模块可开源并按照协议使用。
--   [闭源](/docs/help/faq#为什么有些模块没有开源)：此模块的使用需要向模块原作者授权。
+-   [开源]\(/docs/help/faq#Why some modules are not open source)：this module is open and used according to protocol.
+-   [闭源]\(/docs/help/faq#Why some modules are not open sources)：The use of this module requires authorization from the originator of the module.
 
-### 用户权限
+### User Permissions
 
--   [公开](/docs/permissions)：此命令可公开使用。
--   [仅管理员](/docs/permissions)：此命令仅机器人管理员或群管理员可使用。
--   [仅超级用户](/docs/permissions)：此命令仅超级用户可使用。
+-   [公开](/docs/permissions)：This command is publicly available.
+-   [仅管理员](/docs/permissions)：This command is available only to robot administrator or group administrator.
+-   [仅超级用户](/docs/permissions)：This command is available only for superusers.
 
-### 命令类型
+### Command Type
 
--   [命令](/docs/help/reading#命令类型)：此命令在使用时会立刻做出回应。（一般不显示）
--   [订阅](/docs/help/reading#命令类型)：此命令在使用后可开关消息推送。
--   [设置](/docs/help/reading#命令类型)：此命令在使用后可更改模块设定。
+-   [命令]\(/docs/help/reading#command type)：This command will respond immediately when it is used.(Normally not displayed)
+-   [订阅]\(/docs/help/reading#command type)：This command can switch message push after it is used.
+-   [设置]\(/docs/help/reading#command type)：This command can change module settings after use.
 
-### 其它
+### Other
 
--   强制开启：此命令为基础命令，无法被手动禁用。
--   （任意时间）后撤回：此命令输出的信息会在若干时间后撤回。
--   冷却（任意时间）：使用此命令后在若干时间秒后才可再次使用。
--   不推荐：不建议用户使用此命令。
+-   Force：this command as the base command and cannot be disabled manually.
+-   Retract：information from this command output after any time (anyway).
+-   Cooldown (any time)：uses this command before it can be used again for a few seconds.
+-   No：is recommended to use this command.
