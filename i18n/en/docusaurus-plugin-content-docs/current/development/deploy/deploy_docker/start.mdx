@@ -1,13 +1,13 @@
 ---
 sidebar_position: 4
-description: 运行小可机器人
+description: Run small robot
 ---
 
 import Asciinema from "@site/src/components/Asciinema";
 
-# 运行机器人
+# Run robot
 
-配置完成后，使用 `docker run` 开启小可：
+Use `docker run` to enable small： after configuration has finished
 
 ```sh
 docker run \
@@ -19,9 +19,9 @@ docker run \
 > bakabaka9/akari-bot
 ```
 
-如果终端中返回了 `long_tag` 类型的容器 `ID`, 证明容器已创建完毕，这时我们可以执行 `docker logs akari-bot` 查看小可的日志。
+If a container of the `long_tag` type is returned in the terminal, it is proven that the container has been created, and then we can perform the `docker logs akari-bot` to view the loggable log.
 
-如果没有任何报错，恭喜您！您的小可机器人已经搭建成功！
+Congratulations, if no error occurred!Your small cocoa robot has been built successfully!
 
 <Asciinema
     url="https://asciinema.org/a/605780.cast"
