@@ -1,36 +1,36 @@
 ---
 sidebar_position: 8
-description: 疑难解答
+description: Troubleshooting
 ---
 
-# 疑难解答
+# Troubleshooting
 
-以下的疑难解答部分可以解决小部分在自搭建时遇到的问题。
+The troubleshooter section below will solve the problems encountered by small parts when they are built.
 
-在排错之前，请确保您已经详细地阅读了文档内所有的注释说明。
+Before troubleshooting, make sure you have read all the annotations in the document in detail.
 
-疑难解答将会分为不同方面，如果您有更好的疑难解答欢迎提交 PR。
+Troubleshooter will be divided into different areas, if you have better trouble answering to submit PR.
 
-## 安装依赖
+## Install Dependencies
 
-### 在安装依赖时遇到跟 `hnswlib` 有关的问题导致无法正常安装依赖
+### Unable to install dependencies due to problems associated with `hnswlib`
 
-该情况可能只会发生在 Windows 系统下。
+This may only happen under Windows system.
 
-您可能没有安装好 Microsoft C++ 生成工具。
+You may not have installed Microsoft C++ generation tools.
 
-1.  下载 [Microsoft C++ 生成工具](https://visualstudio.microsoft.com/zh-hans/visual-cpp-build-tools/)。
+1.  Download [Microsoft C++ Generating Tool](https://visualstudio.microsoft.com/en-hans/visual-cpp-build-tools/).
 
-2.  在下载文件夹中打开安装程序，等待片刻会出现一个名为“Visual Studio Installer”的窗口。
+2.  Open the installer in the download folder, waiting for a minute to open a window called Visual Studio Installer.
 
-3.  在“工作负荷”板块中，选择“使用 C++ 的桌面开发”，然后点击右下角的“安装”。
+3.  In the "Workload" block, select "Desktop Development using C++" and then click "Install" in the bottom right corner.
 
-4.  等待安装完成后即可关闭窗口。
+4.  Waiting for installation to close the window.
 
-5.  尝试重新安装依赖。
+5.  Try reinstalling dependency.
 
-### 在使用 pip 安装依赖时遇到依赖冲突
+### Dependency conflict when installing dependency using pip
 
-尝试在安装依赖时加上 `--no-deps` 参数。
+Try adding the `--no-deps` parameter when installing dependencies.
 
-例：`pip install --no-deps -r requirements.txt`。
+Example：`pips install --no-deps -r requirements.txt`.
