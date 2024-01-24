@@ -5,34 +5,34 @@ slug: /core
 
 # Cores
 
--   [开源](/docs/help/faq#为什么有些模块没有开源)
--   强制开启
+-   [开源]\(/docs/help/faq#Why some modules are not open sources)
+-   Force turn on
 
-此模块是小可最基础的模块，可以查看帮助以及使用管理员设置。
+This module is the smallest basicable module, which can view help and use admin settings.
 
 ## `ping`
 
 -   [公开](permissions)
 
-用法：`~ping`
+Use：`~ping`
 
-此命令可以得知机器人是否在线，若拥有超级用户权限则可获取系统信息。
+This command tells us if the robot is online and if you have superuser permission, you can get system information.
 
-:::info 例子
+:::info Example
 
-返回的结果示例：
+Result Example：
 
 ```
->>> ~ping
+>>>> ping
 <<< Pong!
-系统运行时间：2022-12-23 20:31:36
-机器人已运行：0:57:33.924041
-Python版本：3.9.12
-处理器型号：Intel(R) Xeon(R) Platinum 8255C CPU @ 2.50GHz
-当前处理器使用率：3.2%
-物理内存：7443M 使用率：74.6%
-Swap内存：2047M 使用率：99.9%
-磁盘容量：43G/196G
+System run time：2022-12-23 20:31:36
+robot is running：0:57:33. 24041
+Python version：3.9.12
+Processor model：Intel(R) Xeon(R) Platinum 8255C CPU @ 2. 0GHz
+Current processor usage：3.2%
+Physical memory：743M usage：74.6%
+SwapMemory：2047M usage：99.9%
+Disk capacity：43G/196G
 ```
 
 :::
@@ -41,18 +41,18 @@ Swap内存：2047M 使用率：99.9%
 
 -   [公开](permissions)
 
-用法：`~whoami`
+Use：`~whoami`
 
-此命令可以获取发送命令者在机器人内部的 ID 。
+This command can get the ID of the sender inside the robot.
 
-:::info 例子
+:::info Example
 
-返回的结果示例：
+Result Example：
 
 ```
->>> ~whoami
-<<< 你的 ID 是：QQ|xxx
-本对话的 ID 是：QQ|Group|xxx
+>>>> ~whoami
+<<<< your ID is：QQQ|xxxx
+ID of this conversation is：QQQ|Group|xxx
 ```
 
 :::
@@ -61,35 +61,35 @@ Swap内存：2047M 使用率：99.9%
 
 -   [公开](permissions)
 
-用法：`~version`
+Use：`~version`
 
-此命令可以获得目前机器人运行的软件版本。版本号为 Git commit hash 的前六位。
+This command allows you to get a version of the software that is running by the robot.Version number is the first six digits of Git commit hash.
 
 ## `mute`
 
 -   [仅管理员](permissions)
 
-用法：`~mute`
+Use：`~mute`
 
-此命令可以切换是否允许机器人发言。
+This command can toggle whether robots are allowed to speak.
 
 :::warning
 
-请勿直接禁言机器人，这是违反[服务条款](policy)的行为，因为这样会提高机器人账号被冻结的风险。若机器人发现自己被禁言则会退出该群聊。
+Do not ban robots, which is a violation of[服务条款](policy), because this increases the risk that robot accounts will be frozen.If the robot finds itself muted it will exit the group.
 
 :::
 
 ## `leave`
 
 -   [仅管理员](permissions)
--   别名：`dismiss`
+-   Alias：`dismiss`
 
-用法：`~leave`
+Use：`~leave`
 
-此命令可以使机器人离开群聊。
+This command allows robots to leave group chat.
 
 :::warning
 
-请勿直接将机器人移出 QQ 群，这是违反[服务条款](policy)的行为，因为这样会提高机器人账号被冻结的风险。
+Do not remove robots directly from the QQ group, which is a violation of[服务条款](policy), because it increases the risk of robot account freezing.
 
 :::
