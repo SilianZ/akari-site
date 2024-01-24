@@ -1,5 +1,5 @@
 ---
-description: 此模块可以查询一个来自 Mojira（Minecraft 的开发工作室 Mojang Studios 的漏洞汇报器）的指定漏洞汇报的详情
+description: This module will find details of a specific bugging report from Mojira (Minecraft Development Studio Mojang Studios)
 slug: /bugtracker
 ---
 
@@ -8,35 +8,35 @@ slug: /bugtracker
 -   [开源](/docs/help/faq#为什么有些模块没有开源)
 -   别名：`bug`
 
-此模块可以查询一个来自 Mojira（Minecraft 的开发工作室 Mojang Studios 的漏洞汇报器）的指定漏洞汇报的详情。
+This module will find details about a specific bug report from Mojira (Minecraft Development Studio Mojang Studios).
 
 ## `bugtracker`
 
 -   [公开](permissions)
 
-用法：
+Usage：
 
--   `~bugtracker <漏洞 ID>`
--   直接漏洞 ID：`<漏洞 ID>`
--   使用 URL：`http[s]://bugs.mojang.com/browse/<漏洞 ID>`
+-   `~bugtracker <bug ID>`
+-   Direct bug ID：`<bug ID>`
+-   Use URL：`HTML[s]http://bugs.mojang.com/browse/<bug ID>`
 
-此命令可以查询一个来自 Mojira 的指定漏洞汇报的详情。
+This command can ask for details of a specific bug report from Mojira.
 
-本命令无法查询隐私漏洞。
+This command cannot search for privacy holes.
 
-:::info 例子
+:::info Example
 
-返回的结果示例：
+Result Example：
 
 ```
->>> ~bugtracker MC-4
-<<< [MC-4] Item drops sometimes appear at the wrong location
+>>>> ~bugtracker MC-4
+<<< [MC-4] Item drops somtimes appear at the wrong location
 Type: Bug
 Project: Minecraft: Java Edition
 Status: Reopened
 Mojang Priority: Low
 Resolution: Unresolved
-Versions: Minecraft 1.4.1 ~ 1.20 Pre-release 6
+Versions: Minecraft 1. 1 ~1.20 Pre-release 6
 https://bugs.mojang.com/browse/MC-4
 ```
 
