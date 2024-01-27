@@ -1,48 +1,48 @@
 ---
-description: This module can be used to search for cloud music and view song details
+description: 此模块可以用来搜索网易云音乐并查看歌曲详情
 slug: /ncmusic
 ---
 
 # ncmusic
 
--   [开源]\(help/faq#Why some modules are not open sources)
+-   [开源](help/faq#为什么有些模块没有开源)
 
-This module can be used to search for cloud music and see track details.
+此模块可以用来搜索网易云音乐并查看歌曲详情。
 
-## `ncmuc search`
+## `ncmusic search`
 
 -   [公开](permissions)
 
-Use：`~ncmuc search <search term>`
+用法：`~ncmusic search <搜索词>`
 
-This command can search for songs of cloud-friendly music.
+此命令可以搜索网易云音乐的歌曲。
 
 ## `ncmusic search legacy`
 
 -   [公开](permissions)
 
-Use：`~ncmuc search legacy <search term>`
+用法：`~ncmusic search legacy <搜索词>`
 
-This command can force text mode to search for songs that are cloud-friendly.
+此命令可以强制使用文字模式搜索网易云音乐的歌曲。
 
-## `ncmuc info`
+## `ncmusic info`
 
 -   [公开](permissions)
 
-Use：`~ncmusic info <ID>`
+用法：`~ncmusic info <ID>`
 
-This command can fetch information about the song based on the song ID.
+此命令可以根据歌曲 ID 获取歌曲的信息。
 
-:::info Example
+:::info 例子
 
-Result Example：
+返回的结果示例：
 
 ```
->>>> ~ncmuc info 5221167
-<<<：Never Gonna Give Youu Up(5221167)
-album：Simreply The Best Of The Best Of The 80's(509806)
-artist：Rick Astley
-Song Details Page：https://music. 63.com/#/song?id=5221167
+>>> ~ncmusic info 5221167
+<<< 歌名：Never Gonna Give You Up（5221167）
+专辑名：Simply The Best Of The 80's（509806）
+歌手：Rick Astley
+歌曲详情页：https://music.163.com/#/song?id=5221167
 ```
 
 :::
