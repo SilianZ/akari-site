@@ -1,0 +1,161 @@
+---
+description: This module can find information in the CHITHM game
+slug: /chunithm
+---
+
+# chunithm
+
+-   [闭源]\(help/faq#Why some modules are not open sources)
+-   Alias：`chu`
+
+This module can find information in the CHITHM game.
+
+If not specified, the difficulty of this page supports full titles, three-letter abbreviations and Chinese (Green Yellow Red Purple Black), letter-size is not sensitive.
+
+Note
+
+The data source used for this module commands is[查分器]for Diving-Fish (https://www.diving-fish.com/chunithmdx/prober/), please check your registration number and set it before using this command for the first time.
+
+## `chunithm base`
+
+-   [公开](permissions)
+
+Use：`~chunithm base <number > [<max >]`
+
+This command can search for songs according to a certain number.
+
+## `chunithm level`
+
+-   [公开](permissions)
+
+Use：`~chunithm level <Level > [<page>]`
+
+This command can search for songs according to hierarchy.
+
+Leave blank for page 1 by default.
+
+## `chunithm search`
+
+-   [公开](permissions)
+
+Use：`~chunithm search <search term>`
+
+This command can search for songs based on song name (or partly).
+
+## `chunithm id`
+
+-   [公开](permissions)
+
+Use：`~chunithm id <ID> [<difficulty>]`
+
+This command can query song or beatmap information by ID.
+
+:::info Example
+
+Result Example：
+
+Song：
+
+```
+>>> ~chunithm id 1086
+<<< 1086. Super
+artist：Pigative VS Mountains VS Kai VS Watersandy VS VS VA Great Wildness
+Classification：ORIGINAL
+BPM：219
+Version：CHUNITHM PAADISE LOST
+Difficulty：6. 10.0/14.5/15.4
+```
+
+Beatmap：
+
+```
+>>> ~chunithm id 1086 Master
+<<<< 1086. Sex - My Andimistist Me Mag Mag Mag Mag Mon
+Master 15 (15.4)
+Attack：4444
+Spectrator：Spectrum Supporter must be a leader before a person can become a leader who is a member of the JUSTICE. J-Pray - JUSTICE.
+```
+
+:::
+
+## `chunithm song`
+
+-   [公开](permissions)
+
+Use：`~chunithm song <ID 或标题> [<difficulty>]`
+
+This command can query song or beatmap information by ID or alias.
+
+ID needs to be added to prefix 'id'. Use underlined '\_' instead of spaces.
+
+:::info Example
+
+Result Example：
+
+Song：
+
+```
+>>>> ~chunithm song id1086
+<<< 1086. Super
+artist：Pigative VS Mountains VS Kai VS Watersandy VS VS VA Great Wildness
+Classification：ORIGINAL
+BPM：219
+Version：CHUNITHM PAADISE LOST
+Difficulty：6. 10.0/14.5/15.4
+```
+
+Beatmap：
+
+```
+>>> ~chunithm song id1086 Master
+<<< 1086. Sex - My Andil Mag Mag Mag Mag Mag Mag Mag Mag Mag Mag Big Big Big Big Big Big -
+Master 15 (15.4)
+Attack：4444
+Spector：Super Super Super Super Supporter - Pointer Super Supporter Spectrum Spectrum 
+ << 1086 Master 
+ <<<<< 1086. Sex - Me Zultow Sum Sum Sum Sum Spectrum Spectrum Spectrum Sum Sum Sum Same - JUSTICE" - JUSTICE.
+```
+
+:::
+
+## `chunithm random`
+
+-   [公开](permissions)
+
+Use：`~chunithm random [<rating+difficulty>]`
+
+This command can randomly specify a song with a condition or completely random if no parameters are enteredNo spaces are required between difficulty and hierarchy.
+
+## `chunithm b30`
+
+-   [公开](permissions)
+
+Use：`~chunithm b30 [<detector username>]`
+
+This command can be used to get B30 information.
+
+On the QQ platform, the username is left empty to bind to the username corresponding to the QQ number.
+
+## `chunithm bind`
+
+-   [公开](permissions)
+-   Discord
+-   Telegram
+
+Use：`~maimai bind <username>`
+
+This command can be used to bind to Diving-Fish Scorer users.
+
+## `chunithm unbind`
+
+-   [公开](permissions)
+-   Discord
+-   Telegram
+
+Use：`~maimai unbind`
+
+This command can be used to unbind Diving-Fish detector users.
+
+## See also
+
+-   [maimai](maimai)

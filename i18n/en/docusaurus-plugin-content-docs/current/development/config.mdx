@@ -1,18 +1,18 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 ---
 
-# 配置文件
+# Profile
 
-本文将说明配置文件（`config.toml`）中各参数的用途。
+The purpose of each parameter in the configuration file (`config.toml`) will be explained here.
 
-机器人的配置文件储存在 `config` 目录下，在第一次启动后生成。配制文件可使用 `~config` 命令修改，并在重载模块或重启后生效。
+Robot configuration file exists in `config` directory, generated after first start.The configuration file can be modified using the `~config` command and will take effect after reloading the module or restarting.
 
-如果你不需要某些功能，请将对应的键删除，请勿留空。
+If you don't need some features, delete the corresponding key. Do not leave it blank.
 
-刚开始使用的机器人拥有以下默认配置：
+The robot just used has the following default configuration：
 
-```toml title="/config/config.toml"
+```toml title="config/config.toml"
 [secret]
 db_path = "mysql+pymysql://"
 check_accessKeyId =
@@ -29,42 +29,43 @@ matrix_token =
 matrix_megolm_backup_passphrase =
 kook_token =
 openai_api_key =
-nl2c_model =
 curseforge_api_key =
 exchange_rate_api_key =
 wolfram_alpha_appid =
 jwt_secret =
-langsmith_api_key =
-
 [cfg]
+api_port = 5000
 base_superuser = "QQ|2596322644"
 debug = false
 cache_path = "./cache/"
 command_prefix = ["~", "～",]
 confirm_command = ["是", "对", "對", "yes", "Yes", "YES", "y", "Y",]
-disabled_bots =
+disabled_bots = ["",]
+locale = "zh_cn"
+timezone_offset = "+8"
 bug_report_url = "https://s.wd-ljt.com/botreportbug"
-bug_report_targets =
+bug_report_targets = ["",]
 donate_url = "https://afdian.net/@teahouse"
 help_url = "https://bot.teahouse.team"
 issue_url = "https://github.com/Teahouse-Studios/bot/issues/new/choose"
 wiki_whitelist_url = "https://s.wd-ljt.com/botwhitelist"
-rickroll_url = "https://wdf.ink/6OUp"
 web_render_local =
 qq_account = 2314163511
 qq_host = "127.0.0.1:11451"
 qq_invite_join_group_notice = true
 qq_disable_temp_session = false
 qq_enable_listening_self_message = false
-qq_join_group_application_link = "https://github.com/Teahouse-Studios/bot/issues/new?assignees=OasisAkari&labels=New&template=add_new_group.yaml&title=%5BNEW%5D%3A+"
 allow_request_private_ip = false
 allow_bot_auto_approve_group_invite = false
+no_confirm = false
 slower_schedule = false
 enable_dirty_check = true
 enable_rickroll = true
+rickroll_msg = "https://wdf.ink/6OUp"
 enable_urlmanager = true
 enable_tos = false
 tos_waring_counts = 5
+tos_temp_ban_time = 300
 enable_analytics = true
 enable_eval = true
 enable_get_petal = true
@@ -77,93 +78,86 @@ dice_limit = 100
 dice_roll_limit = 10
 dice_mod_max = 10000
 dice_mod_min = -10000
-dice_output_cnt = 50
+dice_output_count = 50
 dice_output_len = 200
-dice_detail_cnt = 5
+dice_detail_count = 5
 dice_count_limit = 10
-api_port = 5000
-enable_langsmith = false
-langsmith_endpoint = "https://api.smith.langchain.com"
-langsmith_project =
 ```
 
-## 属性
+## Properties
 
-### secret
+### Secret
 
-| 属性                              | 使用模块                      | 默认值                | 描述                                                   |
-| ------------------------------- | ------------------------- | ------------------ | ---------------------------------------------------- |
-| db_path                         |                           | "mysql+pymysql://" | 数据库路径，用于存储用户数据。                                      |
-| check_accessKeyId               |                           |                    | 调用阿里云内容安全服务 API 时需要的 AccessKey ID。                   |
-| check_accessKeySecret           |                           |                    | 调用阿里云内容安全服务 API 时需要的 AccessKey Secret。               |
-| web_render                      |                           |                    | Webrender 的地址（IP 或域名）及端口。                            |
-| proxy                           |                           |                    | 代理服务的地址（IP 或域名）及端口。                                  |
-| dc_token                        |                           |                    | Discord 机器人令牌。                                       |
-| kook_token                      |                           |                    | Kook 机器人令牌。                                          |
-| tg_token                        |                           |                    | Telegram 机器人令牌。                                      |
-| matrix_homeserver               |                           |                    | Matrix 服务器 URL。                                      |
-| matrix_user                     |                           |                    | Matrix 机器人用户 ID（含`@`与`:`）。                           |
-| matrix_device_id                |                           |                    | Matrix 机器人设备 ID。                                     |
-| matrix_device_name              |                           |                    | Matrix 机器人设备名称。                                      |
-| matrix_token                    |                           |                    | Matrix 机器人令牌。                                        |
-| matrix_megolm_backup_passphrase |                           |                    | Matrix 机器人的 Megolm 备份密码短语。                           |
-| openai_api_key                  | `ask` `natural` `summary` |                    | OpenAI API 密钥。                                       |
-| nl2c_model                      | `natural`                 |                    | `natural` 模块使用的 AI 模型。                               |
-| curseforge_api_key              | `mod_dl`                  |                    | Curseforge API 密钥。                                   |
-| exchange_rate_api_key           | `exchange_rate`           |                    | ExchangeRate-API 密钥。                                 |
-| wolfram_alpha_appid             | `wolframalpha`            |                    | WolframAlpha API 的 App ID。                           |
-| jwt_secret                      |                           |                    |                                                      |
-| langsmith_api_key               | `ask`                     |                    | LangSmith（Langchain） API 密钥。                         |
+| Properties                            | Use Modules        | Default value             | Description                                                                            |
+| ------------------------------------- | ------------------ | ------------------------- | -------------------------------------------------------------------------------------- |
+| db_path                               |                    | "mysql+pymysql:/"         | Database path used to store user data.                                                 |
+| check_accessKeyId                     |                    |                           | The AccessKey ID required when calling the Aliyun Content Security Service API.        |
+| check_accessKeySecret                 |                    |                           | The AccessKey Secretary required when calling the Aliyun Content Security Service API. |
+| web_render                            |                    |                           | Webrender address (IP or domain name) and port.                                        |
+| Proxy                                 |                    |                           | The address of the proxy service (IP or domain name) and the port.                     |
+| dc_token                              |                    |                           | Discord Robot Token.                                                                   |
+| kok_token                             |                    |                           | Kook robot token.                                                                      |
+| tg_token                              |                    |                           | Telegram robot token.                                                                  |
+| matrix_home server                    |                    |                           | Matrix server URL.                                                                     |
+| matrix_user                           |                    |                           | Matrix Robot User ID (containing `@` and `:`).                                         |
+| matrix_device_id                      |                    |                           | Matrix Robot Device ID.                                                                |
+| matrix_device_name                    |                    |                           | Matrix robot device name.                                                              |
+| Matrix_token                          |                    |                           | Matrix Robot Token.                                                                    |
+| matrix_megolm_backup_password         |                    |                           | Matrix Robot's Megolm backup password phrase.                                          |
+| openai_api_key                        | `ask` `summary`    |                           | OpenAI API key.                                                                        |
+| curseforge_api_key                    | `mod_dl`           |                           | Curseforge API key.                                                                    |
+| exchange_rate_api_key                 | `exchange_rate`    |                           | ExchangeRate-API key.                                                                  |
+| wolfram_alpha_appid                   | `wolflramalpa`     |                           | The App ID of WolframAlpha API.                                                        |
+| jwt_secret                            |                    |                           |                                                                                        |
 
-### cfg
+### config
 
-| 属性                                  | 使用模块                | 默认值                                                                                                                                                                                                                                                                     | 描述                                                                     |
-| ----------------------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| base_superuser                      |                     | "QQ|2596322644"                                                                                                                                                                                                                                                         | 机器人主超级用户，输入用户对应的 ID。可使用 `whoami` 命令查看自己的 ID。                           |
-| debug                               |                     | false                                                                                                                                                                                                                                                                   | 设置是否启用 Logger 的除错模式。                                                   |
-| locale                              |                     | "zh_cn"                                                                                                                                                                                                                                                                 | 机器人默认使用的语言。                                                            |
-| command_prefix                      |                     | ["~", "～",]                                                                                                                                                                                                                                                             | 默认命令前缀列表。                                                              |
-| confirm_command                     |                     | ["是", "对", "對", "yes", "Yes", "YES", "y", "Y",]                                                                                                                                                                                                                         | 命令确认词列表。                                                               |
-| disabled_bots                       |                     |                                                                                                                                                                                                                                                                         | 机器人禁用的平台列表，平台名称为 `bots` 目录下对应的文件名。                                     |
-| cache_path                          |                     | "./cache/"                                                                                                                                                                                                                                                              | 图片等的缓存路径。                                                              |
-| bug_report_url                      |                     | "https://s.wd-ljt.com/botreportbug"                                                                                                                                                                                                                                     | 汇报错误的网址。                                                               |
-| bug_report_targets                  |                     |                                                                                                                                                                                                                                                                         | 机器人发生错误时发送错误报告的群列表。                                                    |
-| donate_url                          | `help`              | "https://afdian.net/@teahouse"                                                                                                                                                                                                                                          | 赞助的网址。                                                                 |
-| help_url                            | `help`              | "https://bot.teahouse.team"                                                                                                                                                                                                                                             | 提供帮助的网址。                                                               |
-| issue_url                           |                     | "https://github.com/Teahouse-Studios/bot/issues/new/choose"                                                                                                                                                                                                             | 提交问题（如封禁申诉等）的网址。                                                       |
-| wiki_whitelist_url                  | `wiki`              | "https://s.wd-ljt.com/botwhitelist"                                                                                                                                                                                                                                     | 申请 Wiki 白名单的网址。                                                        |
-| qq_account                          |                     | "2314163511"                                                                                                                                                                                                                                                            | 机器人的 QQ 号。                                                             |
-| qq_host                             |                     | "127.0.0.1:11451"                                                                                                                                                                                                                                                       | 用于 go-cqhttp 反向连接的 IP 地址及端口。                                           |
-| allow_bot_auto_approve_group_invite |                     | false                                                                                                                                                                                                                                                                   | 设置是否启用机器人在收到 QQ 群邀请时发送提醒消息。                                            |
-| allow_bot_auto_approve_group_invite |                     | "[https://github.com/Teahouse-Studios/bot/issues/new?assignees=OasisAkari&labels=New&template=add_new_group.yaml&title=%5BNEW%5D%3A+](https://github.com/Teahouse-Studios/bot/issues/new?assignees=OasisAkari&labels=New&template=add_new_group.yaml&title=[NEW]%3A+)"  | 申请加入 QQ 群的网址。                                                          |
-| qq_disable_temp_session             |                     | false                                                                                                                                                                                                                                                                   | 设置是否禁用机器人在 QQ 的临时会话。                                                   |
-| qq_enable_listening_self_message    |                     | false                                                                                                                                                                                                                                                                   | 设置是否启用 QQ 的自我消息处理。                                                     |
-| web_render_local                    |                     |                                                                                                                                                                                                                                                                         | 本地 Webrender 的地址，留空则与`web_render`相同。                                   |
-| slower_schedule                     |                     | false                                                                                                                                                                                                                                                                   | 设置是否让计划任务模块使用更长的时间间隔执行。                                                |
-| enable_dirty_check                  |                     | true                                                                                                                                                                                                                                                                    | 设置是否启用屏蔽词检查。                                                           |
-| enable_rickroll                     |                     | true                                                                                                                                                                                                                                                                    | 设置请求被拦截时是否输出网址。                                                        |
-| rickroll_url                        |                     | "https://wdf.ink/6OUp"                                                                                                                                                                                                                                                  | 请求被拦截时输出的内容。                                                           |
-| enable_urlmanager                   | `wiki` `wiki_audit` | true                                                                                                                                                                                                                                                                    | 设置是否启用 URL 管理，禁用后无法使用 `wiki_audit` 命令。                                 |
-| enable_tos                          |                     | false                                                                                                                                                                                                                                                                   | 设置是否启用内置的违反服务条款检查。                                                     |
-| tos_waring_counts                   |                     | 5                                                                                                                                                                                                                                                                       | 设置用户违反服务条款的最高警告次数。                                                     |
-| enable_analytics                    | `analytics`         | true                                                                                                                                                                                                                                                                    | 设置是否启用 `analytics` 模块相关命令。                                             |
-| allow_request_private_ip            |                     | false                                                                                                                                                                                                                                                                   | 设置是否允许私有 IP 请求网站。                                                      |
-| enable_eval                         | `eval`              | true                                                                                                                                                                                                                                                                    | 设置是否启用 `eval` 模块相关命令。                                                  |
-| enable_get_petal                    | `petal`             |                                                                                                                                                                                                                                                                         | 设置是否启用通过游戏获取花瓣。                                                        |
-| gained_petal_limit                  | `petal`             | 10                                                                                                                                                                                                                                                                      | 设置一天内获得的花瓣数量限制。                                                        |
-| lost_petal_limit                    | `petal`             | 5                                                                                                                                                                                                                                                                       | 设置一天内失去的花瓣数量限制。                                                        |
-| coin_limit                          | `coin`              | 10000                                                                                                                                                                                                                                                                   | 一次可投掷的硬币最大个数。                                                          |
-| coin_faceup_rate                    | `coin`              | 4994                                                                                                                                                                                                                                                                    | 硬币正面朝上的概率，按一万分之几计算。                                                    |
-| coin_facedown_rate                  | `coin`              | 4994                                                                                                                                                                                                                                                                    | 硬币反面朝上的概率，按一万分之几计算。                                                    |
-| dice_limit                          | `dice`              | 100                                                                                                                                                                                                                                                                     | 一次可投掷的骰子最大个数。                                                          |
-| dice_roll_limit                     | `dice`              | 10                                                                                                                                                                                                                                                                      | 投掷骰子的最大次数。                                                             |
-| dice_mod_max                        | `dice`              | 10000                                                                                                                                                                                                                                                                   | 投掷骰子的最大调节值。                                                            |
-| dice_mod_min                        | `dice`              | \-10000                                                                                                                                                                                                                                                                 | 投掷骰子的最小调节值。                                                            |
-| dice_limit                          | `dice`              | 100                                                                                                                                                                                                                                                                     | 一次可投掷的骰子最大个数。                                                          |
-| dice_output_cnt                     | `dice`              | 50                                                                                                                                                                                                                                                                      | 输出时的最大数据量，超过则无法正常显示。                                                   |
-| dice_detail_cnt                     | `dice`              | 5                                                                                                                                                                                                                                                                       | 多次投掷骰子的总数，超过则不再显示详细信息。                                                 |
-| dice_count_limit                    | `dice`              | 10                                                                                                                                                                                                                                                                      | 骰子多项式最大的项数。                                                            |
-| api_port                            |                     | 5000                                                                                                                                                                                                                                                                    |                                                                        |
-| enable_langsmith                    | `ask`               | false                                                                                                                                                                                                                                                                   | 设置是否启用 LangSmith。                                                      |
-| langsmith_endpoint                  | `ask`               | "https://api.smith.langchain.com"                                                                                                                                                                                                                                       | LangSmith API 地址。                                                      |
-| langsmith_project                   | `ask`               | false                                                                                                                                                                                                                                                                   | LangSmith 项目。                                                          |
+| Properties                                | Use Modules            | Default value                                                      | Description                                                                                                          |
+| ----------------------------------------- | ---------------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| api_port                                  |                        | 5000                                                               |                                                                                                                      |
+| base_superuser                            |                        | "QQQ|2596322644"                                                   | Robot master superuser, enter user corresponding ID.Use the `whoami` command to view your ID.                        |
+| debug                                     |                        | false                                                              | Set if Logger is enabled in error mode.                                                                              |
+| cache_path                                |                        | "./cache/"                                                         | Cache path for pictures and more.                                                                                    |
+| command_prefix                            |                        | ["~", "~",]                                                        | List of default command prefixes.                                                                                    |
+| firm_command                              |                        | \["Yes", "right", "yes", "Yes", "Yes", "Yes", "Y",                 | List of command confirmations.                                                                                       |
+| disabled_bodies                           |                        | [""]                                                               | List of platforms disabled by robot, the name of the platform is the corresponding filename in the `bots` directory. |
+| locale                                    |                        | "en_cn"                                                            | The language used by the robot by default.                                                                           |
+| timezone_offset                           |                        | "+8"                                                               | Robot default timezone offset.                                                                                       |
+| bug_report_url                            |                        | "https://s.wd-ljt.com/botreportbug"                                | URL to report errors.                                                                                                |
+| bug_report_targets                        |                        | [""]                                                               | List of groups that sent error reports when the robot made an error.                                                 |
+| donate_url                                | `help`                 | "https://afdian.net/@taahouse"                                     | Sponsored URL.                                                                                                       |
+| help_url                                  | `help`                 | "[https://bot.teahouse.team](https://bot.teahouse.team/)"          | Help URL.                                                                                                            |
+| issue_url                                 |                        | "https://github.com/Teahouse-Studios/bot/issues/new/choose"        | Submit a web site on issues (such as blocking appeals, etc.).                                                        |
+| wiki_whiteist_url                         | `wiki`                 | "https://s.wd-ljt.com/botwhiteist"                                 | The URL of the Wiki whitelist.                                                                                       |
+| q_account                                 |                        | 2314163511                                                         | The robot's QQ number.                                                                                               |
+| q_host                                    |                        | "127.0.0.1:11451"                                                  | IP address and port for go-cqp reverse connections.                                                                  |
+| allow_bot_auto_approve_group_invitation   |                        | false                                                              | Set whether to enable robots to send reminders when they receive QQ group invitations.                               |
+| q_disable_temp_session                    |                        | false                                                              | Set whether robot temporary sessions in QQ are disabled.                                                             |
+| q_enable_listening_self_message           |                        | false                                                              | Set whether QQ self-message processing is enabled.                                                                   |
+| web_render_local                          |                        |                                                                    | Local Webrender address left empty is the same as `web_render`.                                                      |
+| no_firm                                   |                        | false                                                              | Set whether to skip the confirmation message to execute directly.                                                    |
+| slower_schedule                           |                        | false                                                              | Set whether the scheduled task module will be executed at a longer interval.                                         |
+| enable_dirty_check                        |                        | true                                                               | Set if block word check is enabled.                                                                                  |
+| enable_rickroll                           |                        | true                                                               | Whether or not to export the URL when the request is blocked.                                                        |
+| rickroll_msg                              |                        | "https://wdf.ink/6OUp"                                             | The content of the request will be exported when it is blocked.                                                      |
+| enable_urlmanager                         | `wiki`                 | true                                                               | Set if URL management is enabled. You cannot use the `wiki_audit` command once disabled.                             |
+| enable_tos                                |                        | false                                                              | Set if built-in violation of the terms of service is enabled.                                                        |
+| toos_waring_counts                        |                        | 5                                                                  | Set the maximum number of times the user has violated the terms of service.                                          |
+| tos_temp_ban_time                         |                        | 300                                                                | Sets a temporary limit after the user has violated the terms of service.                                             |
+| enable_analytics                          | `Analytics`            | true                                                               | Set whether to enable the `analytics` module.                                                                        |
+| allow_request_private_ip                  |                        | false                                                              | Set whether private IP requests are allowed.                                                                         |
+| enable_eval                               | `eval`                 | true                                                               | Set whether the `eval` block command is enabled.                                                                     |
+| enable_get_petal                          | `petal`                |                                                                    | Set whether to enable valve fetching via game.                                                                       |
+| gainted_petal_limit                       | `petal`                | 10                                                                 | Set the limit of peppets to be obtained within a day.                                                                |
+| lost_petal_limit                          | `petal`                | 5                                                                  | Set the limit of the number of valves lost within a day.                                                             |
+| coin_limit                                | `coin`                 | 10000                                                              | Maximum number of coins that can be thrown at once.                                                                  |
+| coin_faceup_rate                          | `coin`                 | 4994                                                               | Coins have a positive upward probability, calculated at a rate of ten thousands.                                     |
+| coin_facedown_rate                        | `coin`                 | 4994                                                               | The negative upward probability of coins is calculated in the order of ten thousands.                                |
+| dice_limit                                | `dice`                 | 100                                                                | Maximum number of dice to throw at one time.                                                                         |
+| dice_roll_limit                           | `dice`                 | 10                                                                 | Maximum number of dice throws.                                                                                       |
+| dice_mod_max                              | `dice`                 | 10000                                                              | Maximum tuning value for a dice throw.                                                                               |
+| dice_mod_min                              | `dice`                 | \-10000                                                            | Minimum tuning value for dice throwing.                                                                              |
+| dice_limit                                | `dice`                 | 100                                                                | Maximum number of dice to throw at one time.                                                                         |
+| dice.output_cnt                           | `dice`                 | 50                                                                 | Maximum amount of data on output, cannot be displayed properly beyond it.                                            |
+| dice_detail_cnt                           | `dice`                 | 5                                                                  | The total number of multiple dice throws, no longer show details.                                                    |
+| dice_count_limit                          | `dice`                 | 10                                                                 | Maximum number of dice multiple items.                                                                               |

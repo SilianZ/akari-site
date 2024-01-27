@@ -5,7 +5,7 @@ slug: /wiki
 
 # wiki
 
--   [开源](/docs/help/faq#为什么有些模块没有开源)
+-   [开源](help/faq#为什么有些模块没有开源)
 
 此模块可以查询一个基于 MediaWiki 的网站的指定页面的详情。
 
@@ -133,22 +133,20 @@ Interwiki 若留空则为默认 Wiki。
 用法：
 
 -   设置新的请求标头：`~wiki headers add <请求标头>`
--   删除请求标头：`~wiki headers remove <请求标头>`
+-   删除请求标头：`~wiki headers remove <标头键名>`
 -   重置请求标头：`~wiki headers reset`
 -   查看当前设置请求标头：`~wiki headers show`
 
 此命令用于设置使用 `wiki` 命令时的请求标头。设置完毕后，每一次查询 Wiki 都会使其带上此标头查询。
 
-不同标头之间使用换行隔开。
-
 如果你不清楚这有什么用，那么请不要乱设置，否则可能导致返回结果异常。
 
-:::info 关于灰机 wiki
+:::info 关于灰机 Wiki
 
-面对近期的攻击，我们发现灰机对部分 wiki 采用了“部分封站”的措施，即限制网站，仅可使“狗头人”APP 用户访问。小可受波及，但可通过**伪装狗头人APP的`User-Agent`**解决。请运行以下命令：
+面对近期的攻击，我们发现灰机对部分 Wiki 采用了“部分封站”的措施，即限制网站，仅可使“狗头人”APP 用户访问。小可受波及，但可通过**伪装狗头人APP的`User-Agent`**解决。请运行以下命令：
 
 ```
-~wiki headers set {"user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0 Huijiapp/5"}
+~wiki headers add {"user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0 Huijiapp/5"}
 ```
 
 :::
@@ -162,7 +160,7 @@ Interwiki 若留空则为默认 Wiki。
 -   设置新的前缀：`~wiki prefix set <前缀>`
 -   重置前缀：`~wiki prefix reset`
 
-此命令用于设置使用`wiki`命令时时自动添加的前缀。设置完毕后，每一次查询 Wiki 都会使其带上此前缀查询。
+此命令用于设置使用 `wiki` 命令时时自动添加的前缀。设置完毕后，每一次查询 Wiki 都会使其带上此前缀查询。
 
 ## `wiki fandom`
 

@@ -1,18 +1,18 @@
 ---
-description: 此模块可以从区间内生成随机数，或从集合中随机选择一个元素
+description: This module can generate random numbers from within the range, or randomly select an element from the collection
 slug: /random
 ---
 
 # random
 
--   [开源](/docs/help/faq#为什么有些模块没有开源)
--   别名：`rand`、`rng`
+-   [开源]\(help/faq#Why some modules are not open sources)
+-   Alias：`rand`, `rng`
 
-此模块可以从区间内生成随机数，或从集合中随机选择一个元素。
+This module can generate random numbers from within the range, or select a random element from the collection.
 
 :::warning
 
-此命令易被滥用，请勿在短时间内使用太多次，否则会触发[滥用警告](abuse_warning)。滥用命令是违反[服务条款](policy)的行为，不仅会影响正常交流，还有可能导致机器人账号被风控。
+This command is susceptible to abuse, please do not use too many times in a short period of time or trigger[滥用警告](abuse_warning).Abuse of command is a violation of[服务条款](policy), which not only affects normal communication, but can also cause robot accounts to be controlled.
 
 :::
 
@@ -20,47 +20,30 @@ slug: /random
 
 -   [公开](permissions)
 
-用法：`~random number <最小值> <最大值>`
+Use：`~random number <small> <maximum>`
 
-此命令可以从区间内随机生成一个整数。
+This command can generate an integer randomly from within the range.
 
 ## `random choice`
 
 -   [公开](permissions)
 
-用法：`~random choice <元素 1> <元素 2> [<元素 3> <元素 4>...]`
+Use：`~random choice <Element 1> <2> [<3> <Element 4>...]`
 
-此命令可以从集合内随机选择一个元素。
+This command can select an element randomly from the collection.
 
 ## `random shuffle`
 
 -   [公开](permissions)
 
-用法：`~random shuffle <元素 1> <元素 2> [<元素 3> <元素 4>...]`
+Use：`~random shuffle <element 1> <element 2> [<3> <element 4>...]`
 
-此命令可以将集合中的所有元素重新排列。
-
-## `random password`
-
--   [公开](permissions)
-
-用法：`~random password <长度> [-u] [-l] [-n] [-s]`
-
-参数：
-
--   `-u`：使用大写字母
--   `-l`：使用小写字母
--   `-n`：使用数字
--   `-s`：使用特殊符号
-
-此命令可以生成一段特定长度的字符串。
-
-字符串默认为字母和数字组合，支持的特殊符号有`!@#$%^&*-_+=?`。
+This command can rearrange all elements in the collection.
 
 ## `random uuid`
 
 -   [公开](permissions)
 
-用法：`~random uuid`
+Use：`~random uid`
 
-此命令可以生成一个随机 UUID。
+This command can generate a random UUID.

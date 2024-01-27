@@ -1,38 +1,38 @@
 ---
 sidebar_position: 6
-description: 启动小可机器人
+description: Start Small Bot
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import Asciinema from "@site/src/components/Asciinema";
 
-# 运行机器人
+# Run robot
 
-小可机器人主要由平台机器人构成，为了让开发者更好地测试模块，我们还提供了测试控制台，接下来我们将逐步讲解如何运行机器人。
+The small cocoa robot consists mainly of platform robots. In order for developers to better test modules, we have also provided a test console, and we will then show how to run the robots.
 
-## 运行平台机器人
+## Run Platform Robots
 
 <Tabs groupId="operating-systems">
 <TabItem value="win" label="Windows" default>
 
-我们不推荐双击运行 `start.bat` 来启动程序。
+We do not recommend double clicking on `start.bat` to start the program.
 
-建议在启动机器人之前，先打开终端（cmd 或 Powershell）再运行 `start.bat`。
+It is recommended to open the terminal (cmd or Powershell) before running `start.bat`.
 
-1.  于 `start.bat` 所在目录，打开终端。
-2.  在终端内输入 `./start.bat` （Powershell） 或 `start.bat` （cmd）来启动机器人。
+1.  Open Terminal in `start.bat` directory.
+2.  Enter `./start.bat` (Powershell) or `start.bat` (cmd) in the terminal to start the robot.
 
 </TabItem>
 <TabItem value="linux" label="Linux">
 
-1.  于终端内，设置 `start` 脚本的执行权限：
+1.  In the terminal, set the execution permissions of the `start` script：
 
     ```sh
     chmod +x start
     ```
 
-2.  启动脚本：`./start`。
+2.  Launch script：`./start`.
 
 </TabItem>
 </Tabs>
@@ -48,20 +48,20 @@ import Asciinema from "@site/src/components/Asciinema";
     }}
 />
 
-## 运行测试控制台
+## Run Test Console
 
-测试控制台包括一个基础的运行环境，您可以在测试控制台内使用命令进行基础的机器人交互。
+The test console includes a basic operating environment in which you can use the command to perform the underlying robotic interaction within the test console.
 
-测试控制台仅支持回复文本消息和图片，其它消息元素将被忽略或转换为文本或图片来显示。
+The test console only supports replies to text messages and images. Other message elements will be ignored or converted to text or image to show.
 
 :::info
 
-您可能需要使用 `poetry shell` 切换 poetry 的虚拟环境来调用先前安装的依赖。
+You may need to switch to a Poetry virtual environment using `potry shell` to call the previously installed dependencies.
 
 :::
 
-1.  于 `console.py` 所在目录，打开终端。
-2.  在终端内输入 `python console.py` 来启动测试控制台。
+1.  Open Terminal in `console.py` directory.
+2.  Enter `python console.py` in the terminal to start the test console.
 
 <Asciinema
     url="https://asciinema.org/a/605772.cast"

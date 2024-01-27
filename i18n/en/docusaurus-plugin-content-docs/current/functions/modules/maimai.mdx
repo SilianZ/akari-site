@@ -1,24 +1,22 @@
 ---
-description: 此模块可以查询 Maimai 游戏中的信息
+description: This module can query information from the Maimai game
 slug: /maimai
 ---
 
 # maimai
 
--   [闭源](/docs/help/faq#为什么有些模块没有开源)
--   别名：`mai`
+-   [闭源]\(help/faq#Why some modules are not open sources)
+-   Alias：`mai`
 
-此模块可以查询 Maimai 游戏中的信息。
+This module can query information from the Maimai game.
 
-本模块移植自 [Maibot](https://github.com/Diving-Fish/mai-bot) 。
+This module was transplanted from [Maibot](https://github.com/Diving-Fish/mai-bot).
 
-如非特别说明，本页面的难度支持全称、三字母缩写和中文缩写（绿黄红紫白），字母大小写不敏感。
-
-为防止影响正常交流，结果超过 10 条则采用图片形式，超过 200 条则不显示。
+If not specified, the difficulty of this page supports full title, three-letter abbreviations and Chinese (Green Yellow Red Purple), letter-size is not sensitive.
 
 :::warning
 
-本模块的命令使用的数据源为 Diving-Fish 提供的[查分器](https://www.diving-fish.com/maimaidx/prober/)，第一次使用本命令前请先按照对应说明注册账号并设置。
+The data source used for this module commands is[查分器]for Diving-Fish (https://www.diving-fish.com/maimaidx/prober/), please check your registration number and set it before using this command for the first time.
 
 :::
 
@@ -26,212 +24,100 @@ slug: /maimai
 
 -   [公开](permissions)
 
-用法：`~maimai base <定数> [<最大定数>]`
+Use：`~maimai base <number > [<maximum>]`
 
-此命令可以根据定数搜索对应歌曲。
+This command can search for songs according to a certain number.
 
 ## `maimai level`
 
 -   [公开](permissions)
 
-用法：`~maimai level <等级>`
+Use：`~maimai level <Level > [<page>]`
 
-此命令可以根据等级搜索对应歌曲。
+This command can search for songs according to hierarchy.
 
-使用本命令可正常显示超过 200 条结果。
+Leave blank for page 1 by default.
+
+## `maimai new`
+
+-   [公开](permissions)
+
+Use：`~maimai new [<page>]`
+
+This command can get the latest version of the song.
+
+Leave blank for page 1 by default.
 
 ## `maimai search`
 
 -   [公开](permissions)
 
-用法：`~maimai search <搜索词>`
+Use：`~maimai search <search term>`
 
-此命令可以根据歌曲名称（或一部分）搜索对应歌曲。
+This command can search for songs based on song name (or partly).
 
 ## `maimai alias`
 
 -   [公开](permissions)
 
-用法：`~maimai alias <ID>`
+Use：\`~maimai alias <ID>
 
-此命令可以查询歌曲的别名。歌曲别名库由 Xray 提供。
+This command can query alias names of songs.The song alias library is provided by Xray
 
-## `maimai b50`
-
--   [公开](permissions)
-
-用法：`~maimai b50 [<查分器用户名>]`
-
-此命令可以用于查询 B50 信息。
-
-用户名留空则默认为绑定 QQ 号对应的用户名。
-
-:::info 例子
-
-返回的结果示例：
-
-```
->>> ~maimai b50
-```
-
-![](https://z1.ax1x.com/2023/11/11/piGZWRJ.png)
-
-:::
-
-:::tip 无法使用？
-
-请检查您是否输入的是**查分器用户名**（非游戏名或昵称）。
-
-:::
-
-## `maimai info`
+## `maimai id`
 
 -   [公开](permissions)
 
-用法：`~maimai info <ID 或别名> [<查分器用户名>]`
+Use：`~maimai id <ID> [<difficulty>]`
 
-此命令可以根据 ID 或别名查询歌曲的谱面成绩。
+This command can query song or beatmap information by ID.
 
-ID 需要加入前缀“id”，别名请使用下划线“\_”代替空格。
+:::info Example
 
-用户名留空则默认为绑定 QQ 号对应的用户名。
+Result Example：
 
-:::info 例子
-
-返回的结果示例：
+Song：
 
 ```
->>> ~maimai info id834
-<<< 834. PANDORA PARADOXXX Basic 7+
-100.7275 SSS+ FC
-Advanced 11
-100.7481 SSS+ FC
-Expert 13+
-100.4628 SSS FC
-Master 14+
-98.8164 S+
-Re:MASTER 15
-97.5142 S
+>>> ~maimai id 834
+<<< 834. PANDORA PARADOXXX
+艺术家：削除
+分类：舞萌
+BPM：150
+版本：maimai FiNALE
+难度：7.7/11.5/13.9/14.9/15.0
 ```
 
-:::
-
-:::tip 无法使用？
-
-请检查您是否输入的是**查分器用户名**（非游戏名或昵称）。
-
-:::
-
-## `maimai plate`
-
--   [公开](permissions)
-
-用法：`~maimai plate <名牌板> [<查分器用户名>]`
-
-此命令可以查看玩家的名牌板完成进度。
-
-用户名留空则默认为绑定 QQ 号对应的用户名。
-
-:::info 例子
-
-返回的结果示例：
+Beatmap：
 
 ```
->>> ~maimai plate 舞神
-<<< 您的舞神剩余进度如下：
-Basic 剩余 524 首，
-Advanced 剩余 524 首，
-Expert 剩余 524 首，
-Master 剩余 524 首，
-Re:MASTER 剩余 84 首。
-<<< 您还有 208 首等级大于 13+ 的曲目。
+>>> ~maimai id 834 Re:MASTER
+<<<< 834. PANDORA PARADOXXX
+Re:MASTER 15(15. )
+TAP：1165
+HOLD：72
+SLIDE：90
+BREAK：15
+Spectror：PANDORA PARADOXXX
 ```
 
 :::
-
-:::tip 无法使用？
-
-请检查您是否输入的是**查分器用户名**（非游戏名或昵称）。
-
-:::
-
-## `maimai process`
-
--   [公开](permissions)
-
-用法：`~maimai process <等级> <目标> [<查分器用户名>]`
-
-此命令可以查看玩家在对应等级的评价完成进度。
-
-用户名留空则默认为绑定 QQ 号对应的用户名。
-
-支持的目标评价：
-
--   等级：`A`、`AA`、`AAA`、`S`、`S+`、`SS`、`SS+`、`SSS`、`SSS+`
--   连击：`FC`、`FC+`、`AP`、`AP+`
--   同步率：`FS`、`FS+`、`FDX`、`FDX+`
-
-:::tip 无法使用？
-
-请检查您是否输入的是**查分器用户名**（非游戏名或昵称）。
-
-:::
-
-## `maimai rank`
-
--   [公开](permissions)
-
-用法：`~maimai rank [<查分器用户名>]`
-
-此命令可以查询用户在查分器的分数排名。
-
-用户名留空则默认为绑定 QQ 号对应的用户名。
-
-:::info 例子
-
-返回的结果示例：
-
-```
->>> ~maimai rank
-<<< 截至 2023-06-18 11:07:10，
-查分器共有 12603 名用户，平均分数为 12315.1980，
-（用户）的分数为 14833，排名为 #2388，
-你已经超越了 81.05% 的玩家。
-```
-
-:::
-
-:::tip 无法使用？
-
-请检查您是否输入的是**查分器用户名**（非游戏名或昵称）。
-
-:::
-
-## `maimai scorelist`
-
--   [公开](permissions)
-
-用法：`~maimai scorelist <等级> [<查分器用户名>]`
-
-此命令可以查询用户在对应等级的分数列表。
-
-使用本命令可正常显示超过 200 条结果。
 
 ## `maimai song`
 
 -   [公开](permissions)
 
-用法：`~maimai song <ID 或别名> [<难度>]`
+Use：`~aimai song <ID 或别名> [<difficulty>]`
 
-此命令可以根据 ID 或别名查询歌曲或谱面信息。
+This command can query song or beatmap information by ID or alias.
 
-ID 需要加入前缀“id”，别名请使用下划线“\_”代替空格。
+ID needs to be added to prefix 'id'. Use underlined '\_' instead of spaces.
 
-:::info 例子
+:::info Example
 
-返回的结果示例：
+Result Example：
 
-歌曲：
+Song：
 
 ```
 >>> ~maimai song id834
@@ -243,17 +129,17 @@ BPM：150
 难度：7.7/11.5/13.9/14.9/15.0
 ```
 
-谱面：
+Beatmap：
 
 ```
 >>> ~maimai song id834 Re:MASTER
-<<< 834. PANDORA PARADOXXX
-Re:MASTER 15（15.0）
+<<< 834. PANDORA PAADOXXX
+Re:MASTER 15(15. )
 TAP：1165
 HOLD：72
 SLIDE：90
 BREAK：15
-谱师：PANDORA PARADOXXX
+Spectror：PANDORA PARADOXXX
 ```
 
 :::
@@ -262,46 +148,243 @@ BREAK：15
 
 -   [公开](permissions)
 
-用法：
+Usage：
 
--   指定条件：`~maimai random <等级+难度> [<类型>]`
+-   Specify the：`~maimai random <rating + difficulty> [<type>]`
+-   Fully random：`~maimai random`
 
--   完全随机：`~maimai random`
+This command can randomly specify a song with a condition or completely random if no parameters are entered
 
-此命令可以随机一首指定条件的歌曲，若不输入参数则完全随机。
+Type `*` skipping if you don't want to specify difficulty and hierarchy, no space is required between difficulty and hierarchy.
 
-如果不想指定难度和等级则输入`#`跳过，难度和等级之间不需要空格。
+Type can be entered either `SD` or `DX`. Leave empty or enter another content without filtering.
 
-类型可输入`SD`或`DX`之一，留空或输入其他内容则不筛选。
+## `maimai b50`
+
+-   [公开](permissions)
+
+Use：`~maimai b50 [<detector username>]`
+
+This command can query B50 information.
+
+On the QQ platform, the username is left empty to bind to the username corresponding to the QQ number.
+
+## `maimai b50 beta`
+
+-   [公开](permissions)
+
+Use：`~maimai b50 beta [<detector username>]`
+
+This command can be used to get text version B50 information.
+
+On the QQ platform, the username is left empty to bind to the username corresponding to the QQ number.
+
+## `maimai bind`
+
+-   [公开](permissions)
+-   Discord
+-   Telegram
+
+Use：`~maimai bind <username>`
+
+This command can be used to bind to Diving-Fish Scorer users.
+
+## `maimai unbind`
+
+-   [公开](permissions)
+-   Discord
+-   Telegram
+
+Use：`~maimai unbind`
+
+This command can be used to unbind Diving-Fish detector users.
+
+## `maimai info`
+
+-   [公开](permissions)
+
+Usage：
+
+-   `~maimai info <ID 或别名> [<detector username>]`
+
+This command can query song's beatmap grade by ID or alias.
+
+ID needs to be added to prefix 'id'. Use underlined '\_' instead of spaces.
+
+On the QQ platform, the username is left empty to bind to the username corresponding to the QQ number.
+
+:::info Example
+
+Result Example：
+
+```
+>>>> ~maimai info id834
+<<< 834. PANDORA PAADOXXX
+Basic 7+
+100.7275 SSS+ FC
+Advanced 11
+100. 481 SSS+ FC
+Expert 13+
+100.56222 SSS+ FC
+Master 14+
+99.1487 SS
+Re: MASTER 15
+98.166 S+
+```
+
+:::
+
+:::tip Unusable?
+
+Please check if you have entered **the identifier** (non-game name or nickname).
+
+:::
+
+## `maimai plate`
+
+-   [公开](permissions)
+
+Use：`~maimai plate<name> [<detector username>]`
+
+This command allows you to view the progress of the player's nameplate completion.
+
+On the QQ platform, the username is left empty to bind to the username corresponding to the QQ number.
+
+:::info Example
+
+Result Example：
+
+```
+>>>> ~maimai plate dance
+<<<<< your godess remaining below：
+Basic 524 left,
+Advanced 524 left,
+Expert remaining head,
+Master 524 remaining,
+Re:MASTER 84 left.
+<<<< you have 208 tracks greater than 13+.
+```
+
+:::
+
+:::tip Unusable?
+
+Please check if you have entered **the identifier** (non-game name or nickname).
+
+:::
+
+## `maimai process`
+
+-   [公开](permissions)
+
+Use：`~maimai process <Rank > <Destination > [<Charger Username>]`
+
+This command can see how far players have completed their ratings at the corresponding level.
+
+On the QQ platform, the username is left empty to bind to the username corresponding to the QQ number.
+
+Supported target ratings：
+
+-   Level：`A`, `AAA`, `S`, `S+`, `SS+`, `SSS`, `SSS+`
+-   Strike：`FC`, `FC+`, `AP`, `AP+`
+-   Sync rate：`FS`, `FS+`, `FDX`, `FDX+`
+
+:::tip Unusable?
+
+Please check if you have entered **the identifier** (non-game name or nickname).
+
+:::
+
+## `maimai grade`
+
+-   [公开](permissions)
+
+Use：`~maimai grade <segment bit>`
+
+This command can ask for information about the song's list of identified songs, customs conditions, etc.
+
+:::info Example
+
+Result Example：
+
+```
+>>>> ~maimai grade Master superparent
+<<<< to write to MASTER ultra-top segment identification list：
+11223. Heavy Blast (DX) Master 14+
+571. Our Wrenly Master 14+
+11029. Titia (DX) Master 14
+11106. Valsqotch (DX) Master 14+
+Maximum health：100
+GREAT-2/GOOD-3/MIS-5/CLEAR+20
+```
+
+:::
+
+## `maimai rank`
+
+-   [公开](permissions)
+
+Use：`~maimai rank [<detector username>]`
+
+This command can query the user's score ranking in the score.
+
+On the QQ platform, the username is left empty to bind to the username corresponding to the QQ number.
+
+:::tip Unusable?
+
+Please check if you have entered **the identifier** (non-game name or nickname).
+
+:::
+
+## `maimai scorelist`
+
+-   [公开](permissions)
+
+Usage：
+
+-   `~maimai scorelist <rating> <pages> [<detector username>]`
+
+This command can query the list of scores for users at the corresponding level.
 
 ## `maimai scoreline`
 
 -   [公开](permissions)
 
-用法：`~maimai scoreline <ID> <难度> <分数线>`
+Use：`~maimai scoreline <ID> <difficulty> <Score>`
 
-此命令可以查找某首曲目的分数线。
+This command can find a curve fraction, as well as return the allowed TAP GREAT tolerance and the equivalent TAP GREAT number of BREAK 2500 or BREAK 2000 equivalent.
 
-命令将返回分数线允许的 TAP GREAT 容错以及 BREAK 2500 或 BREAK 2000 等价的TAP GREAT 数。
+:::info Example
 
-:::info 例子
-
-返回的结果示例：
+Result Example：
 
 ```
->>> ~maimai scoreline 834 Re:MASTER 100
-<<< PANDORA PARADOXXX Re:MASTER
-分数线 100.0% 允许的最多 TAP GREAT 数量为 82.70（每个-0.0121%），
-BREAK 2550（一共 15 个）等价于 1.378 个 TAP GREAT（-0.0167%），
-BREAK 2000（一共 15 个）等价于 8.308 个 TAP GREAT（-0.1005%）。
+>>>> ~maimai scoreline 834 Re:MASTER 100
+<<< PANDOORA PAADOXXR Re:MASTER
+Spectrum 100.0% allowed up to 82.70 (per -0). 121%),
+BREAK 2550 (total 15) equals 1.3378 TAP GREAT (-0.0167%),
+BREAK 2000 (total 15) = 8.38 TAP GREAT (-0.1005%).
 ```
 
 :::
+
+## `maimai rating`
+
+-   [公开](permissions)
+
+Use：`~maimai rating <rating > <Score>`
+
+This command calculates a single track of Ratin, based on a fixed number and a score.
 
 ## `maimai update`
 
 -   [仅超级用户](permissions)
 
-用法：`~maimai update`
+Use：`~maimai update`
 
-此命令可以更新 Maimai 资源文件，如别名和封面图。
+This command can update Maimai resource files, such as alias and cover charts.
+
+## See also
+
+-   [maimai_regex](maimai_regex)
+-   [chunithm](chunithm)

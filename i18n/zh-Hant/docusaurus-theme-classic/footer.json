@@ -56,7 +56,7 @@
     "description": "The label of footer link with label=Docusaurus linking to https://docusaurus.io/"
   },
   "copyright": {
-    "message": "版权所有 © 2023 AkariBot. \n                使用 <a href=\"https://docusaurus.io/\">Docusaurus</a> 构建. \n                改编自<a href=\"https://bot.teahouse.team/\">小可 · Wiki</a>.\n                除非另有声明，本网站内容采用<a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">知识共享署名-相同方式共享 4.0</a> 授权.",
+    "message": "版权所有 © 2024 AkariBot. \n                使用 <a href=\"https://docusaurus.io/\">Docusaurus</a> 构建. \n                改编自<a href=\"https://bot.teahouse.team/\">小可 · Wiki</a>.\n                除非另有声明，本网站内容采用<a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">知识共享署名-相同方式共享 4.0</a> 授权.",
     "description": "The footer copyright"
   },
   "logo.alt": {

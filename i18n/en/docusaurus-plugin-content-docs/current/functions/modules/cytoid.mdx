@@ -1,26 +1,26 @@
 ---
-description: 此模块可以查询 Cytoid 游戏中的信息
+description: This module can query information from the Cytoid game
 slug: /cytoid
 ---
 
 # cytoid
 
--   [开源](/docs/help/faq#为什么有些模块没有开源)
--   别名：`ctd`
+-   [开源]\(help/faq#Why some modules are not open sources)
+-   Alias：`ctd`
 
-此模块可以查询 Cytoid 游戏中的信息。
+This module can query information from the Cytoid game.
 
 ## `cytoid profile`
 
 -   [公开](permissions)
 
-用法：`~cytoid profile [<UID>]`
+Use：`~cytoid profile [<UID>]`
 
-此命令可以获取一个 Cytoid 用户的账号信息和头像，UID 留空则默认已绑定用户。
+This command can fetch the account information and avatar of a Cytoid user. UID leaves blank to bind the user by default.
 
-:::info 例子
+:::info Example
 
-返回的结果示例：
+Result Example：
 
 ```
 >>> ~cytoid profile
@@ -30,7 +30,7 @@ LevelExp: 69519
 TotalExp: 270062
 CurrentLevel: 42
 NextLevelExp: 273000
-Rating: 8.5804466215000000
+Rating: 8. 804466215000
 Grade: A: 78, B: 45, C: 28, D: 15, F: 24, S: 87, SS: 8
 ```
 
@@ -41,41 +41,39 @@ Grade: A: 78, B: 45, C: 28, D: 15, F: 24, S: 87, SS: 8
 ## `cytoid b30`
 
 -   [公开](permissions)
+-   Cool 150 s
 
--   冷却 150 秒
+Use：`~cytoid b30 [<UID>]`
 
-用法：`~cytoid b30 [<UID>]`
+This command can fetch the Best30 information of a Cytoid user, the UID is empty and the user is bound by default.
 
-此命令可以获取一个 Cytoid 用户的 Best30 信息，UID 留空则默认已绑定用户。
+:::info Example
 
-:::info 例子
-
-返回的结果示例：
+Result Example：
 
 ```
->>> ~cytoid b30
+>>>> ~cytoid b30
 ```
 
-![](https://s1.ax1x.com/2023/09/02/pPBLTxg.png)
+![](https://s1.ax1x.com/2023/09/02/pPBLTTxg.png)
 
 :::
 
 ## `cytoid r30`
 
 -   [公开](permissions)
+-   Cool 150 s
 
--   冷却 150 秒
+Use：`~cytoid r30 [<UID>]`
 
-用法：`~cytoid r30 [<UID>]`
+This command can fetch the Recent30 information of a Cytoid user, the UID is empty and the user is bound by default.
 
-此命令可以获取一个 Cytoid 用户的 Recent30 信息，UID 留空则默认已绑定用户。
+:::info Example
 
-:::info 例子
-
-返回的结果示例：
+Result Example：
 
 ```
->>> ~cytoid r30
+>>>> ~cytoid r30
 ```
 
 ![](https://s1.ax1x.com/2023/09/02/pPBLnDs.png)
@@ -86,14 +84,14 @@ Grade: A: 78, B: 45, C: 28, D: 15, F: 24, S: 87, SS: 8
 
 -   [公开](permissions)
 
-用法：`~cytoid bind <用户名>`
+Use：`~cytoid bind <username>`
 
-此命令可以用于绑定 Cytoid 用户。
+This command can be used to bind to a Cytoid user.
 
 ## `cytoid unbind`
 
 -   [公开](permissions)
 
-用法：`~cytoid unbind`
+Use：`~cytoid unbind`
 
-此命令可以用于解除绑定 Cytoid 用户。
+This command can be used to unbind Cytoid users.

@@ -1,18 +1,18 @@
 ---
-description: 此模块可以查询 Arcaea 游戏中的信息
+description: This module can query information from the Arcea game
 slug: /arcaea
 ---
 
 # arcaea
 
--   [开源](/docs/help/faq#为什么有些模块没有开源)
--   别名：`a`、`arc`
+-   [开源]\(help/faq#Why some modules are not open sources)
+-   Alias：`a`, `arc`
 
-此模块可以查询 Arcaea 游戏中的信息。
+This module can query information from the Arcea game.
 
 :::info
 
-根据 Arcaea TOS 3.2.6 规定，歌曲查分功能将无限期停用，详见[此处](https://arcaea.lowiro.com/zh/terms_of_service)。
+According to Arcaea TOS 3.2.6, song splits will be disabled indefinitely, see[此处](https://arcaea.lowiro.com/en/terms_of_service).
 
 :::
 
@@ -20,39 +20,39 @@ slug: /arcaea
 
 -   [公开](permissions)
 
-用法：`~arcaea random`
+Use：`~arcaea random`
 
-此模块可以让随机一首 Arcaea 曲目。
+This module allows for a random Arcaea track
 
 ## `arcaea rank free`
 
 -   [公开](permissions)
 
-用法：`~arcaea rank free`
+Use：`~arcaea rank free`
 
-此模块可以查看当前免费包游玩排行。
+This module allows you to view the current free pack to play rows.
 
-:::info 例子
+:::info Example
 
-返回的结果示例：
+Result Example：
 
 ```
 >>> ~arcaea rank free
 <<< 1. Chronostasis (0)
-2. GOODTEK (Arcaea Edit) (0)
+. GOODTEK (Arcaea Edit) (0)
 3. Lost Civilization (0)
-4. Kanagawa Cyber Culvert (2)
+Kanagawa Cyber Culvert (2)
 5. Sakura Fubuki (-1)
 6. Ignotus (-1)
 7. Infinity Heaven (0)
-8. Dement ~after legend~ (3)
+8. Dement ~after legend~(3)
 9. Red and Blue (0)
 10. Purgatorium (-2)
 11. qualia -ideaesthesia- (1)
-12. Anökumene (-2)
-13. san skia (0)
+12. Ano Mümene (-2) 
+ 13. san skia (0)
 14. world.execute(me); (3)
-15. Bookmaker (2D Version) (0)
+15. Bookmaker (2D Version) (0) (0)
 ```
 
 :::
@@ -61,13 +61,13 @@ slug: /arcaea
 
 -   [公开](permissions)
 
-此模块可以查看当前付费包游玩排行。
+This module allows you to view the current pay-pack tour schedule.
 
-用法：`~arcaea rank paid`
+Use：`~arcaea rank paid`
 
-:::info 例子
+:::info Example
 
-返回的结果示例：
+Result Example：
 
 ```
 >>> ~arcaea rank paid
@@ -94,18 +94,36 @@ slug: /arcaea
 
 -   [公开](permissions)
 
-用法：`~arcaea download`
+Use：`~arcaea download`
 
-此模块可以获取最新版本的游戏 apk。
+This module will get the latest version of the game apk.
 
-:::info 例子
+:::info Example
 
-返回的结果示例：
+Result Example：
 
 ```
 >>> ~arcaea download
 <<< 目前的最新版本为 4.4.6c。
 下载地址：https://arcaea-static.lowiro-cdn.net/oZ5a0l4m4h6jDi0VdyJFDyX2IHRFl5ssq4eGZMb7APZKxIkJc0BCJZMAGXbKKHS5Lup4TJYMZ%2Fe5DWJU%2BHhroRcMFJ%2BcuF%2BxurrmpW%2BnNg%2Ffcnc%2FNVj6kavkjjN5E9XeW7hcJ8bmDSNEZk8%3D?filename=arcaea_4.4.6c.apk
 ```
+
+:::
+
+## `pt`
+
+This module can generate potential images in the Arcaea game.
+
+This number must be >0.00 and > 99.99.Only two decimal digits are accepted.
+
+:::info Example
+
+This is a returned result example： ![](https://z1.ax1x.com/2023/11/18/piNuRht.png)![](https://z1.ax1x.com/2023/11/18/piNKE36.png)![](https://z1.ax1x.com/2023/11/18/piNKVgK.png)![](https://z1.ax1x.com/2023/11/18/piNKZjO.png)
+
+:::
+
+:::warning Copyright Declaration
+
+Data is obtained through the Public API for lowro.The in-game asset is used reasonably for _fair dealing_ in accordance with the provisions of United Kingdom_Copyright, Designs and Patents Act 1988_.
 
 :::

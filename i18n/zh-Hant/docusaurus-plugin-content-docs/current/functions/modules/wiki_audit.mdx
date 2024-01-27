@@ -1,22 +1,14 @@
 ---
-description: 此模块用于管理 wiki 站点的黑白名单
+description: 此模块用于管理 Wiki 站点的黑白名单
 slug: /wiki_audit
 ---
 
 # wiki_audit
 
--   [开源](/docs/help/faq#为什么有些模块没有开源)
+-   [开源](help/faq#为什么有些模块没有开源)
 -   依赖：[wiki](wiki)
 
-此模块用于管理 wiki 站点的黑白名单。
-
-## `wiki_audit trust`
-
--   [仅超级用户](permissions)
-
-用法：`~wiki_audit trust <wiki 域名/脚本路径>`
-
-此命令可以将 wiki 站点加入白名单。
+此模块用于管理 Wiki 站点的黑白名单。
 
 :::tip 脚本路径
 
@@ -34,13 +26,21 @@ slug: /wiki_audit
 
 :::
 
+## `wiki_audit trust`
+
+-   [仅超级用户](permissions)
+
+用法：`~wiki_audit trust <wiki 域名/脚本路径>`
+
+此命令可以将 wiki 站点加入白名单。
+
 ## `wiki_audit block`
 
 -   [仅超级用户](permissions)
 
 用法：`~wiki_audit block <wiki 域名/脚本路径>`
 
-此命令可以将 wiki 站点加入黑名单。
+此命令可以将 Wiki 站点加入黑名单。
 
 ## `wiki_audit distrust`
 
@@ -48,7 +48,7 @@ slug: /wiki_audit
 
 用法：`~wiki_audit ditrust <wiki 域名/脚本路径>`
 
-此命令可以将 wiki 站点移出白名单。
+此命令可以将 Wiki 站点移出白名单。
 
 ## `wiki_audit unblock`
 
@@ -56,7 +56,7 @@ slug: /wiki_audit
 
 用法：`~wiki_audit unblock <wiki 域名/脚本路径>`
 
-此命令可以将 wiki 站点移出黑名单。
+此命令可以将 Wiki 站点移出黑名单。
 
 ## `wiki_audit query`
 
@@ -64,7 +64,7 @@ slug: /wiki_audit
 
 用法：`~wiki_audit query <wiki 域名/脚本路径>`
 
-此命令可以允许机器人询问是否访问此 wiki 站点。
+此命令可以询问机器人是否访问此 Wiki 站点是否在名单中。
 
 ## `wiki_audit list`
 

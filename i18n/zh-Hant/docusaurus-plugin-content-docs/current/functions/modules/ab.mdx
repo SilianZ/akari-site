@@ -1,19 +1,26 @@
 ---
-description: 此模块可以查询设定的起始Wiki的滥用日志
+description: 此模块可以查询设定的起始 Wiki 的滥用日志
 slug: /ab
 ---
 
 # ab
 
--   [开源](/docs/help/faq#为什么有些模块没有开源)
+-   [开源](help/faq#为什么有些模块没有开源)
 
 此模块可以查询设定的起始 Wiki 的滥用日志。
+
+:::warning
+
+某些网站已经被列入黑名单，使用此命令无法获取某些网站的某些信息。即使网站不在黑名单内，返回的内容仍将经过小可云智能过滤。请不要作死。
+
+:::
 
 ## `ab`
 
 -   [公开](/docs/permissions)
+-   转发消息
 
-此命令可以查询设定的起始 Wiki 的滥用日志。
+此命令可以查询滥用日志。
 
 用法：`~ab`
 
@@ -23,29 +30,30 @@ slug: /ab
 
 ```
 >>> ~ab
-<<< https://minecraft.fandom.com/zh/wiki/Special:AbuseLog
-•石头（消歧义） - 42.54.135.169于11时47分
-过滤器名：创建未翻译的页面
-处理结果：
-•石头（消歧义） - 42.54.135.169于11时47分
-过滤器名：创建未翻译的页面
-处理结果：warn
-•File:The Caves & Cliffs Update Part I Artwork.png - String75于5时4分
-过滤器名：上传文件时未选择授权协议
-处理结果：warn
-•File:The Caves & Cliffs Update Part I Artwork.png - String75于5时2分
-过滤器名：上传文件时未选择授权协议
-处理结果：disallow
-•File:The Caves & Cliffs Update Part I Artwork.png - String75于5时1分
-过滤器名：上传文件时未选择授权协议
-处理结果：warn
+<<< •File:EE HOC2024 panorama 5.jpg - JYN2018X 于 19:32
+ 过滤器描述：上传文件时未选择授权协议
+ 采取的行动：tag
+•File:EE HOC2024 panorama 5.jpg - JYN2018X 于 19:32
+ 过滤器描述：上传文件时未选择授权协议
+ 采取的行动：warn
+•File:EE HOC2024 panorama 4.jpg - JYN2018X 于 19:32
+ 过滤器描述：上传文件时未选择授权协议
+ 采取的行动：tag
+•File:EE HOC2024 panorama 3.jpg - JYN2018X 于 19:32
+ 过滤器描述：上传文件时未选择授权协议
+ 采取的行动：tag
+•File:EE HOC2024 panorama 5.jpg - JYN2018X 于 19:32
+ 过滤器描述：上传文件时未选择授权协议
+ 采取的行动：warn
 …仅显示前 5 条内容。
 ```
 
 :::
 
-:::warning
+## `ab legacy`
 
-某些网站已经被列入黑名单，使用此命令无法获取某些网站的某些信息。即使网站不在黑名单内，返回的内容仍将经过小可云智能过滤。请不要作死。
+-   [公开](/docs/permissions)
 
-:::
+用法：`~ab legacy`
+
+此命令可以强制使用文字模式查询滥用日志。
