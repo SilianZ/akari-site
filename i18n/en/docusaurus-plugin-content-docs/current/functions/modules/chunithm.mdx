@@ -1,79 +1,79 @@
 ---
-description: This module can find information in the CHITHM game
+description: 此模块可以查询 CHUNITHM 游戏中的信息
 slug: /chunithm
 ---
 
 # chunithm
 
--   [闭源]\(help/faq#Why some modules are not open sources)
--   Alias：`chu`
+-   [闭源](help/faq#为什么有些模块没有开源)
+-   别名：`chu`
 
-This module can find information in the CHITHM game.
+此模块可以查询 CHUNITHM 游戏中的信息。
 
-If not specified, the difficulty of this page supports full titles, three-letter abbreviations and Chinese (Green Yellow Red Purple Black), letter-size is not sensitive.
+如非特别说明，本页面的难度支持全称、三字母缩写和中文缩写（绿黄红紫黑），字母大小写不敏感。
 
-Note
+注意
 
-The data source used for this module commands is[查分器]for Diving-Fish (https://www.diving-fish.com/chunithmdx/prober/), please check your registration number and set it before using this command for the first time.
+本模块的命令使用的数据源为 Diving-Fish 提供的[查分器](https://www.diving-fish.com/chunithmdx/prober/)，第一次使用本命令前请先按照对应说明注册账号并设置。
 
 ## `chunithm base`
 
 -   [公开](permissions)
 
-Use：`~chunithm base <number > [<max >]`
+用法：`~chunithm base <定数> [<最大定数>]`
 
-This command can search for songs according to a certain number.
+此命令可以根据定数搜索对应歌曲。
 
 ## `chunithm level`
 
 -   [公开](permissions)
 
-Use：`~chunithm level <Level > [<page>]`
+用法：`~chunithm level <等级> [<页数>]`
 
-This command can search for songs according to hierarchy.
+此命令可以根据等级搜索对应歌曲。
 
-Leave blank for page 1 by default.
+页数留空则默认为第 1 页。
 
 ## `chunithm search`
 
 -   [公开](permissions)
 
-Use：`~chunithm search <search term>`
+用法：`~chunithm search <搜索词>`
 
-This command can search for songs based on song name (or partly).
+此命令可以根据歌曲名称（或一部分）搜索对应歌曲。
 
 ## `chunithm id`
 
 -   [公开](permissions)
 
-Use：`~chunithm id <ID> [<difficulty>]`
+用法：`~chunithm id <ID> [<难度>]`
 
-This command can query song or beatmap information by ID.
+此命令可以根据 ID 查询歌曲或谱面信息。
 
-:::info Example
+:::info 例子
 
-Result Example：
+返回的结果示例：
 
-Song：
+歌曲：
 
 ```
 >>> ~chunithm id 1086
-<<< 1086. Super
-artist：Pigative VS Mountains VS Kai VS Watersandy VS VS VA Great Wildness
-Classification：ORIGINAL
+<<< 1086. 祈 -我ら神祖と共に歩む者なり-
+艺术家：光吉猛修 VS 穴山大輔 VS Kai VS 水野健治 VS 大国奏音
+分类：ORIGINAL
 BPM：219
-Version：CHUNITHM PAADISE LOST
-Difficulty：6. 10.0/14.5/15.4
+版本：CHUNITHM PARADISE LOST
+难度：6.0/10.0/14.5/15.4
 ```
 
-Beatmap：
+谱面：
 
 ```
 >>> ~chunithm id 1086 Master
-<<<< 1086. Sex - My Andimistist Me Mag Mag Mag Mag Mon
+<<< 1086. 祈 -我ら神祖と共に歩む者なり-
 Master 15 (15.4)
-Attack：4444
-Spectrator：Spectrum Supporter must be a leader before a person can become a leader who is a member of the JUSTICE. J-Pray - JUSTICE.
+连击：4444
+谱师：譜面ボーイズからの祈り -Pray for "JUSTICE"-
 ```
 
 :::
@@ -82,38 +82,36 @@ Spectrator：Spectrum Supporter must be a leader before a person can become a le
 
 -   [公开](permissions)
 
-Use：`~chunithm song <ID 或标题> [<difficulty>]`
+用法：`~chunithm song <ID 或标题> [<难度>]`
 
-This command can query song or beatmap information by ID or alias.
+此命令可以根据 ID 或别名查询歌曲或谱面信息。
 
-ID needs to be added to prefix 'id'. Use underlined '\_' instead of spaces.
+ID 需要加入前缀“id”，别名请使用下划线“\_”代替空格。
 
-:::info Example
+:::info 例子
 
-Result Example：
+返回的结果示例：
 
-Song：
+歌曲：
 
 ```
->>>> ~chunithm song id1086
-<<< 1086. Super
-artist：Pigative VS Mountains VS Kai VS Watersandy VS VS VA Great Wildness
-Classification：ORIGINAL
+>>> ~chunithm song id1086
+<<< 1086. 祈 -我ら神祖と共に歩む者なり-
+艺术家：光吉猛修 VS 穴山大輔 VS Kai VS 水野健治 VS 大国奏音
+分类：ORIGINAL
 BPM：219
-Version：CHUNITHM PAADISE LOST
-Difficulty：6. 10.0/14.5/15.4
+版本：CHUNITHM PARADISE LOST
+难度：6.0/10.0/14.5/15.4
 ```
 
-Beatmap：
+谱面：
 
 ```
 >>> ~chunithm song id1086 Master
-<<< 1086. Sex - My Andil Mag Mag Mag Mag Mag Mag Mag Mag Mag Mag Big Big Big Big Big Big -
+<<< 1086. 祈 -我ら神祖と共に歩む者なり-
 Master 15 (15.4)
-Attack：4444
-Spector：Super Super Super Super Supporter - Pointer Super Supporter Spectrum Spectrum 
- << 1086 Master 
- <<<<< 1086. Sex - Me Zultow Sum Sum Sum Sum Spectrum Spectrum Spectrum Sum Sum Sum Same - JUSTICE" - JUSTICE.
+连击：4444
+谱师：譜面ボーイズからの祈り -Pray for "JUSTICE"-
 ```
 
 :::
@@ -122,19 +120,19 @@ Spector：Super Super Super Super Supporter - Pointer Super Supporter Spectrum S
 
 -   [公开](permissions)
 
-Use：`~chunithm random [<rating+difficulty>]`
+用法：`~chunithm random [<等级+难度>]`
 
-This command can randomly specify a song with a condition or completely random if no parameters are enteredNo spaces are required between difficulty and hierarchy.
+此命令可以随机一首指定条件的歌曲，若不输入参数则完全随机。难度和等级之间不需要空格。
 
 ## `chunithm b30`
 
 -   [公开](permissions)
 
-Use：`~chunithm b30 [<detector username>]`
+用法：`~chunithm b30 [<查分器用户名>]`
 
-This command can be used to get B30 information.
+此命令可以用于获取 B30 信息。
 
-On the QQ platform, the username is left empty to bind to the username corresponding to the QQ number.
+在 QQ 平台，用户名留空则默认为绑定 QQ 号对应的用户名。
 
 ## `chunithm bind`
 
@@ -142,9 +140,9 @@ On the QQ platform, the username is left empty to bind to the username correspon
 -   Discord
 -   Telegram
 
-Use：`~maimai bind <username>`
+用法：`~maimai bind <用户名>`
 
-This command can be used to bind to Diving-Fish Scorer users.
+此命令可以用于绑定 Diving-Fish 查分器用户。
 
 ## `chunithm unbind`
 
@@ -152,10 +150,10 @@ This command can be used to bind to Diving-Fish Scorer users.
 -   Discord
 -   Telegram
 
-Use：`~maimai unbind`
+用法：`~maimai unbind`
 
-This command can be used to unbind Diving-Fish detector users.
+此命令可以用于解除绑定 Diving-Fish 查分器用户。
 
-## See also
+## 另见
 
 -   [maimai](maimai)

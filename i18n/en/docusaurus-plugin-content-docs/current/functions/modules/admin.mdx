@@ -1,64 +1,64 @@
 ---
-description: This module can set the robot administrator to manage robots without a group administrator
+description: 此模块可以设置机器人管理员，以实现不设置成员为群组管理员的情况下管理机器人的功能
 slug: /admin
 ---
 
 # admin
 
--   [开源]\(help/faq#Why some modules are not open sources)
--   Force turn on
+-   [开源](help/faq#为什么有些模块没有开源)
+-   强制开启
 
-This module can set the robot administrator to perform the function of managing robots without a group administrator being set up.
+此模块可以设置机器人管理员，以实现不设置成员为群组管理员的情况下管理机器人的功能。
 
-This module sets separate and part-time permissions for each group.
+此模块设置各群组独立，非全局权限。
 
 ## `admin add`
 
 -   [仅管理员](/docs/permissions)
 
-Use：`~admin add <User ID>`
+用法：`~admin add <用户 ID>`
 
-This command can set a member as a robot administrator.
+此命令可以设置成员为机器人管理员。
 
 ## `admin remove`
 
 -   [仅管理员](/docs/permissions)
 
-Use：`~admin remove <User ID>`
+用法：`~admin remove <用户 ID>`
 
-This command can remove members as robot administrators.
+此命令可以移除成员为机器人管理员。
 
 ## `admin list`
 
 -   [仅管理员](permissions)
 
-Use：`~admin list`
+用法：`~admin list`
 
-This command can list all robots in this group.
+此命令可以列出本群组内所有的机器人管理员。
 
 ## `admin ban`
 
 -   [仅管理员](permissions)
 
-Use：`~admin ban <User ID>`
+用法：`~admin ban <用户 ID>`
 
-This command can limit someone to use robots in their group.
+此命令可以限制某人在本群使用机器人。
 
 :::info
 
-If you have multiple robots in your group and may cause a circular call, use this command to prevent the robot user from responding.
+若你的群组中有多个机器人且可能会产生循环调用的问题，可使用此命令让小可不对机器人用户做出响应。
 
 :::
 
-## `admin ban`
+## `admin unban`
 
 -   [仅管理员](permissions)
 
-Use：`~admin unban <User ID>`
+用法：`~admin unban <用户 ID>`
 
-This command removes restrictions on someone using robots in their group.
+此命令可以解除对某人在本群使用机器人的限制。
 
-## See also
+## 另见
 
 -   [superuser](superuser)
 -   [权限](permissions)
