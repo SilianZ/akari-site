@@ -1,68 +1,68 @@
 ---
-description: This module will be able to query information from a Minecraft server
+description: 此模块可以查询一个 Minecraft 服务器的信息
 slug: /server
 ---
 
 # server
 
--   [开源]\(help/faq#Why some modules are not open sources)
--   Alias：`s`
+-   [开源](help/faq#为什么有些模块没有开源)
+-   别名：`s`
 
-This module will be able to query information about a Minecraft server.
+此模块可以查询一个 Minecraft 服务器的信息。
 
 ## `server`
 
 -   [公开](permissions)
 
-Use：`~server <server IP or domain name>[:<port>] [-r] [-p]`
+用法：`~server <服务器 IP 或域名>[:<端口>] [-r] [-p]`
 
-Parameter：
+参数：
 
--   `-r`：shows original messages
--   \``-p`：Show Players List
+-   `-r`：显示原始信息
+-   `-p`：显示玩家列表
 
-This command can query information about a Minecraft server.
+此命令可以查询一个 Minecraft 服务器的信息。
 
-:::info Example
+:::info 例子
 
-Result Example：
+返回的结果示例：
 
-General：
+常规：
 
 ```
->>> ~server hypixel. et
-<<<< [JE]
+>>> ~server hypixel.net
+<<< [JE]
                 Hypixel Network [1.8-1.19]
-            3RD RD SKYBLOCK ANNIVERSARY
-Online player：47649/200000
-Game version：Requires MC 1. 1.19
-Hypixel.net:25565
+            3RD SKYBLOCK ANNIVERSARY
+在线玩家：47649 / 200000
+游戏版本：Requires MC 1.8 / 1.19
+hypixel.net:25565
 ```
 
-Raw message：
+原始信息：
 
 ```
->>> ~server hypixel. et -r
-<<<< [JE]
+>>> ~server hypixel.net -r
+<<< [JE]
                 §aHypixel Network §c[1.8-1.19]
             §d§l3RD SKYBLOCK ANNIVERSARY
-Online player：47666/200000
-Game Version：Requires MC 1. 1.19
-Hypixel.net:25565
+在线玩家：47666 / 200000
+游戏版本：Requires MC 1.8 / 1.19
+hypixel.net:25565
 ```
 
-Players list：
+玩家列表：
 
 ```
->>> ~server hypixel. et -p
-<<<< [JE]
+>>> ~server hypixel.net -p
+<<< [JE]
                 Hypixel Network [1.8-1.19]
-            3RD RD SKYBLOCK ANNIVERSARY
-Online player：47636 / 200000
-Current online player：
-(Low)
-Game version：Requires MC 1. 1.19
-Hypixel.net:25565
+            3RD SKYBLOCK ANNIVERSARY
+在线玩家：47636 / 200000
+当前在线玩家：
+（略）
+游戏版本：Requires MC 1.8 / 1.19
+hypixel.net:25565
 ```
 
 :::
