@@ -1,22 +1,14 @@
 ---
-description: This module manages black whitelist of wiki sites
+description: This module manages black whitelist of Wiki sites
 slug: /wiki_edit
 ---
 
 # wiki_edit
 
--   [开源]\(/docs/help/faq#Why some modules are not open sources)
+-   [开源]\(help/faq#Why some modules are not open sources)
 -   Depends：[wiki](wiki)
 
-This module is used to manage the black and white list of wiki sites.
-
-## `wiki_edit trust`
-
--   [仅超级用户](permissions)
-
-Use：`~wiki_edit trust <wiki 域名/脚本路径>`
-
-This command allows wiki sites to be whitelisted.
+This module manages the black and white list of Wiki sites.
 
 :::tip Script Path
 
@@ -34,13 +26,21 @@ If your wiki is self-constructed, or if your farm is not listed here, the follow
 
 :::
 
+## `wiki_edit trust`
+
+-   [仅超级用户](permissions)
+
+Use：`~wiki_edit trust <wiki 域名/脚本路径>`
+
+This command allows wiki sites to be whitelisted.
+
 ## `wiki_edit block`
 
 -   [仅超级用户](permissions)
 
 Use：\`~wiki_edit block \<wiki 域名/脚本路径>
 
-This command can blacklist wiki sites.
+This command can blacklist Wiki sites.
 
 ## `wiki_edit registration`
 
@@ -56,7 +56,7 @@ This command can remove wiki sites from whitelist.
 
 Use：\`~wiki_audit unblock \<wiki 域名/脚本路径>
 
-This command can remove wiki sites from blacklist.
+This command can remove Wiki sites from blacklist.
 
 ## `wiki_edit query`
 
@@ -64,7 +64,7 @@ This command can remove wiki sites from blacklist.
 
 Use：\`~wiki_edit query \<wiki 域名/脚本路径>
 
-This command allows robots to ask whether to access this wiki site.
+This command can ask if robots visit this Wiki site or not.
 
 ## `wiki_edit list`
 
