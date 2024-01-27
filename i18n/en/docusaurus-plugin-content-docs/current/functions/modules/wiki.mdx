@@ -5,7 +5,7 @@ slug: /wiki
 
 # wiki
 
--   [开源]\(/docs/help/faq#Why some modules are not open sources)
+-   [开源]\(help/faq#Why some modules are not open sources)
 
 This module provides details of a specific page based on a MediaWiki website.
 
@@ -133,22 +133,20 @@ If your wiki is self-constructed, or if your farm is not listed here, the follow
 Usage：
 
 -   Set new request header：`~wiki headers add <request header>`
--   Delete request header：`~wiki headers remove <request header>`
+-   Delete request header：`~wiki headers remove <header key name>`
 -   Reset request header：`~wiki header reset`
 -   View the current settings request header：`~wiki headers show`
 
 This command is used to set the requested header when using the `wiki` command.Once set, each query wiki will be taken to this header.
 
-Separate lines from different headers.
-
 If you do not know what this is useful, please do not disturb the settings or may result in an exception to the result.
 
 :::info About grey wiki
 
-In the face of recent attacks, we found that the grey machine had used “partially sealed sites” measures to some wiki by restricting the web site to “dog heads” APP users only.Small can be affected but can be resolved by **\*US-Agent\`** of the pseudo-dog APP.Please run the following command：
+In the face of recent attacks, we found that the grey machine had used “partially sealed sites” to some wiki by restricting the site to “dog heads” APP users only.Small can be affected but can be resolved by **\*US-Agent\`** of the pseudo-dog APP.Please run the following command：
 
 ```
-~wiki headers set {"user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0 Huijiapp/5"}
+~wiki headers ad {"user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0 Huijiapp/5"}
 ```
 
 :::
@@ -162,7 +160,7 @@ Usage：
 -   Set the new prefix：`~wiki prefix set <prefix>`
 -   Reset prefix：`~wiki prefix reset`
 
-This command is used to set the auto-add prefix when using the `wiki` command.Once set, each query wiki will be asked with the previous prefix query.
+This command is used to set auto-add prefix when using the `wiki` command.Once set, each query wiki will be asked with the previous prefix query.
 
 ## `wiki fandom`
 
