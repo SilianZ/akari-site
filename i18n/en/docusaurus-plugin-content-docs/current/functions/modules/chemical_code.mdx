@@ -1,20 +1,20 @@
 ---
-description: 此模块可以生成一个化学结构式，并要求给出对应的分子式
+description: This module generates a chemical structure and requires corresponding molecular formula
 slug: /chemical_code
 ---
 
 # chemical_code
 
--   [开源](help/faq#为什么有些模块没有开源)
--   别名：`cc`、`ccode`
+-   [开源]\(help/faq#Why some modules are not open sources)
+-   Alias：`cc`, `ccode`
 
-此模块可以生成一个化学结构式，并要求给出对应的分子式。
+This module generates a chemical structure and requires corresponding molecular formula.
 
-本模块修改自 [Chemical_Code](https://github.com/lunarbunnys/Chemical_Code)，信息源来自 [ChemSpider](https://www.chemspider.com/) 。
+This module was modified from [Chemical_Code](https://github.com/lunarbunnys/Chemical_Code), from [ChemSpider](https://www.chemspider.com/).
 
 :::warning
 
-此命令易被滥用，请勿在短时间内使用太多次，否则会触发[滥用警告](/docs/abuse_warning)。滥用命令是违反[服务条款](policy)的行为，不仅会影响正常交流，还有可能导致机器人账号被风控。
+This command is vulnerable to abuse, do not use too many times in a short period of time or trigger[滥用警告](/docs/abuse_warning).Abuse of command is a violation of[服务条款](policy), which not only affects normal communication, but can also cause robot accounts to be controlled.
 
 :::
 
@@ -22,37 +22,37 @@ slug: /chemical_code
 
 -   [公开](permissions)
 
-用法：`~chemical_code [<ChemSpider ID>]`
+Use：`~chemical_code [<ChemSpider ID>]`
 
-此命令可以生成一个结构式，使用者需要在限定时间内回答。
+This command can generate a structure in which the user needs to answer within a limited time.
 
-输入 ChemSpider ID 可自定义题目，输入为 0 或留空则随机。答案使用字母表顺序。
+Enter the ChemSpider ID to customize the title, enter it as 0 or leave blank to random.Answers use alphabetical order.
 
-若回答正确可获得 1 片花瓣，自定义题目不会获得花瓣。
+If the answer is correct, you can get 1 piece of peal, your custom title won't get a valve.
 
-:::info 例子
+:::info Example
 
-返回的结果示例：
+Result Example：
 
 ```
->>> ~chemical_code
+>>>> ~chemical_code
 <<< ID：236
-请在 2 分钟内发送这个化合物的分子式。（除C、H外使用字母表顺序，如：CHBrClF）
+Please send the molecular formula of this compound in 2 minutes. (Use alphabetical order in C and H like：CHBrClF)
 ```
 
-![](https://s1.ax1x.com/2023/09/02/pPBLVgg.png)
+![](https://s1.ax1x.com/2023/09/02/pPBLVg.png)
 
-正确回答示例：
-
-```
->>> C6H6
-<<< 回答正确。
-```
-
-超时未正确回答示例：
+Correct answer sample：
 
 ```
-<<< 已超时，正确答案是 C6H6。
+>>>> C6H6
+<<< Correct Answers.
+```
+
+Timeout failed to answer sample：
+
+```
+<<< Timeout, the correct answer is C6H6.
 ```
 
 :::
@@ -60,37 +60,37 @@ slug: /chemical_code
 ## `chemical_code captcha`
 
 -   [公开](permissions)
--   别名：`ccaptcha`
+-   Alias：`ccaptcha`
 
-用法：`~chemical_code captcha`
+Use：`~chemical_captcha`
 
-标准的验证码样式。去除了计时器系统，以发起者发起后发送的第一条消息为答案，不支持自定义题目。
+Standard verification code style.The timer system was removed and the first message sent by the initiator was answered and the custom title is not supported.
 
-若回答正确可获得 2 片花瓣。
+Get 2 pieces of valve valve if the answer is correct.
 
-:::info 例子
+:::info Example
 
-返回的结果示例：
+Result Example：
 
 ```
 >>> ~chemical_code captcha
 <<< ID：236
-请发送这个化合物的分子式。（除C、H外使用字母表顺序，如：CHBrClF）
+Please send the molecular formula of this compound. (Use alphabetical order in C and H, e.g.：CHBrClF)
 ```
 
-![](https://s1.ax1x.com/2023/09/02/pPBLVgg.png)
+![](https://s1.ax1x.com/2023/09/02/pPBLVg.png)
 
-正确回答示例：
-
-```
->>> C6H6
-<<< 回答正确。
-```
-
-未正确回答示例：
+Correct answer sample：
 
 ```
-<<< 回答错误，正确答案是 C6H6。
+>>>> C6H6
+<<< Correct Answers.
+```
+
+Incorrect answer to sample：
+
+```
+<<<< Answer Error, the correct answer is C6H6.
 ```
 
 :::
@@ -99,6 +99,6 @@ slug: /chemical_code
 
 -   [公开](permissions)
 
-用法：`~chemical_code stop`
+Use：`~chemical_code stop`
 
-此命令在模块正在运行时使用，则会停止。
+This command will stop when the module is running.
