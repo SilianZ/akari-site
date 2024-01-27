@@ -56,7 +56,7 @@
     "description": "The label of footer link with label=Docusaurus linking to https://docusaurus.io/"
   },
   "copyright": {
-    "message": "Copyright ©️ 2023 Akaribot. \n                to build with <a href=\"https://docusaurus.io/\">Docusaur</a> . \n                to adapt from<a href=\"https://bot.teahouse.team/\">Noble Wiki</a>.\n                unless otherwise stated, the content of this site is in<a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons Attribution - share 4</a> authorization.",
+    "message": "Copyright ©️ 2024 Akaribot. \n                to build with <a href=\"https://docusaurus.io/\">Docusaur</a> . \n                to adapt from<a href=\"https://bot.teahouse.team/\">Noble Wiki</a>.\n                unless otherwise stated, the content of this site is in<a href=\"https://creativecommons.org/licenses/by-sa/4.0/\">Creative Commons Attribution - share 4</a> authorization.",
     "description": "The footer copyright"
   },
   "logo.alt": {
