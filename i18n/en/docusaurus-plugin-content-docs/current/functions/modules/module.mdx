@@ -1,86 +1,86 @@
 ---
-description: This module can be enabled or disabled
+description: 此模块可以启用或禁用模块
 slug: /module
 ---
 
-# Module
+# module
 
--   [开源]\(help/faq#Why some modules are not open sources)
--   Force turn on
+-   [开源](help/faq#为什么有些模块没有开源)
+-   强制开启
 
-This module can be enabled or disabled.
+此模块可以启用或禁用模块。
 
 ## `module enable`
 
 -   [仅管理员](permissions)
--   Alias：`enable`
+-   别名：`enable`
 
-Usage：
+用法：
 
--   Specify：\`~module enabling \<Module 1> [<Module 2>...] [-g]
--   All：`~module enables all [-g]`
+-   指定：`~module enable <模块 1> [<模块 2>...] [-g]`
+-   全部：`~module enable all [-g]`
 
-Parameter：
+参数：
 
--   `-g`：applies to the channel globally.
+-   `-g`：应用至频道全局。
 
-This command can turn on specified or all modules.
+此命令可以开启指定或所有模块。
 
 ## `module disable`
 
 -   [仅管理员](permissions)
--   Alias：`disable`
+-   别名：`disable`
 
-Usage：
+用法：
 
--   Specify：\`~module disable\<Module 1> [<Module 2>...] [-g]
--   All：`~module disable all [-g]`
+-   指定：`~module disble <模块 1> [<模块 2>...] [-g]`
+-   全部：`~module disable all [-g]`
 
-Parameter：
+参数：
 
--   `-g`：applies to the channel globally.
+-   `-g`：应用至频道全局。
 
-This command can close the specified or all modules.
+此命令可以关闭指定或所有模块。
 
 ## `module list`
 
 -   [仅管理员](permissions)
 
-Use：`~module list`
+用法：`~module list`
 
-This command can list all modules of the current robot.
+此命令可以列出目前机器人的所有模块。
 
 ## `module list legacy`
 
 -   [仅管理员](permissions)
 
-Use：`~module list legacy`
+用法：`~module list legacy`
 
-This command can force text mode to list all modules of the current robot.
+此命令可以强制使用文字模式列出目前机器人的所有模块。
 
-## `module load`
+## `module reload`
 
 -   [仅超级用户](permissions)
--   Alias：`load`
+-   别名：`reload`
 
-Use：`~module load <1> [<Module 2>...]`
+用法：`~module reload <模块 1> [<模块 2>...]`
 
-This command can reload the module.
+此命令可以重新加载模块。
 
 ## `module unload`
 
 -   [仅超级用户](permissions)
--   Alias：`unload`
+-   别名：`unload`
 
-Use：`~module unload<Module 1> [<Module 2>...]`
+用法：`~module unload <模块 1> [<模块 2>...]`
 
-This command can uninstall the module and leave it unloaded on reboot.
+此命令可以卸载模块，并使其在重启时不加载。
 
 ## `module load`
 
 -   [仅超级用户](permissions)
--   Alias：`load`
+-   别名：`load`
 
-Use：`~module load <Module 1> [<Module 2>...]`
+用法：`~module load <模块 1> [<模块 2>...]`
 
-This command can load uninstalled modules.
+此命令可以加载已卸载的模块。
