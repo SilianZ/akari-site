@@ -1,37 +1,37 @@
 ---
-description: 此模块用于查看机器人已执行的命令次数
+description: This module is used to view the number of commands that the robot has executed
 slug: /analytics
 ---
 
-# analytics
+# Analytics
 
--   [开源](help/faq#为什么有些模块没有开源)
--   强制开启
+-   [开源]\(help/faq#Why some modules are not open sources)
+-   Force turn on
 
-此模块用于查看机器人已执行的命令次数。
+This module is used to view the number of commands that the robot has executed.
 
-可在[配置文件](development/config)中修改参数决定是否启用。
+Parameters can be changed in[配置文件](development/config) to enable or not.
 
-## `analytics`
-
--   [仅超级用户](permissions)
-
-用法：`~analytics`
-
-此命令可以查看机器人已执行的命令次数。
-
-## `analytics days`
+## `Analytics`
 
 -   [仅超级用户](permissions)
 
-用法：`~analytics days [<命令>]`
+Use：`~analytics`
 
-此命令可以查看机器人最近 30 天的命令调用次数统计，命令参数留空则统计所有命令。
+This command allows you to view the number of commands that the robot has executed.
 
-## `analytics year`
+## \`Analytics days'
 
 -   [仅超级用户](permissions)
 
-用法：`~analytics year [<命令>]`
+Use：`~analytics days [<command>]`
 
-此命令可以查看机器人最近一年的命令调用次数统计，命令参数留空则统计所有命令。
+This command allows you to view the number of robots called in the last 30 days. Command parameters leave empty to count all commands.
+
+## `Analytics year`
+
+-   [仅超级用户](permissions)
+
+Use：`~analytics year [<command>]`
+
+This command allows you to view the number of calls from the robot for the last year. Command parameters leave empty for all commands.
