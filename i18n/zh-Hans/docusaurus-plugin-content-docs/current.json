@@ -34,5 +34,9 @@
   "sidebar.docs.category.帮助": {
     "message": "帮助",
     "description": "The label for category 帮助 in sidebar docs"
+  },
+  "sidebar.docs.category.重定向": {
+    "message": "重定向",
+    "description": "The label for category 重定向 in sidebar docs"
   }
 }
