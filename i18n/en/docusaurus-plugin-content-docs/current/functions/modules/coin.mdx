@@ -1,17 +1,17 @@
 ---
-description: This module can be used to throw coins or drill water
+description: 此模块可用于投掷硬币或打水漂
 slug: /coin
 ---
 
 # coin
 
--   [开源]\(help/faq#Why some modules are not open sources)
+-   [开源](help/faq#为什么有些模块没有开源)
 
-This module can be used to throw coins or drift water.
+此模块可用于投掷硬币或打水漂。
 
 :::warning
 
-This command is susceptible to abuse, please do not use too many times in a short period of time or trigger[滥用警告](abuse_warning).Abuse of command is a violation of[服务条款](policy), which not only affects normal communication, but can also cause robot accounts to be controlled.
+此命令易被滥用，请勿在短时间内使用太多次，否则会触发[滥用警告](abuse_warning)。滥用命令是违反[服务条款](policy)的行为，不仅会影响正常交流，还有可能导致机器人账号被风控。
 
 :::
 
@@ -19,24 +19,24 @@ This command is susceptible to abuse, please do not use too many times in a shor
 
 -   [公开](permissions)
 
-Usage：
+用法：
 
--   `~coin <number of coins>`
--   `(lost|drop) [<number of coins>(|entries)]coin`
+-   `~coin <硬币数量>`
+-   `(丢|抛)[<硬币数量>(个|枚)]硬币`
 
-This command can throw any amount of coins.
+此命令可以投掷任意数量的硬币。
 
-The maximum number of coins by default is 10,000, the positive and negative probability is 199/400 (49.75%) and the direct probability is 1/200 (0.5%).
+默认硬币数量最大为 10000 枚，正反面概率为 199/400（49.75%），直立概率为 1/200（0.5%）。
 
-Maximum number of coins and positive and negative probability can be modified at[配置文件](development/config).
+硬币最大数量和正反面概率可在[配置文件](development/config)修改。
 
 ## `stone`
 
 -   [公开](permissions)
--   Cool 30s
+-   冷却 30 秒
 
-Use：`~stone`
+用法：`~stone`
 
-This command can simulate drift.
+此命令可以模拟打水漂。
 
-Floating between 0 and 10, you can get 1 piece of valve if the result is 10.
+打水漂的数量在 0-10 浮动，若结果为 10 可以得到 1 片花瓣。
