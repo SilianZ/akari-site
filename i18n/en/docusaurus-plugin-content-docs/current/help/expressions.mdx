@@ -29,14 +29,14 @@ This page helps modules that use Python Math Expressions (e.g. [calc](/docs/calc
 
 ### by bit operator
 
-| Operator | Meaning        | Example           | Binary                  |           |        |               |
-| -------- | -------------- | ----------------- | ----------------------- | --------- | ------ | ------------- |
-| `&`      | By bit with    | `10 & 12 = 8`     | `1010 & 1100 = 1000`    |           |        |               |
-| \`       | \`             | By bit or         | \`10                    | 12 = 14\` | \`1010 | 1100 = 1110\` |
-| `^`      | By bit isn't   | `10 ^ 12 = 6`     | `1010 ^ 1100 = 0110`    |           |        |               |
-| `~`      | Reverse by bit | `~ 12 = - 13`     | `~ 1100 = 0011`         |           |        |               |
-| `>>`     | Move Right     | `12 >> 2 = 3`     | `001100 >> 2 = 000011`  |           |        |               |
-| `<<`     | Move left      | `12 << 2 = 48`    | `001100 << 2 = 110000`  |           |        |               |
+| Operator | Meaning        | Example           | Binary                 |           |        |               |
+| -------- | -------------- | ----------------- | ---------------------- | --------- | ------ | ------------- |
+| `&`      | By bit with    | `10 & 12 = 8`     | `1010 & 1100 = 1000`   |           |        |               |
+| \`       | \`             | By bit or         | \`10                   | 12 = 14\` | \`1010 | 1100 = 1110\` |
+| `^`      | By bit/[^1]    | `10 ^ 12 = 6`     | `1010 ^ 1100 = 0110`   |           |        |               |
+| `~`      | Reverse by bit | `~ 12 = - 13`     | `~ 1100 = 0011`        |           |        |               |
+| `>>`     | Move Right     | `12 >> 2 = 3`     | `001100 >> 2 = 000011` |           |        |               |
+| `<<`     | Move left      | `12 << 2 = 48`    | `001100 << 2 = 110000` |           |        |               |
 
 ### Logical Operator
 
@@ -45,6 +45,8 @@ This page helps modules that use Python Math Expressions (e.g. [calc](/docs/calc
 | `and`    | Logic with | `True and False = False`    |
 | `or`     | Logic or   | `True or False = True`      |
 | `not`    | Logic Not  | `not True = False`          |
+
+[^1]: `^` indicates the power of power at many times, but in Python `**` it means the power and `^` it is different by bit.Do not confuse its use.
 
 ## Classes
 
