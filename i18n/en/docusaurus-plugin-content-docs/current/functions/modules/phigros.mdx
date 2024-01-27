@@ -1,26 +1,26 @@
 ---
-description: This module can query information in the Phigros game
+description: 此模块可以查询 Phigros 游戏中的信息
 slug: /phigros
 ---
 
 # phigros
 
--   [闭源]\(help/faq#Why some modules are not open sources)
--   Alias：`p`, `pgr`, `phi`
+-   [闭源](help/faq#为什么有些模块没有开源)
+-   别名：`p`、`pgr`、`phi`
 
-This module can query information in the Phigros game.
+此模块可以查询 Phigros 游戏中的信息。
 
 ## `phigros b19`
 
 -   [公开](permissions)
 
-Use：`~phigros b19`
+用法：`~phigros b19`
 
-This command can fetch Best19 information from a Phigros user.
+此命令可以获取一个 Phigros 用户的 Best19 信息。
 
-:::info Example
+:::info 例子
 
-Result Example：
+返回的结果示例：
 
 ```
 >>> ~phigros b19
@@ -33,32 +33,32 @@ Result Example：
 ## `phigros bind`
 
 -   [公开](permissions)
--   Revoke in 15 seconds
+-   15 秒后撤回
 
-Use：`~phigros bind <sessionToken>`
+用法：`~phigros bind <sessionToken>`
 
-This command can be used to bind to Phigros users.
+此命令可以用于绑定 Phigros 用户。
 
-About session Token
+关于 sessionToken
 
-`sessionToken` is a string of lowercase letters and numbers with a length of 25 and can be used to fetch cloud archive data.
+`sessionToken` 是一个长度为 25 的由小写英文字母和数字构成的字符串，可用于获取对应的云存档数据。
 
-Since `sessionToken` is a private message, please bind as much as possible through private chat, otherwise the spoiler may destroy or tamper with your cloud archival data.If `sessionToken` is leaked, exit and re-login to Phigros should be reset as soon as possible.
+由于 `sessionToken` 为隐私信息，请尽可能通过私聊的方式完成绑定，否则破坏者可能会破坏或篡改你的云存档数据。若 `sessionToken` 已泄露，应尽快退出并重新登录 Phigros 以重置。
 
-Access to `sessionToken` and other information can be found in[此处](https://mivik.gitee.io/pgr-bot-help/index.html#Android).
+关于 `sessionToken` 的获取以及其他信息，可前往[此处](https://mivik.gitee.io/pgr-bot-help/index.html#安卓)。
 
 ## `phigros unbind`
 
 -   [公开](permissions)
 
-Use：`~phigros unbind`
+用法：`~phigros unbind`
 
-This command can be used to unbind Phigros users.
+此命令可以用于解除绑定 Phigros 用户。
 
 ## `phigros update`
 
 -   [仅超级用户](permissions)
 
-Use：`~phigros update`
+用法：`~phigros update`
 
-This command can update Phigros resource files, such as sketch and quantity.
+此命令可以更新 Phigros 资源文件，如曲绘和定数。
