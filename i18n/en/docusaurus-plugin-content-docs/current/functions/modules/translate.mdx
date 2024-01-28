@@ -1,32 +1,32 @@
 ---
-description: This module can translate text
+description: 此模块可以翻译文本
 slug: /translate
 ---
 
-# Translate
+# translate
 
--   [开源]\(help/faq#Why some modules are not open sources)
--   Alias：`trans`
+-   [开源](help/faq#为什么有些模块没有开源)
+-   别名：`trans`
 
-This module can translate text.
+此模块可以翻译文本。
 
-This module is based on [100 translations of API](https://fanyi-api.baidu.com/).
+本模块基于[百度翻译 API](https://fanyi-api.baidu.com/) 实现。
 
 ## `convert`
 
 -   [公开](permissions)
 
-Use：`~convert<pre-conversion values> <rear unit>`
+用法：`~convert <转换前数值> <转换后单位>`
 
-This command can use the Pint conversion unit.Unit symbols are case-sensitive.
+此命令可以使用 Pint 转换单位。单位符号大小写敏感。
 
-:::info Example
+:::info 例子
 
-Result Example：
+返回的结果示例：
 
 ```
 >>> ~convert km mi
-<<<1 km = 0.6213711922373339696174341841 mi
+<<< 1 km = 0.6213711922373339696174341841 mi
 ```
 
 :::
