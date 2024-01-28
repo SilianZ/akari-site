@@ -1,41 +1,41 @@
 ---
-description: 此模块可用于投掷骰子
+description: This module can be used to throw dice
 slug: /dice
 ---
 
 # dice
 
--   [开源](help/faq#为什么有些模块没有开源)
--   别名：`rd`
+-   [开源]\(help/faq#Why some modules are not open sources)
+-   Alias：`rd`
 
-此模块可用于投掷骰子。
+This module can be used to throw the dice
 
 ## `dice`
 
 -   [公开](permissions)
 
-用法：
+Usage：
 
--   `dice <多项式> [<检定点数>]`
--   `(扔|投|掷|丢)<m>个[<n>面]骰子`
+-   `dice <polystyle> [<checkpoint>]`
+-   \`(Thrown|throwing|lose)<m>[<n>faces]dice
 
-此命令可以自定义投掷骰子，并支持点数检定。
+This command can customize the throwing of the dice and support dots check.
 
-当检定点数存在时，若掷骰子结果大于检定点数则显示成功，反之显示失败。
+When a point is checked, the success is shown if the dice results are greater than the number checked, and vice versa.
 
-相关设置可在[配置文件](development/config)修改。
+Related settings can be modified at[配置文件](development/config).
 
-骰子多项式参数：`[<N>#<m>]d<n>[(k|kl)<x>±<y>]`
+dice multiple parameter：`[<N>#<m>]d<n>[(k|kl)<x>±<y>]`
 
--   `n`：所掷骰子的面数。
--   `m`：所掷骰子的个数（可选，默认为 1）
--   `N`：所掷骰子的次数（可选，默认为 1）
--   `kx`：优势骰，选取结果最大的 x 个骰子之和（可选）
--   `klx`：劣势骰，选取结果最小的 x 个骰子之和（可选）
--   `y`：调节值，将所得结果加减对应数值（可选）
+-   The number of faces of the dice thrown by `n`：.
+-   Number of dice throws by `m`：(optional, default 1)
+-   Number of times the `N`：dice is thrown (optional, default 1)
+-   `kx`：on the best dice and select the sum of the top x dice (optional)
+-   `klx`：weak dice selects the sum of the smallest x dice (optional)
+-   `y`：adjusts the value by adding the result to the corresponding value (optional)
 
 :::warning
 
-此命令易被滥用，请勿在短时间内使用太多次，否则会触发[滥用警告](abuse_warning)。滥用命令是违反[服务条款](policy)的行为，不仅会影响正常交流，还有可能导致机器人账号被风控。
+This command is susceptible to abuse, please do not use too many times in a short period of time or trigger[滥用警告](abuse_warning).Abuse of command is a violation of[服务条款](policy), which not only affects normal communication, but can also cause robot accounts to be controlled.
 
 :::

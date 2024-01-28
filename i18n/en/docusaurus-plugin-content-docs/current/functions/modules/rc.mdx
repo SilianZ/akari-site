@@ -1,43 +1,43 @@
 ---
-description: 此模块可以查询设置的起始 Wiki 的最近更改
+description: This module can query the latest changes from the starting wiki set
 slug: /rc
 ---
 
 # rc
 
--   [开源](help/faq#为什么有些模块没有开源)
--   依赖：[wiki](wiki)
+-   [开源]\(help/faq#Why some modules are not open sources)
+-   Depends：[wiki](wiki)
 
-此模块可以查询设置的起始 Wiki 的最近更改。
+This module will be able to query the latest changes from the set start wiki.
 
 :::warning
 
-某些网站已经被列入黑名单，使用此命令无法获取某些网站的某些信息。即使网站不在黑名单内，返回的内容仍将经过小可云智能过滤。请不要作死。
+Some websites have been blacklisted, and some information on some sites cannot be obtained using this command.Even if the web is not blacklisted, the returned content will still be cloudable and intelligible.Don't die.
 
 :::
 
 ## `rc`
 
 -   [公开](permissions)
--   转发消息
+-   Forward Message
 
-此命令可以查询最近更改。
+This command can search for recent changes.
 
-用法：`~rc`
+Use：`~rc`
 
-:::info 例子
+:::info Example
 
-返回的结果示例：
+Result Example：
 
 ```
->>> ~rc
-<<< https://zh.minecraft.wiki/w/Special:RecentChanges
-MediaWiki:Conversiontable/zh-tw - MysticNebula70 20:01（UTC+8）
-命令/execute - Eason2013 20:00（UTC+8）
-Minecraft Wiki:社区专页 - Geticer 19:55（UTC+8）
-User talk:JYN2018X - KaplanSteve 19:52（UTC+8）
-File:Launcher 2.14.12 Literary.png - Anterdc99 19:52（UTC+8）
-…仅显示前 5 条内容。
+>>>> ~rrc
+<<<https://en.minecraft. iki/w/Special:RecentChanges
+MediaWiki: Conversiontable/en-tw - MysticNebula 70 20:01(UTC+8)
+Command/execute - Eason2020:00(UTC+8)
+Minecraft Wiki: Community Page - Geticer 19:55(UTC+8)
+User talk:JYN2018X - Kaplan Steve 19:52 (UTC+8)
+File: Launcher 2. 4.12 Literary.png - Anterdc99 19:52 (UTC+8)
+…shows only the first 5 items.
 ```
 
 :::
@@ -46,6 +46,6 @@ File:Launcher 2.14.12 Literary.png - Anterdc99 19:52（UTC+8）
 
 -   [公开](permissions)
 
-用法：`~rc legacy`
+Use：`~rrc legacy`
 
-此命令可以强制使用文字模式查询最近更改。
+This command can force text mode to search for recent changes.
