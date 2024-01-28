@@ -4,11 +4,11 @@
     "description": "The label for version current"
   },
   "sidebar.docs.category.功能": {
-    "message": "Function",
+    "message": "功能",
     "description": "The label for category 功能 in sidebar docs"
   },
   "sidebar.docs.category.模块": {
-    "message": "Modules",
+    "message": "模块",
     "description": "The label for category 模块 in sidebar docs"
   },
   "sidebar.docs.category.color": {
@@ -16,27 +16,27 @@
     "description": "The label for category color in sidebar docs"
   },
   "sidebar.docs.category.开发": {
-    "message": "Development",
+    "message": "开发",
     "description": "The label for category 开发 in sidebar docs"
   },
   "sidebar.docs.category.自搭建": {
-    "message": "From Home",
+    "message": "自搭建",
     "description": "The label for category 自搭建 in sidebar docs"
   },
   "sidebar.docs.category.常规自搭建": {
-    "message": "Normal local location",
+    "message": "常规自搭建",
     "description": "The label for category 常规自搭建 in sidebar docs"
   },
   "sidebar.docs.category.使用 Docker 自搭建": {
-    "message": "Use Docker for Home",
+    "message": "使用 Docker 自搭建",
     "description": "The label for category 使用 Docker 自搭建 in sidebar docs"
   },
   "sidebar.docs.category.帮助": {
-    "message": "Help",
+    "message": "帮助",
     "description": "The label for category 帮助 in sidebar docs"
   },
   "sidebar.docs.category.重定向": {
-    "message": "Redirect",
+    "message": "重定向",
     "description": "The label for category 重定向 in sidebar docs"
   }
 }

@@ -1,57 +1,57 @@
 ---
-description: This module allows you to check the details of a website based on MediaWiki without robot prefix
-slug: /wiki_line
+description: 此模块可以让你无需机器人前缀查询一个基于 MediaWiki 的网站的指定页面的详情
+slug: /wiki_inline
 ---
 
-# wiki_line
+# wiki_inline
 
--   [开源]\(help/faq#Why some modules are not open sources)
--   Depends：[wiki](wiki)
--   Alias：`wiki_regex`
+-   [开源](help/faq#为什么有些模块没有开源)
+-   依赖：[wiki](wiki)
+-   别名：`wiki_regex`
 
-This module allows you to check the details of a specific page of a MediaWiki based website without robot prefixing.
+此模块可以让你无需机器人前缀查询一个基于 MediaWiki 的网站的指定页面的详情。
 
 ## `wiki_inline`
 
 -   [公开](permissions)
 
-Usage：
+用法：
 
--   Query page：`[[[<interwiki>]:<Page Name>]]`
--   Query template：`{{{<Template Name>}}`
--   Query MediaWiki namespace page：`expert <page name>matt`, or `truth<page name>medium`
+-   查询页面：`[[[<interwiki>]:<页面名>]]]`
+-   查询模板：`{{<模板名>}}`
+-   查询 MediaWiki 命名空间的页面：`≺<页面名>≻`或`⧼<页面名>⧽`
 
-This command allows you to check the details of a web page based on MediaWiki without robotic prefixes.
+此命令可以让你无需机器人前缀查询一个基于 MediaWiki 的网站的指定页面的详情。
 
 ![](https://z1.ax1x.com/2023/11/18/piN0Tkq.png)
 
-(Return Infobox Example)
+（返回 Infobox 示例）
 
-Infobox's image will be rendered and displayed if the Infobox is present on the page.
+若页面中存在 Infobox，则会渲染并展示页面中的 Infobox 图像。
 
 :::tip
 
-Note that in the use above：, the first two square brackets are actually required and the third brackets are used to indicate optional parameters.e.g.：
+注意：上方用法中，前两个方括号是实际需要输入的，而第三个括号则是用于表示可选参数的。例如：
 
--   `[[mcwiki: Creepy fear]]`
--   ~~\`\[[mcwiki:painting]~~~!!
-
-:::
-
-:::tip Unusable?
-
-Please check if configuration is referenced to [wiki](wiki).
+-   `[[mcwiki:苦力怕]]`
+-   ~~`[[[mcwiki:苦力怕]]`~~
 
 :::
 
-:::warning
+:::tip 无法使用？
 
-This command is susceptible to abuse, please do not use too many times in a short period of time or trigger[滥用警告](abuse_warning).Abuse of command is a violation of[服务条款](policy), which not only affects normal communication, but can also cause robot accounts to be controlled.
+请检查是否参照 [wiki](wiki) 进行配置。
 
 :::
 
 :::warning
 
-Some websites have been blacklisted, and some information on some sites cannot be obtained using this command.Even if the web is not blacklisted, the returned content will still be cloudable and intelligible.Don't die.
+此命令易被滥用，请勿在短时间内使用太多次，否则会触发[滥用警告](abuse_warning)。滥用命令是违反[服务条款](policy)的行为，不仅会影响正常交流，还有可能导致机器人账号被风控。
+
+:::
+
+:::warning
+
+某些网站已经被列入黑名单，使用此命令无法获取某些网站的某些信息。即使网站不在黑名单内，返回的内容仍将经过小可云智能过滤。请不要作死。
 
 :::

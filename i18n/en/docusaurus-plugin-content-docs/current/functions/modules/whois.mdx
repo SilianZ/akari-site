@@ -1,38 +1,38 @@
 ---
-description: This module can query WHOIS for domain names
+description: 此模块可以查询域名的 WHOIS
 slug: /whois
 ---
 
 # whois
 
--   [开源]\(help/faq#Why some modules are not open sources)
+-   [开源](help/faq#为什么有些模块没有开源)
 
-This module makes it possible to query WHOIS for domain names.
+此模块可以查询域名的 WHOIS。
 
 ## `whois`
 
 -   [公开](permissions)
 
-Use：`~whis <DNS >`
+用法：`~whois <域名>`
 
-This command can query WHOIS.
+此命令可以查询 WHOIS。
 
-:::info Example
+:::info 例子
 
-Result Example：
+返回的结果示例：
 
 ```
->>>> ~whois google.com
-<<<<< domain name：google.com
-registrants：MarkMonitor, Inc.
-WHOIS server：whois.markmonitor. om
-Updated：2019-09-09 15:39:04
-Registration date：1997-09-15 04:00:00
-Due date：2028-09-14 04:00:00
-DNS server：ns1. oogle.com, ns3.google.com, ns2.google.com, ns4.google.com
+>>> ~whois google.com
+<<< 域名名称：google.com
+注册商：MarkMonitor, Inc.
+WHOIS 服务器：whois.markmonitor.com
+更新日期：2019-09-09 15:39:04
+注册日期：1997-09-15 04:00:00
+到期日期：2028-09-14 04:00:00
+DNS 服务器：ns1.google.com, ns3.google.com, ns2.google.com, ns4.google.com
 DNSSEC：unsigned
-Organization：Google LC
-Position：CA, US
+组织：Google LLC
+位置：CA, US
 ```
 
 :::
