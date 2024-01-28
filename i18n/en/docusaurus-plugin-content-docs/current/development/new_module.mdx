@@ -2,31 +2,31 @@
 sidebar_position: 2
 ---
 
-# New Module Guide
+# 新建模块指南
 
-This will teach you how to write a custom module.
+本文将会教你如何编写自定义模块。
 
 :::info
 
-You can install the `precommit` git hook before you develop. It can do some actions before submitting a commit.e.g.：Sync poetry.lock to requirements.txt, auto pep8 formatting.
+您可以在开发之前执行 `pre-commit install` 来安装 `pre-commit` git 钩子，它可以在提交 commit 前执行一些操作。如：同步 poetry.lock 至 requirements.txt、自动 pep8 格式化等。
 
 :::
 
-## Note
+## 说明
 
-All modules are stored in the `modules` folder.If you want to write a new module, create a new folder here.
+所有模块都储存在 `modules` 文件夹。如果你想编写新的模块，请在此新建一个文件夹。
 
-Folder name is not used to differentiate module names, only for classifications.
+文件夹的名字并不用于区分模块名，仅用于分类。
 
 机器人在加载的时候会遍历 `modules` 文件夹，并加载每个模块文件夹里的 `__init__.py`，请将想要加入的模块定义编写在 `__init__.py` 中或确保其能够被引用。
 
-## Prepared by
+## 编写
 
 我们假设你现在写好了具体的代码，现在你想把其做成一个可以给机器人使用的功能：
 
-### Define Module
+### 定义模块
 
-We need to define a module type before writing the module.
+在编写模块之前，我们需要先定义一个模块类型。
 
 ```py
 from core.component import module
@@ -44,150 +44,150 @@ test = module(
 )
 ```
 
-### Bind Module
+### 绑定模块
 
-Now that you have defined a module, you need to bind what you want.
+现在你已经定义好了一个模块，现在你需要将你想要的东西绑定上去了。
 
-In the previous text, we have stated the `test` variable and we will bind subcommands around the definition. To make the code simple, we have used decorator：
+在前文中，我们给 `test` 变量声明了定义，我们将围绕这个定义进行绑定子命令，为了使代码简洁，我们使用了装饰器：
 
-#### Command(general command)
+#### Command（一般命令）
 
 ```py
-From core.builtins import Bot
+from core.builtins import Bot
 
-@test. ommand(help_doc='<args1>', # syntax setting this command, prefix matching module name, Ignore it. Provide a list or tuple to handle multiple commands. Can be empty.
-             required_admin = False, # Mark this command as accessible only to group administrators.
-             required_superuser = False, # Mark this command as a robot superadministrator to use.
-             available for = '*' # controlling the source of the message that this command can be used, Consider '*'(all)
+@test.command(help_doc='<args1>', # 设置此命令的语法，前缀匹配模块名，此处忽略。可为 list 或 tuple 来经手多条命令。可为空。
+             required_admin = False, # 将此命令标记为仅群组管理员可使用。
+             required_superuser = False, # 将此命令标记为进机器人超级管理员可使用。
+             available_for = '*' # 控制此命令可被使用的消息来源，默认为 '*'（所有）
              )
-async def _(msg: Bot. essageSession:
-...
+async def _(msg: Bot.MessageSession):
+    ...
 ```
 
-When `help_doc` is empty, this module allows executable without syntax command.If：uses the `~test` command (nothing after) then triggers the function below the decorator, otherwise there will be a \`syntax error'.
+当 `help_doc` 为空时，则代表此模块允许无需语法命令即可执行。如：使用 `~test` 命令（后面不带任何东西），即可触发装饰器下面的函数，否则会出现“语法错误”的提示。
 
-Commands matching syntax will be stored in `msg.parsed_msg` (dict type)
+与语法匹配的命令将会被切割存储于 `msg.parsed_msg`（dict 类型）
 
-e.g.：`{'<args1>': 'xx'}`
+如：`{'<args1>': 'xxx'}`
 
-#### Regex(regular expression)
+#### Regex（正则表达式）
 
 ```py
-From core.builtins import Bot
+from core.builtins import Bot
 
-@test.regex(pattern=r'\[\[. ?]]', # regular expression syntax
-            mode='M', # regular mode, set to 'M' match, A' matches all mode
-            flags=0, # regular flags, such as Re. |Re.I
-            show_typing=False # Whether to show input tips (e.g. stamps) when command is executed, Consider True
+@test.regex(pattern=r'\[\[(.*?)]]', # 正则表达式语法
+            mode='M', # 正则模式，设为'M'为匹配模式，'A'为匹配所有模式
+            flags=0, # 设置正则的flags，如Re.M|Re.I
+            show_typing=False # 设置命令执行时是否展示输入提示（如戳一戳），默认为True
              )
-async def _(msg: Bot. essageSession):
-...
+async def _(msg: Bot.MessageSession):
+    ...
 ```
 
-The command results matching the expression will be stored in `msg.matched_msg`.
+与表达式匹配的命令结果将会存储于 `msg.matched_msg` 中。
 
-When the commands you entered match the syntax inside `help_doc`, the robot will pass the message into the function below the decorator and you can do it.
+当你输入的命令匹配 `help_doc` 内的语法时，机器人将会把消息传入装饰器下方的函数，然后你就可以进行发挥了。
 
-#### Schedule (Scheduled Tasks)
+#### Schedule（计划任务）
 
 ```py
-From core.builtins import Bot
-from core.scheduler import cronTrigger
+from core.builtins import Bot
+from core.scheduler import CronTrigger
 
-@test.schedule(trigger=CronTrigger.from_crontab('30 8 * MON')) # conditions that trigger this decorator
+@test.schedule(trigger=CronTrigger.from_crontab('30 8 * * MON')) # 触发此装饰器的条件
 async def _():
-...
+    ...
 ```
 
 #### FetchTarget
 
 ```py
-From core.builtins import Bot
+from core.builtins import Bot
 ...
-await Bot.FetchTarget. ost_message('test', 'A'h') # Push message
-sender = 'QQ|123456' # QQ number 123456 friend
-fetch = Bot to all users who have enabled the test module. etchTarget.fetch_target(senter) # Retrieving
-if fetch: # if fetched to
-    await fetch.sendMessage('xx') # send message
+await Bot.FetchTarget.post_message('test', '啊吧啊吧') # 向所有已开启 test 模块的用户推送消息
+sender = 'QQ|123456' # QQ 号为 123456 的好友
+fetch = Bot.FetchTarget.fetch_target(sender) # 获取信息
+if fetch: # 如获取到
+    await fetch.sendMessage('xxx') # 发送消息
 ```
 
-Used mainly to get user push content from the database.
+主要用于从数据库中获取用户推送内容。
 
-### Universal Decorator
+### 通用装饰器
 
-Assuming that you already use the decorator above and you are particularly lazy, you can use the Universal Decorator to replace the three decorators, which will automatically identify the condition and classify the function.
+假设你已经会使用了以上装饰器，而你又特别懒，则你可以使用通用装饰器来代替以上三种装饰器，此装饰器将会自动识别条件并归类函数。
 
 ```py
-From core.builtins import Bot
+from core.builtins import Bot
 
 @test.handle('<args1>')
 async def _(msg: Bot.MessageSession):
     ...
 
 
-@test.handle(re.complie('). )')
+@test.handle(re.complie('(.*)'))
 async def _(msg: Bot.MessageSession):
     ...
 
 
-@test. andle (CronTrigger.from_crontab('30 8 * * MON'))
+@test.handle(CronTrigger.from_crontab('30 8 * * MON'))
 async def _():
-...
+    ...
 ```
 
-### Process Message
+### 处理消息
 
-Our function below the decorator defines a msg parameter on which the message will be sent. We only show base methods here. For specific actions see IDE.
+我们在装饰器下方的函数定义了一个 msg 参数，发送消息将围绕它进行。 我们在此处仅展示基础方法，具体可用的操作请借助 IDE 查看。
 
 ```py
 ...
-send = await msg.sendMessage('Hello.') # Send a message to the sending object
-send.delete() # Delete this message
+send = await msg.sendMessage('你好。') # 向发送对象发送一条消息
+send.delete() # 将这条消息删除
 ...
-firm = await msg.waitConfirm('Are you sure?')# will suspend execution after sending this message, waiting for the user's next message,
-if confirmed: # user sent a confirmation word
-...
+confirm = await msg.waitConfirm('你确定吗？') # 在发送此消息后将暂停执行，等待用户的下一条消息
+if confirm: # 用户发送了确认的词语
+    ...
 ```
 
-Sent messages can be sent to stack or contain a list of message components, such as：`Plain('Today's Picture：'), Image('https://example.com/test.jpg')`
+发送的消息可以为 str 或装有消息组件的 list，如：`[Plain('今日图片：'), Image('https://example.com/test.jpg')]`
 
-### Feed
+### 消息来源
 
-The following information sources are available at this time with the following account：
+目前可用的消息来源有以下几种：
 
 -   QQ
-    -   `QQQ|Group` (QQ group)
-    -   `QQQ` (QQ friends)
-    -   `QQQ|Guild` (QQ channel)
+    -   `QQ|Group`（QQ 群）
+    -   `QQ`（QQ 好友）
+    -   `QQ|Guild`（QQ 频道）
 -   Discord
-    -   \`Discord|Channel
-    -   `Discord|DM|Channel (Private Channel`)
+    -   `Discord|Channel`（Discord 频道）
+    -   `Discord|DM|Channel`（Discord 私聊频道）
 -   Telegram
-    -   `Telegram|private` (Telegram private chat)
-    -   `Telegram|group` (Telegram Group)
-    -   `Telegram|supergroup` (Telegram supergroup(?))
-    -   `Telegram|channel`(Telegram channel)
+    -   `Telegram|private`（Telegram 私聊）
+    -   `Telegram|group`（Telegram 群组）
+    -   `Telegram|supergroup`（Telegram supergroup(?)）
+    -   `Telegram|channel`（Telegram 频道）
 -   Kook
-    -   `Kook|GROUP` (Kook channel)
--   Console
-    -   `TEST|Console` (Console )
+    -   `Kook|GROUP`（Kook 频道）
+-   控制台
+    -   `TEST|Console`（控制台）
 
-### Message Component
+### 消息组件
 
-Currently available `Plain` (text), `Image` (image), `Voice` (voice)
+目前可用的有`Plain`（文本）、`Image`（图片）、`Voice`（语音）
 
-### Alias
+### 别名
 
-Use mainly for quick triggering commands or for compatibility with old command syntax. The alias will point to the module name when it is `str`, `List[str]`, `Tuple[str]`.
+主要用于快捷触发命令，或是兼容老的命令语法。 当为 `str`、`List[str]`、`Tuple[str]` 时，别名将会指向模块名。
 
-Use `~t xxx = ~test1 xxx` as above
+如上文，`alias='t'`，则使用 `~t xxx = ~test1 xxx`
 
 当为 dict 时则可自定义别名映射的命令，如 `{'enable': 'module enable'}`，则 `~enable xxx` = `~module enable xxx`
 
-### Multilingualism
+### 多语言
 
-We have joined multilingual support, and all multilingual files are stored in the `locales` folder in the module folder, where `en_us.json`, `en_us.json` and json files store different language keys.
+我们加入了多语言支持，所有的多语言文件在模块文件夹下的 `locales` 文件夹，其中 `zh_cn.json`、`en_us.json` 等 json 文件分别存储不同语言的键名。
 
-Most of the public commands currently in the official repository are maintained in multiple languages by robots, and the new module needs to store `en.json` under the folder.
+目前官方存储库的大部分公开命令的多语言由机器人维护，新模块仅需在文件夹下存储 `zh_cn.json` 即可。
 
-Multiple languages can be called in the code via `MessageSession.locale.t("Keyname")`.命令帮助则是 `{键名}` ，如 `test <arg1> {{help.test}}`。
+在代码中可通过 `MessageSession.locale.t("键名")` 调用多语言。命令帮助则是 `{键名}` ，如 `test <arg1> {{help.test}}`。
