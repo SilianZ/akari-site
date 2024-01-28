@@ -1,0 +1,31 @@
+---
+description: 此模块可以操作机器人的配置文件
+slug: /config
+---
+
+# config
+
+-   [开源](help/faq#为什么有些模块没有开源)
+-   别名：`cfg`
+
+此模块可以操作机器人的[配置文件](development/config)。
+
+## `config write`
+
+-   [仅超级用户](permissions)
+
+用法：`~config write <属性> <值> [-s]`
+
+参数：
+
+-   `-s`：将配置信息添加到 secret 类。
+
+此命令可以添加配置信息。
+
+## `config delete`
+
+-   [仅超级用户](permissions)
+
+用法：`~config delete <属性>`
+
+此命令可以移除配置信息。

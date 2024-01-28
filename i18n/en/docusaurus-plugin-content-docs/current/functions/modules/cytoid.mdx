@@ -1,0 +1,97 @@
+---
+description: 此模块可以查询 Cytoid 游戏中的信息
+slug: /cytoid
+---
+
+# cytoid
+
+-   [开源](help/faq#为什么有些模块没有开源)
+-   别名：`ctd`
+
+此模块可以查询 Cytoid 游戏中的信息。
+
+## `cytoid profile`
+
+-   [公开](permissions)
+
+用法：`~cytoid profile [<UID>]`
+
+此命令可以获取一个 Cytoid 用户的账号信息和头像，UID 留空则默认已绑定用户。
+
+:::info 例子
+
+返回的结果示例：
+
+```
+>>> ~cytoid profile
+<<< UID: wdljt
+BasicExp: 200543
+LevelExp: 69519
+TotalExp: 270062
+CurrentLevel: 42
+NextLevelExp: 273000
+Rating: 8.5804466215000000
+Grade: A: 78, B: 45, C: 28, D: 15, F: 24, S: 87, SS: 8
+```
+
+![](https://s1.ax1x.com/2023/09/02/pPBLmuj.png)
+
+:::
+
+## `cytoid b30`
+
+-   [公开](permissions)
+-   冷却 150 秒
+
+用法：`~cytoid b30 [<UID>]`
+
+此命令可以获取一个 Cytoid 用户的 Best30 信息，UID 留空则默认已绑定用户。
+
+:::info 例子
+
+返回的结果示例：
+
+```
+>>> ~cytoid b30
+```
+
+![](https://s1.ax1x.com/2023/09/02/pPBLTxg.png)
+
+:::
+
+## `cytoid r30`
+
+-   [公开](permissions)
+-   冷却 150 秒
+
+用法：`~cytoid r30 [<UID>]`
+
+此命令可以获取一个 Cytoid 用户的 Recent30 信息，UID 留空则默认已绑定用户。
+
+:::info 例子
+
+返回的结果示例：
+
+```
+>>> ~cytoid r30
+```
+
+![](https://s1.ax1x.com/2023/09/02/pPBLnDs.png)
+
+:::
+
+## `cytoid bind`
+
+-   [公开](permissions)
+
+用法：`~cytoid bind <用户名>`
+
+此命令可以用于绑定 Cytoid 用户。
+
+## `cytoid unbind`
+
+-   [公开](permissions)
+
+用法：`~cytoid unbind`
+
+此命令可以用于解除绑定 Cytoid 用户。
