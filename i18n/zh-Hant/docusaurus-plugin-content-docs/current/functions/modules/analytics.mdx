@@ -1,0 +1,37 @@
+---
+description: 此模块用于查看机器人已执行的命令次数
+slug: /analytics
+---
+
+# analytics
+
+-   [开源](help/faq#为什么有些模块没有开源)
+-   强制开启
+
+此模块用于查看机器人已执行的命令次数。
+
+可在[配置文件](development/config)中修改参数决定是否启用。
+
+## `analytics`
+
+-   [仅超级用户](permissions)
+
+用法：`~analytics`
+
+此命令可以查看机器人已执行的命令次数。
+
+## `analytics days`
+
+-   [仅超级用户](permissions)
+
+用法：`~analytics days [<命令>]`
+
+此命令可以查看机器人最近 30 天的命令调用次数统计，命令参数留空则统计所有命令。
+
+## `analytics year`
+
+-   [仅超级用户](permissions)
+
+用法：`~analytics year [<命令>]`
+
+此命令可以查看机器人最近一年的命令调用次数统计，命令参数留空则统计所有命令。
