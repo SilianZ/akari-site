@@ -1,10 +1,10 @@
 {
   "title": {
-    "message": "Docusauur blog!",
+    "message": "Docusaurus blog!",
     "description": "The title for the blog used in SEO"
   },
   "description": {
-    "message": "A Docusauus empowered blog!",
+    "message": "A Docusaurus powered blog!",
     "description": "The description for the blog used in SEO"
   },
   "sidebar.title": {
