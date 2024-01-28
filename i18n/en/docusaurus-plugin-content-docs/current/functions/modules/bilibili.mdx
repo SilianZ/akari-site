@@ -1,56 +1,56 @@
 ---
-description: This module will be able to find information about videos on the beep-mile video site
+description: 此模块可以查询关于哔哩哔哩视频网站上的视频相关信息
 slug: /bilibili
 ---
 
 # bilibili
 
--   [开源]\(help/faq#Why some modules are not open sources)
--   Alias：`bili`
+-   [开源](help/faq#为什么有些模块没有开源)
+-   别名：`bili`
 
-This module will be able to find information about videos on the beep mile beep.
+此模块可以查询关于哔哩哔哩视频网站上的视频相关信息。
 
 ## `bilibili`
 
 -   [公开](permissions)
 
-Usage：
+用法：
 
--   \`~bilibili <video number> [-i]
--   Enter：`<video number>` directly
--   Use URL：
+-   `~bilibili <视频编号> [-i]`
+-   直接输入：`<视频编号>`
+-   使用 URL：
     -   完整链接：`http[s]://www.bilibili.com/video/<视频编号>`
-    -   Short link：`HTML[s]://b23.tv/<video number>`
+    -   短链接：`http[s]://b23.tv/<视频编号>`
 
-Parameter：
+参数：
 
--   `-i`：shows details
+-   `-i`：显示详细内容
 
-This command can view the video content of the AV or BV number.
+此命令可以查看 AV 号或 BV 号对应的视频内容。
 
-:::info Example
+:::info 例子
 
-Result Example：
+返回的结果示例：
 
 ```
 >>> ~bilibili BV1j4411W7F7
-<<https://www.bilibili>. om/video/BV1j4411W7F7
-Heading：'Lang' New
-Type：Home Dance
-UP Owner：fruit kitchen
-date：2019-05-28 13:19:24
+<<< https://www.bilibili.com/video/BV1j4411W7F7
+标题：【猛男版】新 宝 岛
+类型：宅舞
+UP 主：果厨果厨果
+日期：2019-05-28 13:19:24
 ```
 
-Details：
+详细内容：
 
 ```
->>> ~bilibili BV1j4411W7F7-i
-<<https://www.bilibili>. om/video/BV1j4411W7F7
-Heading：'Light-Male New Islands' | Type：House Dance
-UP Owner：Fruit kitchen | Follower：238. k
-Watch：140.8M | Popup：805.5k | Comment：290.7k
-like：5. M | Inn：2.1M | Favorite：3.0M | Share：2.2M
-Date：2019-05-28 13:19:24
+>>> ~bilibili BV1j4411W7F7 -i
+<<< https://www.bilibili.com/video/BV1j4411W7F7
+标题：【猛男版】新 宝 岛 | 类型：宅舞
+UP 主：果厨果厨果 | 粉丝：238.6k
+观看：140.8M | 弹幕：805.5k | 评论：290.7k
+喜欢：5.1M | 投币：2.1M | 收藏：3.0M | 分享：2.2M
+日期：2019-05-28 13:19:24
 ```
 
 :::
