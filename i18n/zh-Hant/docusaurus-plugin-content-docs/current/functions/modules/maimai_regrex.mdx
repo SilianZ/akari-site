@@ -1,0 +1,76 @@
+---
+description: 此模块可以更方便地使用关于 maimai 相关的命令
+slug: /maimai_regex
+---
+
+# maimai_regex
+
+-   [闭源](help/faq#为什么有些模块没有开源)
+-   依赖：[maimai](maimai)
+-   别名：`mai_regex`
+
+此模块可以更方便地使用关于 `maimai` 相关的命令。
+
+## `maimai_regex song`
+
+-   [公开](permissions)
+
+用法：`<ID 或别名>是什么歌`
+
+此命令可以通过歌曲 ID 或别名获取歌曲信息，ID 需要加入前缀“id”。
+
+## `maimai_regex info`
+
+-   [公开](permissions)
+
+用法：`<ID 或别名>有什么分 [<查分器用户名>]`
+
+此命令可以根据 ID 或别名查询歌曲的谱面成绩，ID 需要加入前缀“id”。
+
+用户名留空则默认为绑定 QQ 号对应的用户名。
+
+:::tip 无法使用？
+
+请检查您是否输入的是**查分器用户名**（非游戏名或昵称）。
+
+:::
+
+## `maimai_regex alias`
+
+-   [公开](permissions)
+
+用法：`<ID>有什么别名`
+
+此命令可以通过歌曲 ID 获取歌曲别名。
+
+## `maimai_regex random`
+
+-   [公开](permissions)
+
+用法：`随个[(dx|标准)][(绿|黄|红|紫|白)]<难度>`
+
+此命令可以随机一首指定条件的歌曲。
+
+## `maimai_regex plate`
+
+-   [公开](permissions)
+
+用法：`<名牌板>进度 [<查分器用户名>]`
+
+此命令可以查看玩家的名牌板完成进度。
+
+用户名留空则默认为绑定 QQ 号对应的用户名。
+
+:::tip 无法使用？
+
+请检查您是否输入的是**查分器用户名**（非游戏名或昵称）。
+
+:::
+
+## `maimai_regex grade`
+
+-   [公开](permissions)
+
+用法：`<段位>段位认定列表`
+
+此命令可以查询段位认定的歌曲列表、通关条件等信息。
