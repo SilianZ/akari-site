@@ -8,6 +8,15 @@ const darkTheme = themes.dracula;
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'AkariBot',
+    plugins: [
+        [
+            'vercel-analytics',
+            {
+                debug: true,
+                mode: 'auto',
+            },
+        ],
+    ],
     favicon: 'img/logo.svg',
     url: 'https://www.akari-bot.top',
     baseUrl: '/',

@@ -15,9 +15,9 @@
   },
   "dependencies": {
     "@docusaurus/core": "^3.1.1",
+    "@docusaurus/plugin-vercel-analytics": "^0.0.0-5831",
     "@docusaurus/preset-classic": "^3.1.1",
     "@mdx-js/react": "^3.0.0",
-    "@vercel/analytics": "^1.2.2",
     "asciinema-player": "^3.0.0-rc.1",
     "clsx": "^1.2.1",
     "docusaurus-mdx-checker": "^3.0.0",
