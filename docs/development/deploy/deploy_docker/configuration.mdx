@@ -72,12 +72,12 @@ import TabItem from "@theme/TabItem";
 
     **接口信息：**
 
-    -   被动 WebSocket 地址：`ws://127.0.0.1:11451/ws/` - 此处填写先前的 IP 地址和端口，注意不要删去后面的 /ws/。
+    - 被动 WebSocket 地址：`ws://127.0.0.1:11451/ws/` - 此处填写先前的 IP 地址和端口，注意不要删去后面的 /ws/。
 
     **功能设置：**
 
-    -   消息格式为 CQ 码：开启
-    -   被动 WebSocket：开启
+    - 消息格式为 CQ 码：开启
+    - 被动 WebSocket：开启
 
 3. 强制杀死 QQ 进程并重新启动 QQ 来应用 OpenShamrock 配置文件。
 
@@ -133,7 +133,7 @@ import TabItem from "@theme/TabItem";
 
     请填写好配置文件中的 QQ 账号和密码。
 
-5.  请在小可机器人的配置文件 `config.toml` 填写以下字段：
+5. 请在小可机器人的配置文件 `config.toml` 填写以下字段：
 
     `qq_host = "127.0.0.1:11451"` - 将会在填写的 IP 地址和端口中开启一个 Websocket 服务器，用于 go-cqhttp 反向连接。
 
@@ -214,7 +214,7 @@ import TabItem from "@theme/TabItem";
 
     ```json title="device.json" {2}
     {
-    "protocol": 1,
+        "protocol": 1
     }
     ```
 

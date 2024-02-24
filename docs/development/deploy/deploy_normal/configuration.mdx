@@ -70,12 +70,12 @@ import TabItem from "@theme/TabItem";
 
     **接口信息：**
 
-    -   被动 WebSocket 地址：`ws://127.0.0.1:11451/ws/` - 此处填写先前的 IP 地址和端口，注意不要删去后面的 /ws/。
+    - 被动 WebSocket 地址：`ws://127.0.0.1:11451/ws/` - 此处填写先前的 IP 地址和端口，注意不要删去后面的 /ws/。
 
     **功能设置：**
 
-    -   消息格式为 CQ 码：开启
-    -   被动 WebSocket：开启
+    - 消息格式为 CQ 码：开启
+    - 被动 WebSocket：开启
 
 3. 强制杀死 QQ 进程并重新启动 QQ 来应用 OpenShamrock 配置文件。
 
@@ -101,7 +101,7 @@ import TabItem from "@theme/TabItem";
 
 如果你想使用 Docker 部署 go-cqhttp，请转到[使用 Docker](https://docs.go-cqhttp.org/guide/docker.html)。
 
-1. 从 go-cqhttp 的官方仓库上下载最新的 [Release](https://github.com/Mrs4s/go-cqhttp/releases/latest)。
+1.  从 go-cqhttp 的官方仓库上下载最新的 [Release](https://github.com/Mrs4s/go-cqhttp/releases/latest)。
 
     | 系统类型       | 可执行文件                    | 压缩文件                        |
     | -------------- | ----------------------------- | ------------------------------- |
@@ -116,25 +116,27 @@ import TabItem from "@theme/TabItem";
     | arm64 Windows  | `go-cqhttp_windows_arm64.exe` | `go-cqhttp_windows_arm64.zip`   |
     | armv7 Windows  | `go-cqhttp_windows_armv7.exe` | `go-cqhttp_windows_armv7.zip`   |
 
-2. 解压下载好的文件到一个已经预先准备好的文件夹中：
+2.  解压下载好的文件到一个已经预先准备好的文件夹中：
 
-    <Tabs groupId="operating-systems">
+        <Tabs groupId="operating-systems">
+
     <TabItem value="win" label="Windows" default>
 
-    请使用自己熟悉的解压软件自行解压。
+            请使用自己熟悉的解压软件自行解压。
 
-    </TabItem>
+            </TabItem>
 
-    <TabItem value="linux" label="Linux">
+            <TabItem value="linux" label="Linux">
 
-    请在命令行中输入 `tar -xzvf [文件名]`。
+            请在命令行中输入 `tar -xzvf [文件名]`。
 
-    </TabItem>
-    </Tabs>
+            </TabItem>
 
-3. 运行 go-cqhttp。
+        </Tabs>
 
-4. 此时将提示：
+3.  运行 go-cqhttp。
+
+4.  此时将提示：
 
     ```
     [WARNING]: 尝试加载配置文件 config.yml 失败: 文件不存在。
@@ -226,7 +228,7 @@ import TabItem from "@theme/TabItem";
 
     ```json title="device.json" {2}
     {
-    "protocol": 1,
+        "protocol": 1
     }
     ```
 
