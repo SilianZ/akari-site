@@ -56,7 +56,7 @@ import TabItem from "@theme/TabItem";
 
 我们在这里使用了 [aiocqhttp](https://github.com/nonebot/aiocqhttp) 来对接 [OpenShamrock](https://github.com/whitechi73/OpenShamrock) 客户端。
 
-使用该方案需要一定的安卓（Android）的使用基础，如果看不懂下面的文档的，请转到 [QQ（go-cqhttp）](#qqgo-cqhttpqqgo-cqhttp) 并使用 go-cqhttp 来配置 QQ 平台。
+使用该方案需要一定的安卓（Android）的使用基础，如果看不懂下面的文档的，请转到 [QQ（go-cqhttp）](#qqgo-cqhttp) 并使用 go-cqhttp 来配置 QQ 平台。
 
 1. 尝试根据 [OpenShamrock 官方文档](https://whitechi73.github.io/OpenShamrock/guide/getting-started.html) 完成 OpenShamrock 的初步安装。
 
@@ -118,19 +118,25 @@ import TabItem from "@theme/TabItem";
 
 2. 解压下载好的文件到一个已经预先准备好的文件夹中：
 
+   ```
    <Tabs groupId="operating-systems">
+   ```
+
    <TabItem value="win" label="Windows" default>
 
-   请使用自己熟悉的解压软件自行解压。
+   ```
+       请使用自己熟悉的解压软件自行解压。
 
-   </TabItem>
+       </TabItem>
 
-   <TabItem value="linux" label="Linux">
+       <TabItem value="linux" label="Linux">
 
-   请在命令行中输入 `tar -xzvf [文件名]`。
+       请在命令行中输入 `tar -xzvf [文件名]`。
 
-   </TabItem>
+       </TabItem>
+
    </Tabs>
+   ```
 
 3. 运行 go-cqhttp。
 
@@ -226,7 +232,7 @@ import TabItem from "@theme/TabItem";
 
     ```json title="device.json" {2}
     {
-    "protocol": 1,
+        "protocol": 1
     }
     ```
 
@@ -338,7 +344,7 @@ QQ 频道消息的处理仍然处于测试阶段，由于 go-cqhttp 对频道消
 
 #### 部署
 
-请参照 [Webrender 文档](/docs/developmeny/webrender#部署) 部署 Webrender。
+请参照 [Webrender 文档](/docs/development/webrender#部署) 部署 Webrender。
 
 你亦可使用云服务产商的 Serverless 服务来部署本服务。
 
