@@ -3,7 +3,7 @@
 
 const { themes } = require('prism-react-renderer');
 const lightTheme = themes.github;
-const darkTheme = themes.dracula;
+const darkTheme = themes.okaidia;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -174,7 +174,7 @@ const config = {
             prism: {
                 theme: lightTheme,
                 darkTheme: darkTheme,
-                additionalLanguages: ['bash', 'diff', 'json', 'python', 'toml', 'powershell']
+                additionalLanguages: ['bash', 'diff', 'json', 'python', 'toml', 'powershell', 'properties']
             },
         }),
 };

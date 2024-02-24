@@ -1,0 +1,176 @@
+---
+sidebar-position: 6
+---
+
+# Webrender
+
+Webrender 为小可的外置服务。主要用于处理 Wiki Infobox 图片渲染、HTML 渲染以及部分功能的访问代理。
+
+此服务使用 JavaScript 编写，并由 Puppeteer 驱动，因此需要安装 Node.js 环境，以及安装 Chromium 内核浏览器。
+
+## 部署
+
+请前往[此处](https://github.com/Teahouse-Studios/oa-web-render)下载源文件，并在终端内安装依赖。
+
+```sh
+npm install
+```
+
+前往[此处](https://github.com/adieuadieu/serverless-chrome/releases)下载任意版本 Chromium，或前往 Chromium 官方网站下载。
+
+于 `package.json` 同级目录中，中新建 `.env` 文件，并填写以下字段：
+
+```properties title=".env"
+CHROMIUM_PATH = # Chromium 可执行文件位置
+FC_SERVER_PORT = 15551 # API 监听端口
+```
+
+使用 node 运行 `./src/index.js` 来开启服务。
+
+```sh
+node ./src/index.js
+```
+
+API 监听端口默认位于 15551，可自行选择配置代理。
+
+请在[配置文件](/docs/development/config)中 `web_render` 配置项填写访问地址，如 `http://127.0.0.1:15551`。
+
+``` title="config/config.toml" {2,6}
+[secret]
+web_render = "http://127.0.0.1:15551"
+...
+[cfg]
+...
+web_render_local = "http://127.0.0.1:15551"
+...
+```
+
+## 用法
+
+以下为 Webrender API 的用法。
+
+带有星号（`*`）为必填项。
+
+### `/`
+
+此 API 可以生成网页内容截图。
+
+#### 请求方法
+
+POST
+
+#### 请求参数
+
+| 参数        | 数据类型 | 默认值      | 说明                       |
+| ----------- | -------- | ----------- | -------------------------- |
+| `content`\* | `string` | `undefined` | 要加载到页面的 HTML 内容。 |
+| `width`     | `int`    | `500`       | 截图的宽度（`px`）。       |
+| `height`    | `int`    | `1000`      | 截图的高度（`px`）。       |
+| `mw`        | `bool`   | `undefined` | 是否仅截取主要内容。       |
+| `tracing`   | `bool`   | `False`     | 是否启用页面追踪。         |
+
+#### 响应
+
+| 情况 | 返回值                         |
+| ---- | ------------------------------ |
+| 成功 | 返回生成的 JPEG 格式页面截图。 |
+| 失败 | 返回 500 错误。                |
+
+### `/element_screenshot`
+
+此 API 可以生成指定元素的网页内容截图。
+
+#### 请求方法
+
+POST
+
+#### 请求参数
+
+| 参数        | 数据类型   | 默认值      | 说明                            |
+| ----------- | ---------- | ----------- | ------------------------------- |
+| `element`\* | `string[]` | `undefined` | 指定要截图的元素的 CSS 选择器。 |
+| `content`   | `string`   | `undefined` | 要加载到页面的 HTML 内容。      |
+| `url`       | `string`   | `undefined` | 要加载的页面的 URL。            |
+| `css`       | `string`   | `undefined` | 要应用于页面的自定义 CSS 样式。 |
+| `width`     | `int`      | `720`       | 截图的宽度（`px`）。            |
+| `height`    | `int`      | `1290`      | 截图的高度（`px`）。            |
+| `counttime` | `bool`     | `True`      | 是否在截图中添加计时框。        |
+| `tracing`   | `bool`     | `False`     | 是否启用页面追踪。              |
+
+#### 响应
+
+| 情况 | 返回值                         |
+| ---- | ------------------------------ |
+| 成功 | 返回生成的 JPEG 格式页面截图。 |
+| 失败 | 返回 500 错误。                |
+
+### `/section_screenshot`
+
+此 API 可以生成网页中特定区域的内容截图。
+
+#### 请求方法
+
+POST
+
+#### 请求参数
+
+| 参数        | 数据类型 | 默认值      | 说明                            |
+| ----------- | -------- | ----------- | ------------------------------- |
+| `section`\* | `string` | `undefined` | 要截取的区域的 HTML 元素的 ID。 |
+| `content`   | `string` | `undefined` | 要加载到页面的 HTML 内容。      |
+| `url`       | `string` | `undefined` | 要加载的页面的 URL。            |
+| `css`       | `string` | `undefined` | 要应用于页面的自定义 CSS 样式。 |
+| `width`     | `int`    | `720`       | 截图的宽度（`px`）。            |
+| `height`    | `int`    | `1280`      | 截图的高度（`px`）。            |
+| `counttime` | `bool`   | `True`      | 是否在截图中添加计时框。        |
+| `tracing`   | `bool`   | `False`     | 是否启用页面追踪。              |
+
+#### 响应
+
+| 情况 | 返回值                         |
+| ---- | ------------------------------ |
+| 成功 | 返回生成的 JPEG 格式页面截图。 |
+| 失败 | 返回 500 错误。                |
+
+### `/page`
+
+此 API 可以生成指定 URL 页面的截图。
+
+#### 请求方法
+
+POST
+
+#### 请求参数
+
+| 参数    | 数据类型 | 默认值      | 说明                            |
+| ------- | -------- | ----------- | ------------------------------- |
+| `url`\* | `string` | `undefined` | 要加载的页面的 URL。            |
+| `css`   | `string` | `undefined` | 要应用于页面的自定义 CSS 样式。 |
+
+#### 响应
+
+| 情况 | 返回值                         |
+| ---- | ------------------------------ |
+| 成功 | 返回生成的 JPEG 格式页面截图。 |
+| 失败 | 返回 500 错误。                |
+
+### `/source`
+
+此 API 可以获取网页源代码。
+
+#### 请求方法
+
+GET
+
+#### 请求参数
+
+| 参数    | 数据类型 | 默认值      | 说明                 |
+| ------- | -------- | ----------- | -------------------- |
+| `url`\* | `string` | `undefined` | 要加载的页面的 URL。 |
+
+#### 响应
+
+| 情况 | 返回值               |
+| ---- | -------------------- |
+| 成功 | 返回请求的网页内容。 |
+| 失败 | 返回 500 错误。      |
