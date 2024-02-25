@@ -5,19 +5,17 @@ slug: /wiki
 
 # wiki
 
--   [开源](help/faq#为什么有些模块没有开源)
-
 此模块可以查询一个基于 MediaWiki 的网站的指定页面的详情。
 
 ## `wiki`
 
--   [公开](permissions)
+- [公开](permissions)
 
 用法：`~wiki [<Interwiki>:]<页面名> [-l <语言>]`
 
 参数：
 
--   `-l`：查找页面的对应语言版本，若无结果则返回当前语言。
+- `-l`：查找页面的对应语言版本，若无结果则返回当前语言。
 
 此命令可以查询一个基于 MediaWiki 的网站的指定页面的详情。Interwiki 若留空则为默认 Wiki。
 
@@ -35,7 +33,7 @@ slug: /wiki
 
 ## `wiki id`
 
--   [公开](permissions)
+- [公开](permissions)
 
 用法：`~wiki id [<Interwiki>:]<页面 ID>`
 
@@ -51,7 +49,7 @@ Interwiki 若留空则为默认 Wiki。
 
 ## `wiki search`
 
--   [公开](permissions)
+- [公开](permissions)
 
 用法：`~wiki search <关键词>`
 
@@ -59,7 +57,7 @@ Interwiki 若留空则为默认 Wiki。
 
 ## `wiki random`
 
--   [公开](permissions)
+- [公开](permissions)
 
 用法：`~wiki random`
 
@@ -67,8 +65,8 @@ Interwiki 若留空则为默认 Wiki。
 
 ## `wiki set`
 
--   [仅管理员](permissions)
--   别名：`wiki_start_site`
+- [仅管理员](permissions)
+- 别名：`wiki_start_site`
 
 用法：`~wiki set <wiki 域名/脚本路径>`
 
@@ -78,31 +76,31 @@ Interwiki 若留空则为默认 Wiki。
 
 :::tip 脚本路径
 
-“脚本路径”指的是 wiki 的 index.php、api.php 所在的目录。
+“脚本路径”指的是 Wiki 的 index.php、api.php 所在的目录。
 
--   在 WMF 所属的网站（维基百科、维基词典等）和 Miraheze 农场，此目录在 `<域名>/w/`。
--   在 Fandom 农场的英文 wiki 上，此目录在 `<域名>`。
--   在 Fandom 农场的其他语言 wiki 上，此目录在 `<域名>/<语言代码>/`。
+- 在 WMF 所属的网站（维基百科、维基词典等）和 Miraheze 农场，此目录在 `<域名>/w/`。
+- 在 Fandom 农场的英文 Wiki 上，此目录在 `<域名>`。
+- 在 Fandom 农场的其他语言 Wiki 上，此目录在 `<域名>/<语言代码>/`。
 
-如果您的 wiki 是自行搭建的，或您的农场没有在此列出，下面是获取脚本路径的方法。
+如果你的 Wiki 是自行搭建的，或你的农场没有在此列出，下面是获取脚本路径的方法。
 
-1.  在搜索框内输入：`Special:Version`。
-2.  打开页面后，向下滑，找到第二个表格。对于中文 wiki 来说，此表格的名称为“接入点URL”。
-3.  找到此表格的第二行（对于中文 wiki 来说，这一行的表头为“脚本路径”）第二列（对于中文 wiki 来说，这一列的表头为“URL”）内容。右键此字符并复制链接，即为此 wiki 的脚本路径。
+1. 在搜索框内输入：`Special:Version`。
+2. 打开页面后，向下滑，找到第二个表格。对于中文 Wiki 来说，此表格的名称为“接入点URL”。
+3. 找到此表格的第二行（对于中文 Wiki 来说，这一行的表头为“脚本路径”）第二列（对于中文 Wiki 来说，这一列的表头为“URL”）内容。右键此字符并复制链接，即为此 Wiki 的脚本路径。
 
 :::
 
 ## `wiki iw`
 
--   [仅管理员](permissions)
--   别名：`interwiki`
+- [仅管理员](permissions)
+- 别名：`interwiki`
 
 用法：
 
--   添加新的 Interwiki：`~wiki iw add <Interwiki 名称> <Wiki 域名/脚本路径>`
--   删除现有的 Interwiki：`~wiki iw remove <Interwiki 名称>`
--   查看当前设置 Interwiki 列表：`~wiki iw list [legacy]`
--   获取 API 地址：`~wiki iw get <Interwiki 名称>`
+- 添加新的 Interwiki：`~wiki iw add <Interwiki 名称> <Wiki 域名/脚本路径>`
+- 删除现有的 Interwiki：`~wiki iw remove <Interwiki 名称>`
+- 查看当前设置 Interwiki 列表：`~wiki iw list [legacy]`
+- 获取 API 地址：`~wiki iw get <Interwiki 名称>`
 
 此命令可以设置使用 `wiki` 命令时的 Interwiki。设置完毕后，可以在使用 `wiki` 时在前面加上 Interwiki 的名称加**英文**冒号（`:`）以获取此 Wiki 的内容。
 
@@ -112,30 +110,30 @@ Interwiki 若留空则为默认 Wiki。
 
 :::tip 脚本路径
 
-“脚本路径”指的是 wiki 的 index.php、api.php 所在的目录。
+“脚本路径”指的是 Wiki 的 index.php、api.php 所在的目录。
 
--   在 WMF 所属的网站（维基百科、维基词典等）和 Miraheze 农场，此目录在 `<域名>/w/`。
--   在 Fandom 农场的英文 wiki 上，此目录在 `<域名>`。
--   在 Fandom 农场的其他语言 wiki 上，此目录在 `<域名>/<语言代码>/`。
+- 在 WMF 所属的网站（维基百科、维基词典等）和 Miraheze 农场，此目录在 `<域名>/w/`。
+- 在 Fandom 农场的英文 Wiki 上，此目录在 `<域名>`。
+- 在 Fandom 农场的其他语言 Wiki 上，此目录在 `<域名>/<语言代码>/`。
 
-如果您的 wiki 是自行搭建的，或您的农场没有在此列出，下面是获取脚本路径的方法。
+如果你的 Wiki 是自行搭建的，或你的农场没有在此列出，下面是获取脚本路径的方法。
 
-1.  在搜索框内输入：`Special:Version`。
-2.  打开页面后，向下滑，找到第二个表格。对于中文 wiki 来说，此表格的名称为“接入点URL”。
-3.  找到此表格的第二行（对于中文 wiki 来说，这一行的表头为“脚本路径”）第二列（对于中文 wiki 来说，这一列的表头为“URL”）内容。右键此字符并复制链接，即为此 wiki 的脚本路径。
+1. 在搜索框内输入：`Special:Version`。
+2. 打开页面后，向下滑，找到第二个表格。对于中文 Wiki 来说，此表格的名称为“接入点URL”。
+3. 找到此表格的第二行（对于中文 Wiki 来说，这一行的表头为“脚本路径”）第二列（对于中文 Wiki 来说，这一列的表头为“URL”）内容。右键此字符并复制链接，即为此 Wiki 的脚本路径。
 
 :::
 
 ## `wiki headers`
 
--   [仅管理员](permissions)
+- [仅管理员](permissions)
 
 用法：
 
--   设置新的请求标头：`~wiki headers add <请求标头>`
--   删除请求标头：`~wiki headers remove <标头键名>`
--   重置请求标头：`~wiki headers reset`
--   查看当前设置请求标头：`~wiki headers show`
+- 设置新的请求标头：`~wiki headers add <请求标头>`
+- 删除请求标头：`~wiki headers remove <标头键名>`
+- 重置请求标头：`~wiki headers reset`
+- 查看当前设置请求标头：`~wiki headers show`
 
 此命令用于设置使用 `wiki` 命令时的请求标头。设置完毕后，每一次查询 Wiki 都会使其带上此标头查询。
 
@@ -143,7 +141,7 @@ Interwiki 若留空则为默认 Wiki。
 
 :::info 关于灰机 Wiki
 
-面对近期的攻击，我们发现灰机对部分 Wiki 采用了“部分封站”的措施，即限制网站，仅可使“狗头人”APP 用户访问。小可受波及，但可通过**伪装狗头人APP的`User-Agent`**解决。请运行以下命令：
+面对近期的攻击，我们发现灰机对部分 Wiki 采用了“部分封站”的措施，即限制网站，仅可使“狗头人”APP 用户访问。小可受波及，但可通过**伪装狗头人APP的 `User-Agent`** 解决。请运行以下命令：
 
 ```
 ~wiki headers add {"user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X x.y; rv:42.0) Gecko/20100101 Firefox/42.0 Huijiapp/5"}
@@ -153,19 +151,19 @@ Interwiki 若留空则为默认 Wiki。
 
 ## `wiki prefix`
 
--   [仅管理员](permissions)
+- [仅管理员](permissions)
 
 用法：
 
--   设置新的前缀：`~wiki prefix set <前缀>`
--   重置前缀：`~wiki prefix reset`
+- 设置新的前缀：`~wiki prefix set <前缀>`
+- 重置前缀：`~wiki prefix reset`
 
 此命令用于设置使用 `wiki` 命令时时自动添加的前缀。设置完毕后，每一次查询 Wiki 都会使其带上此前缀查询。
 
 ## `wiki fandom`
 
--   [仅管理员](permissions)
--   [设置](/docs/help/reading#命令类型)
+- [仅管理员](permissions)
+- [设置](/docs/help/reading#命令类型)
 
 用法：`~wiki fandom`
 
@@ -173,13 +171,13 @@ Interwiki 若留空则为默认 Wiki。
 
 Fandom全局查询用法：
 
--   命令：`~wiki w:c:<Wiki 名>:[<Interwiki>]:<页面名>`
--   行内：`[[w:c:<Wiki 名>:[<Interwiki>]:<页面名>]]`
+- 命令：`~wiki w:c:<Wiki 名>:[<Interwiki>]:<页面名>`
+- 行内：`[[w:c:<Wiki 名>:[<Interwiki>]:<页面名>]]`
 
 ## `wiki redlink`
 
--   [仅管理员](permissions)
--   [设置](/docs/help/reading#命令类型)
+- [仅管理员](permissions)
+- [设置](/docs/help/reading#命令类型)
 
 用法：`~wiki redlink`
 

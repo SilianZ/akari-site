@@ -5,8 +5,8 @@ slug: /eval
 
 # eval
 
--   [开源](help/faq#为什么有些模块没有开源)
--   强制开启
+- 强制开启
+- [仅超级用户](permissions)
 
 此模块用于返回传入字符串的表达式的结果。相当于 `eval()` 函数。
 
@@ -14,8 +14,27 @@ slug: /eval
 
 ## `eval`
 
--   [仅超级用户](permissions)
+- [仅超级用户](permissions)
 
 用法：`~eval <字符串>`
 
 此命令可以把字符串当成有效表达式，并返回对应结果。
+
+支持 `Bot.MessageSession` 类表达式，可使用 `msg` 实现。
+
+:::info 例子
+
+返回的结果示例：
+
+```
+>>> ~eval 2+2
+<<< 4
+>>> ~eval pow(2,3)
+<<< 8
+>>> ~eval sum([1,2,3])
+<<< 6
+>>> ~eval msg.locale.t(\'example\')
+<<< 你好世界！
+```
+
+:::
