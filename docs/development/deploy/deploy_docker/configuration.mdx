@@ -68,18 +68,22 @@ import TabItem from "@theme/TabItem";
 
     `qq_account = 2314163511` - 填写机器人的 QQ 号。
 
-    接下来，请配置 OpenShamrock 的以下选项：
+    接下来，请配置 OpenShamrock 的以下选项[^1]：
+
+    [^1]: 在 OpenShamrock 中，双击要更改的配置项进行配置。
 
     **接口信息：**
 
-    - 被动 WebSocket 地址：`ws://127.0.0.1:11451/ws/` - 此处填写先前的 IP 地址和端口，注意不要删去后面的 /ws/。
+    -   被动 WebSocket 地址：`ws://127.0.0.1:11451/ws/` - 此处填写先前的 IP 地址和端口，注意不要删去后面的 /ws/。
 
     **功能设置：**
 
-    - 消息格式为 CQ 码：开启
-    - 被动 WebSocket：开启
+    -   消息格式为 CQ 码：开启
+    -   被动 WebSocket：开启
 
-3. 强制杀死 QQ 进程并重新启动 QQ 来应用 OpenShamrock 配置文件。
+3. 强制杀死 QQ 进程[^2]并重新启动 QQ 来应用 OpenShamrock 配置文件。
+
+[^2]: 你可以通过设置 - 应用管理 - QQ 来结束 QQ 的进程。
 
 :::info
 
@@ -97,7 +101,10 @@ import TabItem from "@theme/TabItem";
 
 :::
 
-一个新注册的 QQ 账号仅需完成基础配置部分即可，为了避免在机器人使用后期时遇到 Code45 等问题，我们建议按照进阶配置来配置签名服务器。
+一个新注册的 QQ 账号仅需完成基础配置部分即可，为了避免在机器人使用后期时遇到 Code45[^3] 等问题，我们建议按照进阶配置来配置签名服务器。
+
+[^3]: Code45 是 Mirai（一个高效率 QQ 机器人框架，也是 go-cqhttp 正在使用的框架）在登陆遇到的一种常见登陆失败报错。
+具体表现为：`[WARNING]: 登录失败: 登录失败，建议升级最新版本后重试，或通过问题反馈与我们联系。 Code: 45`。
 
 #### 基础配置
 
@@ -167,13 +174,15 @@ import TabItem from "@theme/TabItem";
 
 ##### 进阶配置（配置签名服务器）
 
-由于 QQ 风控机制的加强，go-cqhttp 若出现 Code45 报错情况时，请参照以下步骤配置签名服务器：
+由于 QQ 风控机制的加强，go-cqhttp 若出现 Code45[^3] 报错情况时，请参照以下步骤配置签名服务器：
 
-6. 安装 JRE 17（Java Runtime Environment 17），请善用搜索引擎查找安装方法。
+6. 安装 JRE 17（Java Runtime Environment 17）[^4]，请善用搜索引擎查找安装方法。
+
+[^4]: 你也可以使用 JDK 17（Java Development Kit 17）。
 
 7. 在 ~~[unidbg-fetch-qsign](https://github.com/fuqiuluo/unidbg-fetch-qsign)~~（原作者已删库，请自行在 GitHub 上搜索有关 `qsign` 的仓库）的 Release 界面中下载最新版本的 unidbg-fetch-qsign 并解压到一个提前准备好的文件夹中。
 
-8. 删除与 go-cqhttp 同一目录下的 `data` 文件夹和 `device.json` 文件。
+8. 删除与 go-cqhttp 同级目录下的 `data` 文件夹和 `device.json` 文件。
 
 9. 在存放 unidbg-fetch-qsign 的文件夹中，运行以下命令：
 
@@ -188,7 +197,7 @@ import TabItem from "@theme/TabItem";
     :::info
 
     在选择版本时，应当遵从以下原则：
-    升级版本应当**一个一个版本**升，以后冻结了可能就没机会回退版本了。发生 Code45 应当先尝试删除 go-cqhttp 的 `device.json` 文件和 `data\cache` 文件夹并重新登录，而不是第一时间升级版本。
+    升级版本应当**一个一个版本**升，以后冻结了可能就没机会回退版本了。发生 Code45[^3] 应当先尝试删除 go-cqhttp 的 `device.json` 文件和 `data\cache` 文件夹并重新登录，而不是第一时间升级版本。
 
     :::
 
@@ -199,7 +208,7 @@ import TabItem from "@theme/TabItem";
       # 数据包的签名服务器列表，第一个作为主签名服务器，后续作为备用
       sign-servers:
         - url: 'http://127.0.0.1:8080'  # 主签名服务器地址， 必填
-          key: '114514'  # 签名服务器所需要的 apikey, 如果签名服务器的版本在1.1.0及以下则此项无效
+          key: '114514'  # 签名服务器所需要的 apikey, 如果签名服务器的版本在 1.1.0 及以下则此项无效
           authorization: '-'   # authorization 内容, 依服务端设置，如 'Bearer xxxx'
         ...
       ...
@@ -246,9 +255,9 @@ import TabItem from "@theme/TabItem";
 
 你需要自行完成账号注册与登录。
 
-`matrix_homeserver =` - 填写你使用的 Matrix server URL（只包括协议与主机，最后无需添加`/`）。
+`matrix_homeserver =` - 填写你使用的 Matrix server URL（只包括协议与主机，最后无需添加 `/`）。
 
-`matrix_user =` - 填写机器人的[完全限定用户 ID](https://spec.matrix.org/v1.9/appendices/#user-identifiers)（包括`@`与`:`）。
+`matrix_user =` - 填写机器人的[完全限定用户 ID](https://spec.matrix.org/v1.9/appendices/#user-identifiers)（包括 `@` 与 `:`）。
 
 `matrix_device_id =` - 填写机器人的设备 ID（即 Element 的会话 ID）
 
@@ -259,6 +268,7 @@ import TabItem from "@theme/TabItem";
 :::info
 
 不推荐使用其他客户端获取 Access Token，这样容易导致 olm 会话非常混乱。
+
 如果（不怕死）使用客户端获取 Access Token，不要使用客户端的退出登录功能，推荐通过浏览器隐私模式登陆并获取 Token。
 
 :::
@@ -316,7 +326,7 @@ QQ 频道消息的处理仍然处于测试阶段，由于 go-cqhttp 对频道消
 
 :::info
 
-关于 go-cqhttp 选用以上方式登录时出现的的 Code45 或其他登录问题，请根据 go-cqhttp 官方 [Issue](https://github.com/Mrs4s/go-cqhttp) 对照解决，或选用除以上协议外的其他协议。
+关于 go-cqhttp 选用以上方式登录时出现的的 Code45[^3] 或其他登录问题，请根据 go-cqhttp 官方 [Issue](https://github.com/Mrs4s/go-cqhttp) 对照解决，或选用除以上协议外的其他协议。
 
 :::
 
@@ -368,7 +378,7 @@ QQ 频道消息的处理仍然处于测试阶段，由于 go-cqhttp 对频道消
 
 `dice_detail_cnt= 5` - 多次投掷骰子的总数，超过则不再显示详细信息。
 
-`dice_count_limit = 10` - 多项式最多的项数。
+`dice_count_limit = 10` - 骰子表达式最多的项数。
 
 #### maimai
 
