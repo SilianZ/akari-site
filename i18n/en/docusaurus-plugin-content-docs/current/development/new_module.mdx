@@ -8,7 +8,7 @@ sidebar_position: 2
 
 :::info
 
-你可以在开发之前执行 `pre-commit install` 来安装 `pre-commit` Git 钩子，它可以在提交 Commit 前执行一些操作。如：同步 poetry.lock 至 requirements.txt、自动 PEP8 格式化等。
+您可以在开发之前执行 `pre-commit install` 来安装 `pre-commit` git 钩子，它可以在提交 commit 前执行一些操作。如：同步 poetry.lock 至 requirements.txt、自动 pep8 格式化等。
 
 :::
 
@@ -37,9 +37,9 @@ test = module(
     alias='t', # 此模块的别名
     developers=['Example'], # 开发者的名字
     recommend_modules=['test2', 'test3']), # 推荐启用的其他模块，用于在启用此模块时进行一并提示
-    required_admin = False, # 将此模块标记为仅群组管理员可执行，覆盖下文所述的子命令设定，默认为 False
-    base = False, # 将此模块标记为基础模块，无需启用即可使用，默认为 False
-    required_superuser = False, # 将此模块标记为仅机器人超级管理员可使用，覆盖下文所述的子命令设定，默认为 False
+    required_admin = False, # 将此模块标记为仅群组管理员可执行，覆盖下文所述的子命令设定，默认为False
+    base = False, # 将此模块标记为基础模块，无需启用即可使用，默认为False
+    required_superuser = False, # 将此模块标记为仅机器人超级管理员可使用，覆盖下文所述的子命令设定，默认为False
     support_languages=['zh_cn', 'zh_tw', 'en_us'] # 此模块支持的语言，未在列表内的语言在启用模块时会出现提醒
 )
 ```
@@ -76,9 +76,9 @@ async def _(msg: Bot.MessageSession):
 from core.builtins import Bot
 
 @test.regex(pattern=r'\[\[(.*?)]]', # 正则表达式语法
-            mode='M', # 正则模式，设为 'M' 为匹配模式，'A' 为匹配所有模式
-            flags=0, # 设置正则的 flags，如 Re.M | Re.I
-            show_typing=False # 设置命令执行时是否展示输入提示（如戳一戳），默认为 True
+            mode='M', # 正则模式，设为'M'为匹配模式，'A'为匹配所有模式
+            flags=0, # 设置正则的flags，如Re.M|Re.I
+            show_typing=False # 设置命令执行时是否展示输入提示（如戳一戳），默认为True
              )
 async def _(msg: Bot.MessageSession):
     ...
@@ -170,7 +170,7 @@ if confirm: # 用户发送了确认的词语
 - Kook
   - `Kook|GROUP`（Kook 频道）
 - 控制台
-  - `TEST|Console`（[控制台](/docs/development/console)）
+  - `TEST|Console`（控制台）
 
 ### 消息组件
 
