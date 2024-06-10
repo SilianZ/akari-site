@@ -10,7 +10,7 @@ sidebar_position: 3
 
 ## 文件位置
 
-请将语言文件放置在 `./locales/` 目录中，并以语言代码命名为 JSON 文件。
+请将语言文件放置在 `/locales` 目录中，并以语言代码命名为 JSON 文件。
 
 根路径下的目录用于放置全局字符串，模块下的目录用于放置对应专用的模块字符串。
 
@@ -84,7 +84,7 @@ async def test(msg: Bot.MessageSession):
 
 > 今年的全球汽车销售量达到了8000万辆。
 
-### 中文与半角符号之间需要增加空格
+### 完整的英文成句内容中使用半角标点
 
 正确：
 
@@ -198,9 +198,9 @@ async def test(msg: Bot.MessageSession):
 
 ### 标点符号
 
-#### 不要连用标点符号
+#### 不要重复使用标点符号
 
-虽然连用标点符号在规范中是被允许的行为，但是这样会破坏句子的规范性和美观性，请不要这样做。
+虽然重复使用标点符号在规范中是被允许的行为，但是这样会破坏句子的严肃性和美观性，请不要这样做。
 
 正确：
 
@@ -212,7 +212,7 @@ async def test(msg: Bot.MessageSession):
 
 例外：在表达同时包含疑惑和感叹的语气时，可连用“？！”。
 
-### 中文使用全角中文标点
+### 使用全角中文标点
 
 正确：
 
@@ -284,7 +284,7 @@ async def test(msg: Bot.MessageSession):
 
 > In the serene moonlit night, whispers of ancient tales lingered, echoing through the stillness of time…
 
-### 语句
+### 名词
 
 #### 使用“你”而不是“您”
 
@@ -304,7 +304,7 @@ async def test(msg: Bot.MessageSession):
 
 为了保持机器人的适用性，请尽可能不要使用第一人称代词，以避免涉及个人主观观点或情感。
 
-#### 专有名词使用正确的书写格式
+#### 专有名词使用正确的大小写
 
 正确：
 
