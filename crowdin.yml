@@ -4,6 +4,7 @@ files:
   - source: /docs/**/*
     ignore:
       - '**.json'
+    type: md
     translation: /i18n/%language%/docusaurus-plugin-content-docs/current/**/%original_file_name%
   - source: /src/pages/**/*
     ignore:
