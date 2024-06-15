@@ -1,0 +1,33 @@
+---
+sidebar_position: 5
+---
+
+import Asciinema from "@site/src/components/Asciinema";
+
+# 控制台
+
+控制台（`console.py`）位于机器人根目录下，其包括了一个基础的运行环境，可以在控制台内使用命令进行基本的机器人交互。
+
+## 运行
+
+在控制台所在目录下打开终端。
+
+在终端内切换 Poetry 的虚拟环境来调用先前安装的依赖。（可选）
+
+```sh
+poetry shell
+```
+
+在终端内运行 `python console.py` 以启动控制台。
+
+```sh
+python console.py
+```
+
+## 使用
+
+在控制台中的操作者默认拥有超级用户权限。
+
+控制台中仅支持回复文本消息和图片，其它消息元素将被忽略或转换为文本或图片显示。
+
+如果需要退出控制台，请使用 `~exit` 命令或按下 Ctrl + C 键。

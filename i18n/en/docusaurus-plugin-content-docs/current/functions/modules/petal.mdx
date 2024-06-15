@@ -5,13 +5,14 @@ slug: /petal
 
 # petal
 
--   [开源](help/faq#为什么有些模块没有开源)
+- 强制开启
+- 别名：`petals`
 
 此模块可以获取当前群组的花瓣数，花瓣可用于 [`ask`](ask) 模块。
 
 ## `petal`
 
--   [公开](permissions)
+- [公开](permissions)
 
 用法：`~petal [<群组 ID>]`
 
@@ -19,8 +20,16 @@ slug: /petal
 
 ## `petal modify`
 
--   [仅超级用户](permissions)
+- [仅超级用户](permissions)
 
 用法：`~petal modify <数量> [<群组 ID>]`
 
 此命令可以修改目标群组的花瓣数量，若 ID 留空则修改所在群组的花瓣数量。
+
+## `petal clear`
+
+- [仅超级用户](permissions)
+
+用法：`~petal clear [<目标 ID>]`
+
+此命令可以清除目标的花瓣数量，若 ID 留空则清除操作者所在目标的花瓣数量。
